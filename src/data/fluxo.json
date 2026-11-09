@@ -4422,5 +4422,147 @@
 "42a"
 ]
 }
+],
+"P": {
+"titulo": "Perguntas que a Diretoria pode fazer",
+"intro": "Respostas curtas, com o passo do fluxo, a decisão pendente e o artigo que sustentam cada uma. Artigo sem lei indicada é da Lei 14.133/2021. As datas são as propostas no registro de decisões e dependem de aprovação da Presidência.",
+"fonte": "Fluxo v16.5, especificação 1.4 e sabatina jurídica de 9 de novembro de 2026 (docs/revisao-critica).",
+"grupos": [
+{
+"nome": "Aprovação e governança",
+"itens": [
+{
+"p": "A Diretoria pode aprovar este fluxo hoje?",
+"r": "Pode validar o desenho e mandar construir o sistema. Não pode aprovar sozinha a parte normativa: alçadas, tolerância de valor, pequena monta, tabela de ramos e adoção dos regulamentos federais são regra geral, e regra geral é ato normativo do Plenário, com referendo do COFECI. Isso vai no Regulamento de Contratações do CRECI-ES, com aprovação pelo Plenário proposta para 31/01/2027. Até o referendo, o sistema roda no modo restritivo.",
+"onde": "Regimento art. 4º IV; Lei 9.784 art. 13 I; decisão 20; RN-216 e RN-217"
+},
+{
+"p": "O que é o “modo restritivo”?",
+"r": "É como o sistema opera enquanto o Plenário e o COFECI não fixam os parâmetros. Nenhuma exceção que dependa de parâmetro não fixado liga: tolerância zero (todo aumento de valor volta à Diretoria), sem pequena monta no fim do mandato, sem valor de corte no recebimento (vale a regra geral do art. 140) e sem atalho do plano anual. Decisão atrasada não para o incremento, salvo a decisão 18.",
+"onde": "RN-217; passos 4b, 8c, 19 e 32"
+},
+{
+"p": "Por que o Presidente assina tanta coisa?",
+"r": "Porque autorizar despesas é competência do Presidente (Regimento, art. 8º, VII) e firmar contratos também (art. 8º, III). O Regimento não traz cláusula expressa de delegação nesses incisos, e o projeto não pode apostar numa tese. Até o parecer da decisão 4, o Presidente aprova a demanda (8 e 9), autoriza (22), assina o empenho (25b) e o contrato (26d). O painel da autoridade reúne as pendências com resumo, valor e proposta de decisão, com assinatura em lote.",
+"onde": "Regimento art. 8º III e VII; Lei 9.784 arts. 12 a 14; decisão 4; RN-139 e RN-220"
+},
+{
+"p": "O que a Diretoria colegiada decide e o que o diretor delegado decide?",
+"r": "A Diretoria colegiada, com quorum e ata, aprova o plano anual e cada revisão (passo 0) e reduz, adia ou cancela um pedido sem dotação (11a). O diretor delegado aprova a demanda e registra a aprovação (8 e 9), por ato de delegação publicado, depois da decisão 4. Até lá, o Presidente faz os passos 8 e 9.",
+"onde": "Regimento arts. 5º e 50; Lei 9.784 art. 14; passos 0, 8, 9 e 11a"
+},
+{
+"p": "Quem é o Controle Interno?",
+"r": "Hoje não existe uma unidade de controle interno no CRECI-ES, e o fluxo não a inventa. A lei exige o órgão em vários pontos (apoio ao fiscal, comunicação da quebra da fila de pagamento). A decisão 5 propõe criar a unidade por ato normativo do Plenário, com referendo do COFECI, e o Presidente prover o pessoal; até lá, um empregado do quadro, sem poder de ordenar, executar ou pagar despesa, recebe designação interina, e a lacuna fica declarada em cada passo. O Conselho Fiscal não substitui o controle interno: ele examina depois, a cada trimestre.",
+"onde": "Arts. 117 §3º, 141 §1º e 169; Regimento arts. 4º IV, 8º IV e 12; decisão 5"
+},
+{
+"p": "O que muda nos últimos quatro meses do mandato?",
+"r": "O Regimento proíbe comprar máquinas e equipamentos, contratar propaganda e assumir compromisso para pagar depois do mandato. O sistema bloqueia e só libera por exceção do próprio inciso, gravada com o motivo: máquinas só em continuidade de plano aquisitivo já iniciado; propaganda só as mensagens de fim de ano e das datas da profissão; compromisso só de pequena monta, no valor do Regulamento. A trava é conferida na triagem, na autorização, no empenho e na prorrogação.",
+"onde": "Regimento art. 43 II a IV; passos 8c, 22, 25b, 38b e 44a; RN-218; decisão 13"
+},
+{
+"p": "Quais são as datas das decisões pendentes?",
+"r": "São 29 decisões, cada uma com dono e data proposta. Até 15/12/2026: 16, 17, 18 e 26 (PNCP e legado). Até 31/12/2026: 11 (orçamento de janeiro antes da homologação do COFECI), em sessão extraordinária do Plenário. Até 31/01/2027: 2, 4, 5, 12, 13, 19, 20, 24, 28 e 29, que travam o primeiro incremento. Até 31/03/2027: 23 (assessoria jurídica do quadro). As demais, antes do incremento que as usa.",
+"onde": "Especificação 1.4, seção 6.1; sabatina, Apêndice A"
+}
 ]
+},
+{
+"nome": "PNCP e situação atual",
+"itens": [
+{
+"p": "O que acontece com os contratos e atas vigentes que não estão no PNCP?",
+"r": "A consulta ao PNCP de 9/11/2026 só achou sete pregões do CRECI-ES, nenhum contrato ou ata. Pela lei, a divulgação no PNCP é condição de eficácia do contrato; a ata de registro de preços só começa a viger depois de divulgada. Pelo menos quatro dos sete pregões eram de registro de preços. A decisão 26, proposta para 15/12/2026, manda Compras levantar tudo em 10 dias úteis, divulgar pelo canal disponível e a Assessoria Jurídica opinar sobre cada contratação já feita. Serviços essenciais (limpeza, vigilância, TI) não param: a autoridade faz o juízo de interesse público do art. 147 e registra o risco.",
+"onde": "Art. 94; art. 147; Decreto 11.462 art. 22; decisão 26"
+},
+{
+"p": "Com o fluxo aprovado, conseguimos fazer uma compra nova amanhã?",
+"r": "Não enquanto não houver canal para divulgar no PNCP. O fluxo impede executar qualquer instrumento novo, inclusive a nota de empenho com força de contrato, sem o número de controle do PNCP. O CRECI-ES não digita direto no portal: a inserção é por plataforma credenciada no Ministério da Gestão ou pelo Publicador de Contratos do Compras.gov.br, que exige cadastro. Essa é a decisão 18, a mais urgente do projeto, proposta para 15/12/2026. O atraso dela para toda execução nova.",
+"onde": "Art. 94; Manual de Integração do PNCP v2.6, seção 5.4; decisão 18; RN-190 e RN-229"
+},
+{
+"p": "O que o sistema vai fazer sozinho e o que depende de pessoas?",
+"r": "Na implantação, a divulgação no PNCP é feita por servidor de Compras pelo canal de cada ato: Publicador de Contratos para contrato e aditivo, plataforma da disputa para edital, resultado e ata, site do CRECI-ES para plano anual, aviso de dispensa e ato de contratação direta. O sistema contará os prazos, impedirá ordem de serviço, recebimento e pagamento sem o número de controle, e conferirá todo dia útil cada número na API de consulta do PNCP, que é aberta. O envio automático pela API de integração exige plataforma credenciada e fica como integração futura, sem prazo.",
+"onde": "Passos 27, 27b e 40; RN-214 e RN-215; decisão 18"
+},
+{
+"p": "Por que o registro de preços está suspenso para novos certames?",
+"r": "Porque a ata só vige depois de divulgada no PNCP e ainda não se confirmou que a plataforma da disputa envia a ata. Sem canal, a ata nunca entraria em vigência. Compras precisa confirmar o envio; se não houver, a linha volta com a plataforma credenciada da decisão 18. As atas vigentes continuam só com parecer jurídico e controle de saldo no sistema próprio, enquanto o acesso à ferramenta federal de Gestão de Atas é pedido (decisão 24).",
+"onde": "Decreto 11.462 arts. 22 e 24; linha RP; passos 26c e 41; decisões 18 e 24"
+},
+{
+"p": "Como sabemos que a base legal está certa?",
+"r": "Cada caixa traz o trecho literal da lei, recortado do texto oficial salvo no projeto. Um script confere se cada trecho está mesmo no artigo citado: 579 trechos, 579 coerentes. O que o script não confere é se a afirmação da caixa está certa; isso foi papel da sabatina jurídica, com 100 perguntas de um agente crítico, e segue sendo papel da Assessoria Jurídica. Norma ainda não salva no projeto aparece marcada como “texto fora das fontes legais conferidas” e não vira bloqueio antes de ser conferida.",
+"onde": "gerador/leis; verificar_artigos.py; docs/revisao-critica"
+}
+]
+},
+{
+"nome": "Compra pequena e dia a dia",
+"itens": [
+{
+"p": "Quanto tempo leva uma compra pequena, de R$ 1.800?",
+"r": "Pela dispensa por valor, com as etapas que a lei exige (DFD, pesquisa de preços, parecer jurídico, autorização, divulgação do ato, empenho e divulgação no PNCP), a estimativa é de 15 a 25 dias úteis, e só depois da decisão 18. É estimativa, não medida. Para encurtar, sem afrouxar o que a lei exige: um só despacho do Presidente abaixo do valor do Regulamento (aprova, autoriza, empenha e designa o fiscal), aviso de dispensa dispensado com justificativa do caso, parecer referencial para casos repetitivos e, depois das decisões 1 e 7, cartão e suprimento de fundos para o pronto pagamento.",
+"onde": "Linha DV; Lei 9.784 art. 22; arts. 53 §5º, 72 e 75 §3º; decisões 1, 7, 18 e 23"
+},
+{
+"p": "Podemos usar o cartão de pagamento?",
+"r": "Sim, como meio de pagamento, não como atalho. A compra com entrega no ato segue a dispensa por valor, com processo, autorização e divulgação do ato, e o extrato do cartão é divulgado no PNCP, como a lei prefere. O que não pode é cobrança no cartão antes de receber o bem ou o serviço: isso é pagamento antecipado, que o Regimento proíbe.",
+"onde": "Art. 75 §4º; art. 95 §2º; Regimento art. 36 §1º I; passo 1c; RN-227"
+},
+{
+"p": "E o suprimento de fundos, o adiantamento a servidor?",
+"r": "Fica bloqueado até a decisão 7. A Lei 4.320 só admite adiantamento nos casos expressamente definidos em lei, e o projeto não identificou a lei que define esses casos para o CRECI-ES; o Regimento é resolução, não lei. Quando liberado, exige ato de concessão do Presidente, empenho prévio, prestação de contas e os valores fixados pelo COFECI.",
+"onde": "Lei 4.320 arts. 68 e 69; Regimento art. 39 parágrafo único; decisão 7; RN-228"
+},
+{
+"p": "Assinatura de software que só vende com pagamento antecipado: como fazer?",
+"r": "Hoje não dá. A Lei 14.133 permite antecipar o pagamento em casos justificados, mas o Regimento proíbe pagamento antecipado, e o Regimento prevalece sobre os atos internos. Só se admite mudando o Regimento: proposta aprovada por dois terços dos Conselheiros em duas sessões plenárias, com referendo do COFECI. É a decisão 1. Até lá, o passo 35c fica bloqueado.",
+"onde": "Art. 145; Regimento arts. 36 §1º I e 79 e parágrafo único; passo 35c; decisão 1"
+},
+{
+"p": "Por que não dividir a compra em partes menores para caber na dispensa?",
+"r": "Porque a lei soma tudo o que a unidade gastou no exercício no mesmo ramo de atividade, e ramo é o mercado fornecedor, não o item. Dividir para caber no limite é fracionamento. O sistema soma, inclui cartão, suprimento e pedidos em análise, e bloqueia. Ramo acima do limite vai para licitação, dividida em itens ou lotes quando couber, o que amplia a competição sem fracionar.",
+"onde": "Art. 75 §1º I e II; art. 40 V b e §2º; art. 47 II e §1º; passos 3, 3c e DV1; RN-002"
+},
+{
+"p": "Em emergência, qual é o caminho rápido?",
+"r": "A linha DO, pela dispensa do art. 75, VIII. O Presidente autoriza, porque autorizar despesa é competência dele. O contrato só pode cobrir o necessário para a situação, por até um ano contado da ocorrência, sem prorrogação nem recontratação, e a licitação regular começa em paralelo. Se a compra não estava no plano anual, a inclusão vai ad referendum da Diretoria. Quem deu causa à emergência responde em expediente próprio.",
+"onde": "Art. 75 VIII e §6º; Regimento art. 8º V e VII; linha DO; passo 1c"
+},
+{
+"p": "Energia elétrica e água precisam de contrato?",
+"r": "Sim. É inexigibilidade por fornecedor exclusivo, com vigência por prazo indeterminado, porque é serviço público em regime de monopólio. Vale o contrato de adesão da concessionária; as cláusulas da lei se aplicam no que couber, e as que não se aplicam ficam registradas com o motivo. O contrato é divulgado no PNCP, e todo ano a autoridade atesta que há crédito orçamentário.",
+"onde": "Arts. 74 I, 92 e 109; linha IN; passos 26a e 42a"
+}
+]
+},
+{
+"nome": "Controles",
+"itens": [
+{
+"p": "Como se garante que ninguém compra de parente ou de empresa ligada a dirigente?",
+"r": "Dirigentes, empregados e agentes do processo assinam declaração anual de parentesco, atualizada a cada designação. O fornecedor pessoa física e os sócios declaram que não são cônjuge, companheiro ou parente até o terceiro grau de dirigente ou agente. O sistema cruza só os dados declarados com o quadro societário oficial; coincidência trava até decisão motivada da autoridade. Não há inferência por sobrenome, para não tratar dado além do necessário.",
+"onde": "Arts. 9º §1º e 14 IV; LGPD art. 6º III; passos 24, 26d e IN3"
+},
+{
+"p": "Por que o pagamento segue uma fila?",
+"r": "Porque a lei manda pagar em ordem cronológica, por fonte de recursos e por categoria (bens, locações, serviços, obras), e publicar a fila todo mês. Sair da fila só nas cinco hipóteses da lei, com o inciso indicado e justificativa prévia da autoridade. A posição na fila é a data em que o pagamento ficou exigível: recebimento definitivo com nota aceita, ou o fim do prazo contratual de recebimento, o que vier primeiro. A ordem de pagamento sai em lote semanal, assinada pelo Presidente e pelo Diretor Tesoureiro.",
+"onde": "Art. 141 e §§1º a 3º; art. 143; Regimento art. 10; passo 35; RN-207 e RN-222"
+},
+{
+"p": "Quem fiscaliza os contratos? Temos gente para isso?",
+"r": "Cada contrato tem gestor, fiscal titular e fiscal substituto, designados por portaria do Presidente assinada junto com o contrato. O designado precisa do requisito da lei: atribuição do cargo ligada a contratos, ou formação compatível, ou certificado de escola de governo; sem fiscal e substituto ativos, o contrato não libera execução. Quando faltar conhecimento técnico, um terceiro pode apoiar com laudos e medições, mas não atesta recebimento nem é fiscal. Afastados titular e substituto, o Presidente designa um temporário.",
+"onde": "Arts. 7º II e III e 117 e §4º; passos 28, 30b e 31; decisão 4"
+},
+{
+"p": "“Prática interna” quer dizer o quê?",
+"r": "Que a regra é uma decisão de gestão do CRECI-ES, não uma exigência da lei. O fluxo marca cada uma assim, para que ninguém confunda escolha com obrigação legal e para que o Plenário possa mudar a regra por regulamento. Exemplos: a reserva de dotação antes do empenho, a fila da Diretoria, os prazos por prioridade e a exigência de divulgar o ato de contratação direta antes do empenho.",
+"onde": "Legenda do diagrama, item 6; passos 7, 12 e H25; RN-226"
+}
+]
+}
+]
+}
 }

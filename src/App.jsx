@@ -5,13 +5,25 @@ import Cabecalho from './components/Cabecalho'
 import Fases from './components/Fases'
 import Passo from './components/Passo'
 import Decisao from './components/Decisao'
+import Perguntas from './components/Perguntas'
 
 const INICIO = '1'
+
+// duas vistas pelo endereço: o fluxo (padrão) e as perguntas da Diretoria (#perguntas)
+function vistaDoHash() {
+  return window.location.hash.startsWith('#perguntas') ? 'perguntas' : 'fluxo'
+}
 
 export default function App() {
   const [escolhas, setEscolhas] = useState({})
   const [caso, setCaso] = useState(null)
   const [fase, setFase] = useState(1)
+  const [vista, setVista] = useState(vistaDoHash)
+  useEffect(() => {
+    const f = () => setVista(vistaDoHash())
+    window.addEventListener('hashchange', f)
+    return () => window.removeEventListener('hashchange', f)
+  }, [])
   const fimDoCaso = caso == null ? null : D.M[caso].p[D.M[caso].p.length - 1]
   const itens = useMemo(() => montar(D, INICIO, escolhas, 400, fimDoCaso), [escolhas, fimDoCaso])
 
@@ -37,11 +49,19 @@ export default function App() {
 
   const passos = itens.filter((x) => x.k === 'no').length
 
+  if (vista === 'perguntas') {
+    return (
+      <main>
+        <Perguntas D={D} onVoltar={() => { window.location.hash = ''; window.scrollTo({ top: 0 }) }} />
+      </main>
+    )
+  }
+
   return (
     <>
       <Fases D={D} atual={fase} />
       <main>
-        <Cabecalho D={D} caso={caso} onCaso={abreCaso} onRecomeca={() => { setCaso(null); setEscolhas({}) }} total={passos} />
+        <Cabecalho D={D} caso={caso} onCaso={abreCaso} onRecomeca={() => { setCaso(null); setEscolhas({}) }} total={passos} onPerguntas={() => { window.location.hash = 'perguntas'; window.scrollTo({ top: 0 }) }} />
         <div className="trilho">
           {itens.map((x, k) => {
             if (x.k === 'no') return <Passo key={x.id} D={D} id={x.id} linha={x.linha} />

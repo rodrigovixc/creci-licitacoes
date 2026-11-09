@@ -191,3 +191,24 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 .pncp .depois dt, .pncp .depois dd { color: var(--mute); }
 @media (max-width: 560px) { .pncp dl > div { grid-template-columns: 1fr; gap: 2px; } }
 .pncp dl > div { grid-template-columns: 12.5em 1fr; }
+
+/* perguntas que a Diretoria pode fazer (#perguntas) */
+.atalho-perguntas { margin: 10px 0 0; }
+.perguntas .fonte { color: var(--mute); font-size: 14px; margin: 0 0 14px; }
+.perguntas .grupos { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; }
+.perguntas .grupos a {
+  border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px;
+  font-size: 13px; color: var(--mute); text-decoration: none; background: var(--card);
+}
+.perguntas .grupo { margin-top: 28px; }
+.perguntas h2 { font-size: 22px; margin-bottom: 10px; }
+.pergunta {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 12px 16px; margin: 0 0 10px;
+}
+.pergunta summary { cursor: pointer; font-family: var(--serif); font-size: 18px; font-weight: 500; line-height: 1.35; }
+.pergunta summary::marker { color: var(--accent); }
+.pergunta p { margin: 10px 0 0; }
+.pergunta .onde { font-size: 13px; color: var(--mute); }
+button.limpa { border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--mute); padding: 6px 14px; font-size: 14px; }
+button.limpa:hover { color: var(--ink); border-color: var(--ink); }
