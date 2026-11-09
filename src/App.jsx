@@ -12,7 +12,8 @@ export default function App() {
   const [escolhas, setEscolhas] = useState({})
   const [caso, setCaso] = useState(null)
   const [fase, setFase] = useState(1)
-  const itens = useMemo(() => montar(D, INICIO, escolhas), [escolhas])
+  const fimDoCaso = caso == null ? null : D.M[caso].p[D.M[caso].p.length - 1]
+  const itens = useMemo(() => montar(D, INICIO, escolhas, 400, fimDoCaso), [escolhas, fimDoCaso])
 
   function escolhe(id, i) {
     setCaso(null)
@@ -50,13 +51,14 @@ export default function App() {
               return (
                 <button type="button" key={'v' + k} className="marca volta" onClick={() => document.getElementById('p-' + x.id)?.scrollIntoView({ behavior: 'smooth', block: 'center' })}>
                   ↺ Volta ao passo {x.id}{por ? ': ' + por : ''}
+                  {x.passa.length ? `. Passa de novo por ${x.passa.join(', ')} e segue abaixo.` : ''}
                 </button>
               )
             }
             const fimDoProcesso = D.N[x.id].fim
             return (
               <p key={'f' + k} className="marca fim">
-                {fimDoProcesso ? 'Fim do processo.' : x.linha ? 'Fim desta linha do quadro.' : 'Este ramo termina aqui. Role para cima e escolha outro caminho.'}
+                {x.caso ? (fimDoProcesso ? 'Fim do processo e deste caso.' : 'Fim deste caso. Em modo livre, o fluxo segue pelas saídas do passo acima.') : fimDoProcesso ? 'Fim do processo.' : x.linha ? 'Fim desta linha do quadro.' : 'Este ramo termina aqui. Role para cima e escolha outro caminho.'}
               </p>
             )
           })}

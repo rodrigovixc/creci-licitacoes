@@ -13,7 +13,8 @@ export function padrao(id, n) {
   return i < 0 ? 0 : i
 }
 
-export function montar(D, inicio, escolhas, max = 400) {
+// `fim`: último passo de um caso pronto; o trilho para ali com a marca "fim deste caso".
+export function montar(D, inicio, escolhas, max = 400, fim = null) {
   const { N, L } = D
   const itens = []
   const vistos = new Set()
@@ -24,11 +25,35 @@ export function montar(D, inicio, escolhas, max = 400) {
     const n = N[id]
     if (!n) break
     if (vistos.has(id)) {
-      itens.push({ k: 'volta', id, de: itens[itens.length - 1].id })
-      break
+      // Volta a um passo já mostrado (ex.: 36 → 30, "próxima entrega ou mês"). O ciclo não se repete na tela:
+      // o trilho passa em silêncio pelos passos já vistos e retoma no primeiro ainda não mostrado.
+      // Na segunda passagem por uma decisão vale a escolha `id*` do caso; sem ela, a saída para uma fase posterior; senão a padrão.
+      const de = itens[itens.length - 1].id
+      const passa = []
+      const ff = new Set()
+      let prox = id
+      while (prox && vistos.has(prox) && !ff.has(prox)) {
+        ff.add(prox)
+        const m = N[prox]
+        if (!m || !m.v.length) { prox = null; break }
+        let j = escolhas[prox + '*']
+        if (j === undefined) j = m.v.findIndex(([a]) => !vistos.has(a) && N[a] && N[a].f > m.f)
+        if (j === undefined || j < 0) j = padrao(prox, m)
+        prox = m.v[j][0]
+        if (prox !== id && vistos.has(prox)) passa.push(prox)
+      }
+      const segue = Boolean(prox) && !vistos.has(prox)
+      itens.push({ k: 'volta', id, de, passa: segue ? passa : [] })
+      if (!segue) break
+      id = prox
+      continue
     }
     vistos.add(id)
     itens.push({ k: 'no', id, linha })
+    if (fim && id === fim) {
+      itens.push({ k: 'fim', id, caso: true })
+      break
+    }
     if (n.k === 'linha') {
       linha = n.f
       fila = [...L[n.f].cells]
@@ -64,14 +89,19 @@ export function montar(D, inicio, escolhas, max = 400) {
 }
 
 // Escolhas que reproduzem um caso pronto (exemplo do diagrama), nas bifurcações que o caso atravessa.
+// Quando o caso passa duas vezes pelo mesmo passo (36 → 30 → 42), a segunda escolha fica na chave `id*`.
 export function escolhasDoCaso(D, caminho) {
   const e = {}
+  const vistos = new Set()
   caminho.forEach((a, k) => {
     const b = caminho[k + 1]
     const n = D.N[a]
+    const chave = vistos.has(a) ? a + '*' : a
+    vistos.add(a)
     if (!b || !n) return
     const i = n.v.findIndex(([x]) => x === b)
-    if (i >= 0) { if (n.v.length > 1) e[a] = i; return }
+    if (i >= 0) { if (n.v.length > 1 && e[chave] === undefined) e[chave] = i; return }
+    if (chave !== a) return
     // o exemplo pula um passo intermediário (ex.: 32 → 33c, sem citar o 33): escolhe nos dois
     n.v.forEach(([x, por], ix) => {
       const m = D.N[x]
