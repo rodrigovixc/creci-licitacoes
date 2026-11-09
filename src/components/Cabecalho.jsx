@@ -1,11 +1,11 @@
 export default function Cabecalho({ D, caso, onCaso, onRecomeca, total }) {
   return (
     <header className="cabecalho">
-      <p className="sobre">CRECI-ES · Compras, licitações e contratos · fluxo v16.3</p>
-      <h1>Da solicitação ao contrato, um passo por vez</h1>
+      <p className="sobre">CRECI-ES · Compras, licitações e contratos · fluxo v{D.V}</p>
+      <h1>Da solicitação à extinção do contrato, um passo por vez</h1>
       <p className="intro">
         Role para baixo para seguir o processo. Quando chegar a uma decisão, role para o lado, escolha o caminho e continue descendo.
-        Cada cartão traz quem faz e a base legal.
+        Cada cartão traz quem faz e a base legal. Artigo sem lei indicada é da Lei 14.133/2021.
       </p>
       <div className="casos">
         <span className="rotulo">Casos prontos</span>

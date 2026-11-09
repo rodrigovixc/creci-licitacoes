@@ -53,7 +53,7 @@ export default function App() {
                 </button>
               )
             }
-            const fimDoProcesso = /fim/i.test(D.N[x.id].t)
+            const fimDoProcesso = D.N[x.id].fim
             return (
               <p key={'f' + k} className="marca fim">
                 {fimDoProcesso ? 'Fim do processo.' : x.linha ? 'Fim desta linha do quadro.' : 'Este ramo termina aqui. Role para cima e escolha outro caminho.'}
@@ -62,7 +62,7 @@ export default function App() {
           })}
         </div>
         <footer>
-          Fonte: diagrama v16.3 do fluxo de compras, licitações e contratos do CRECI-ES (5 de novembro de 2026). Os textos e as bases legais vêm do mesmo arquivo que gera o diagrama.
+          Fonte: diagrama v{D.V} do fluxo de compras, licitações e contratos do CRECI-ES ({D.VD}). Os textos e as bases legais vêm do mesmo arquivo que gera o diagrama.
         </footer>
       </main>
     </>

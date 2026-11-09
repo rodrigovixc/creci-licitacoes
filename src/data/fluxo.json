@@ -1,26 +1,34 @@
 {
+"V": "16.4",
+"VD": "9 de novembro de 2026",
 "N": {
 "0": {
 "k": "step",
 "f": 1,
 "t": "Plano de contratações anual",
 "d": "Lista das contratações que o CRECI-ES pretende fazer no ano seguinte, feita a partir das demandas dos setores.",
-"x": "Lista das contratações que o CRECI-ES pretende fazer no ano seguinte, feita a partir das demandas dos setores. Todo ano, em data fixa: os setores enviam seus documentos de demanda (DFD), a Diretoria aprova a lista em bloco e Compras publica o plano no PNCP. Fechado em setembro, alimenta a proposta orçamentária (até 31/10). Itens do plano têm análise simplificada no passo 10. Ao aprovar o plano, o sistema soma as linhas por ramo. Ramo acima do limite de dispensa vai para licitação ou para parcelamento justificado. Cada revisão do plano é versão aprovada e publicada. No fim do ano, relatório de aderência: previsto e feito, feito fora do plano com justificativa, previsto e não feito com motivo. Calendário anual: data-limite de solicitação por modalidade, data-limite de empenho e data de fechamento (prática interna).",
+"x": "Todo ano, em data fixa: os setores enviam seus documentos de demanda (DFD), a Diretoria aprova a lista em bloco e Compras divulga o plano (art. 12, §1º, e art. 174, §2º, I). Fechado em setembro, alimenta a proposta orçamentária (até 31/10). Itens do plano têm análise simplificada no passo 10. Ao aprovar o plano, o sistema soma as linhas por ramo. Ramo acima do limite de dispensa vai para licitação ou para parcelamento justificado. Cada revisão do plano é versão aprovada e divulgada. No fim do ano, relatório de aderência: previsto e feito, feito fora do plano com justificativa, previsto e não feito com motivo. Calendário anual: data-limite de solicitação por modalidade, data-limite de empenho e data de fechamento (prática interna).",
 "q": "Compras e Licitações com os setores",
-"l": "art. 12 VII e §1º; art. 18 §1º VIII; art. 75 §1º II; Regimento art. 31",
+"l": "art. 12 VII e §1º; art. 18 §1º VIII; art. 75 §1º II; art. 174 §2º I; Regimento art. 31",
 "v": [
 [
 "1",
 "alimenta"
 ]
-]
+],
+"m": {
+"implantacao": "O canal no PNCP depende da decisão 18, porque o Publicador de Contratos não trata do plano. Até lá, servidor de Compras divulga o plano aprovado e cada revisão no site do CRECI-ES, que é sítio eletrônico oficial (art. 12, §1º).",
+"controle": "Montará o plano com a categoria de item do PNCP em cada linha e registrará a data de divulgação de cada versão.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+},
+"fim": false
 },
 "0b": {
 "k": "step",
 "f": 1,
 "t": "Patrimônio inicia o desfazimento",
 "d": "Bem móvel inservível entra pelo Patrimônio, sem orçamento nem dotação, e vai direto à linha LE: leilão, ou doação para fim social, ou permuta entre órgãos, com autorização do Presidente.",
-"x": "Bem móvel inservível entra pelo Patrimônio, sem orçamento nem dotação, e vai direto à linha LE: leilão, ou doação para fim social, ou permuta entre órgãos, com autorização do Presidente. Bem móvel inservível (ocioso, recuperável, antieconômico ou irrecuperável) entra pelo Patrimônio, sem orçamento e sem dotação. A comissão classifica, o processo é aberto (13) e vai direto à linha LE (13 → LE1, sem os passos 14 a 19): leilão ou, nas hipóteses do art. 76, II, doação para fim social ou permuta entre órgãos. O Presidente autoriza a alienação.",
+"x": "Bem móvel inservível (ocioso, recuperável, antieconômico ou irrecuperável) entra pelo Patrimônio, sem orçamento e sem dotação. A comissão classifica, o processo é aberto (13) e vai direto à linha LE (13 → LE1, sem os passos 14 a 19): leilão ou, nas hipóteses do art. 76, II, doação para fim social ou permuta entre órgãos. O Presidente autoriza a alienação.",
 "q": "Patrimônio e Almoxarifado",
 "l": "art. 76 II; Decreto 12.785 arts. 3º, 10 e 11; Regimento art. 8º XVI",
 "v": [
@@ -28,14 +36,16 @@
 "13",
 "abre o processo sem dotação"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "1": {
 "k": "step",
 "f": 1,
 "t": "Abre a solicitação de compra",
 "d": "Registro da necessidade do setor; é a base do documento de formalização de demanda (DFD).",
-"x": "Registro da necessidade do setor; é a base do documento de formalização de demanda (DFD). Itens com quantidade e ao menos um orçamento por item, justificativa e prioridade sugerida (P0, urgente, a P3, pode esperar; ver quadro PRIORIDADE). Tipo de objeto (bem comum, serviço comum, serviço com dedicação exclusiva de mão de obra, serviço técnico intelectual, obra ou engenharia, locação de imóvel, software e TI, publicidade, pessoa física, convênio) e ramo de atividade de cada item. Fora do plano anual: justificativa reforçada.",
+"x": "Itens com quantidade e ao menos um orçamento por item, justificativa e prioridade sugerida (P0, urgente, a P3, pode esperar; ver quadro PRIORIDADE). Tipo de objeto (bem comum, serviço comum, serviço com dedicação exclusiva de mão de obra, serviço técnico intelectual, obra ou engenharia, locação de imóvel, software e TI, publicidade, pessoa física, convênio) e ramo de atividade de cada item. Fora do plano anual: justificativa reforçada.",
 "q": "Solicitante (setor requisitante)",
 "l": "art. 72 I (base do DFD); art. 75 §1º II",
 "v": [
@@ -43,14 +53,16 @@
 "2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "1b": {
 "k": "step",
 "f": 1,
 "t": "Compras e Licitações registra pelo setor",
 "d": "O mesmo registro do passo 1, feito por Compras e Licitações em nome do setor, que assina.",
-"x": "O mesmo registro do passo 1, feito por Compras e Licitações em nome do setor, que assina. Mesma solicitação do passo 1, registrada por Compras em nome do setor, que confere e assina como responsável pelas informações.",
+"x": "Mesma solicitação do passo 1, registrada por Compras em nome do setor, que confere e assina como responsável pelas informações.",
 "q": "Compras registra; o setor beneficiado assina",
 "l": "prática interna; segregação de funções (art. 7º §1º)",
 "v": [
@@ -58,14 +70,16 @@
 "2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "1c": {
 "k": "step",
 "f": 1,
 "t": "Via rápida para pequena despesa",
 "d": "Via rápida para pequena despesa: contrato vigente (31), ata (37), ou contrato verbal de pequenas compras pago por cartão ou suprimento de fundos, com empenho prévio (25b) e prestação de contas; ou emergência.",
-"x": "Via rápida para pequena despesa: contrato vigente (31), ata (37), ou contrato verbal de pequenas compras pago por cartão ou suprimento de fundos, com empenho prévio (25b) e prestação de contas; ou emergência. Contrato de manutenção vigente: ocorrência do contrato (31). Ata vigente: contratação pela ata (37). Contrato verbal de pequenas compras ou de serviço de pronto pagamento até R$ 13.098,41 (art. 95, §2º). O pagamento pode ser por cartão ou por suprimento de fundos, cujos valores máximo e mínimo o COFECI fixa (Regimento art. 39, parágrafo único); nos dois, empenho prévio (25b) e, no suprimento, prestação de contas. Emergência (art. 75, VIII) só com risco real e apuração de quem deu causa. O sistema registra a via rápida com número próprio (prática interna). Suprimento de fundos: despesa de pequena monta e pronto pagamento, de difícil subordinação ao processo normal; numerário entregue a servidor, sempre com empenho prévio na dotação própria, prestação de contas e baixa; concessão por ato do Presidente, com suprido, finalidade, valor e prazos; o saldo não aplicado é recolhido; não se concede a servidor em alcance nem a quem já tem dois adiantamentos; rito, valor máximo e mínimo fixados pelo COFECI. Dispensa por valor paga preferencialmente por cartão, com extrato no PNCP (art. 75, §4º).",
+"x": "Contrato de manutenção vigente: ocorrência do contrato (31). Ata vigente: contratação pela ata (37). Contrato verbal de pequenas compras ou de serviço de pronto pagamento até R$ 13.098,41 (art. 95, §2º). O pagamento pode ser por cartão ou por suprimento de fundos, cujos valores máximo e mínimo o COFECI fixa (Regimento art. 39, parágrafo único); nos dois, empenho prévio (25b) e, no suprimento, prestação de contas. Emergência (art. 75, VIII) só com risco real e apuração de quem deu causa. O sistema registra a via rápida com número próprio (prática interna). Suprimento de fundos: despesa de pequena monta e pronto pagamento, de difícil subordinação ao processo normal; numerário entregue a servidor, sempre com empenho prévio na dotação própria, prestação de contas e baixa; concessão por ato do Presidente, com suprido, finalidade, valor e prazos; o saldo não aplicado é recolhido; não se concede a servidor em alcance nem a quem já tem dois adiantamentos; rito, valor máximo e mínimo fixados pelo COFECI. Dispensa por valor paga preferencialmente por cartão, com extrato divulgado no PNCP (art. 75, §4º).",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 arts. 68 e 69; Regimento art. 39 e parágrafo único; arts. 75 VIII e §4º e 95 §2º",
 "v": [
@@ -81,14 +95,20 @@
 "31",
 "contrato de manutenção vigente: ocorrência do contrato"
 ]
-]
+],
+"m": {
+"implantacao": "O art. 75, §4º, manda divulgar no PNCP o extrato do cartão de pagamento. O canal depende da decisão 18, porque a lista de rotas da API de integração não traz rota para esse extrato.",
+"controle": "Lembrará a divulgação a cada mês e guardará o comprovante.",
+"integracao": "Rota a confirmar no Manual de Integração do PNCP."
+},
+"fim": false
 },
 "1d": {
 "k": "step",
 "f": 1,
 "t": "Reconhecimento de dívida",
 "d": "Despesa de exercício encerrado é empenhada na dotação de exercícios anteriores depois que a autoridade reconhece a dívida; despesa do ano sem empenho é indenizada com apuração de responsabilidade.",
-"x": "Despesa de exercício encerrado é empenhada na dotação de exercícios anteriores depois que a autoridade reconhece a dívida; despesa do ano sem empenho é indenizada com apuração de responsabilidade. Despesa de exercício encerrado: a autoridade reconhece a dívida, o Financeiro emite nota de empenho nova na dotação de despesas de exercícios anteriores do exercício corrente (25b) e só então liquida (34). Despesa do próprio exercício feita sem empenho ou sem contrato: indenização do que foi executado, com apuração de responsabilidade, empenho na dotação própria (25b) e liquidação (34). Serviço prestado sem contrato vigente: relatório do fiscal sobre o que foi executado, parecer da Assessoria Jurídica e autorização da autoridade antes de pagar; o pagamento leva a marca “sem cobertura contratual”, visível ao Controle Interno; fundamento e rito: decisão da Assessoria Jurídica. Reembolso de gasto feito do próprio bolso sem autorização prévia segue este rito.",
+"x": "Despesa de exercício encerrado: a autoridade reconhece a dívida, o Financeiro emite nota de empenho nova na dotação de despesas de exercícios anteriores do exercício corrente (25b) e só então liquida (34). Despesa do próprio exercício feita sem empenho ou sem contrato: indenização do que foi executado, com apuração de responsabilidade, empenho na dotação própria (25b) e liquidação (34). Serviço prestado sem contrato vigente: relatório do fiscal sobre o que foi executado, parecer da Assessoria Jurídica e autorização da autoridade antes de pagar; o pagamento leva a marca “sem cobertura contratual”, visível ao Controle Interno; fundamento e rito: decisão da Assessoria Jurídica. Reembolso de gasto feito do próprio bolso sem autorização prévia segue este rito.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "Lei 4.320 arts. 37 e 60; art. 149",
 "v": [
@@ -96,14 +116,16 @@
 "25b",
 "empenha em despesas de exercícios anteriores (25b) e liquida (34)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "2": {
 "k": "step",
 "f": 1,
 "t": "Registra a solicitação",
 "d": "Protocolo eletrônico que dá número, data e histórico à solicitação.",
-"x": "Protocolo eletrônico que dá número, data e histórico à solicitação. Gera protocolo, guarda histórico e anexos e avisa Compras e Licitações. A via rápida (1c) não passa por aqui: o sistema a registra com número próprio (prática interna).",
+"x": "Gera protocolo, guarda histórico e anexos e avisa Compras e Licitações. A via rápida (1c) não passa por aqui: o sistema a registra com número próprio (prática interna).",
 "q": "Sistema (Área Restrita)",
 "l": "Lei 9.784 arts. 5º e 6º",
 "v": [
@@ -111,14 +133,16 @@
 "2b",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "2b": {
 "k": "step",
 "f": 1,
 "t": "Consulta de saldo orçamentário",
 "d": "Informação automática sobre o saldo da rubrica.",
-"x": "Informação automática sobre o saldo da rubrica. Não reserva nem bloqueia valor. Multiplica quantidade por preço orçado, indica a rubrica e informa se o saldo livre é suficiente, comprometido com o plano anual, limitado ou insuficiente. Mostra também “não cabe no exercício pelo prazo”, pela data-limite de solicitação da modalidade provável. Rubrica sem conciliação fechada no mês anterior responde “sem informação”, nunca “saldo suficiente”. Só informa: quem reserva é o Financeiro (12). O painel inclui folha, encargos, diárias e cota-parte do COFECI; o saldo da rubrica é o real, não só o das compras.",
+"x": "Não reserva nem bloqueia valor. Multiplica quantidade por preço orçado, indica a rubrica e informa se o saldo livre é suficiente, comprometido com o plano anual, limitado ou insuficiente. Mostra também “não cabe no exercício pelo prazo”, pela data-limite de solicitação da modalidade provável. Rubrica sem conciliação fechada no mês anterior responde “sem informação”, nunca “saldo suficiente”. Só informa: quem reserva é o Financeiro (12). O painel inclui folha, encargos, diárias e cota-parte do COFECI; o saldo da rubrica é o real, não só o das compras.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; apoia os arts. 18 e 150 e o Regimento art. 35",
 "v": [
@@ -126,14 +150,16 @@
 "3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "3": {
 "k": "step",
 "f": 2,
 "t": "Triagem e prioridade",
 "d": "Conferência inicial, ordem de atendimento e controle de fracionamento por ramo de atividade.",
-"x": "Conferência inicial, ordem de atendimento e controle de fracionamento por ramo de atividade. Confere a solicitação e o saldo informado, classifica a prioridade (P0 a P3) com justificativa e registra prazo e valor estimados. O sistema soma o gasto do exercício no mesmo ramo de atividade (não só o mesmo item), incluindo cartão, suprimento de fundos e lançamentos manuais, contra o limite de dispensa. A soma inclui também o pré-reservado, o reservado e os pedidos em análise do mesmo ramo. Exceção: manutenção de veículos até R$ 10.478,74 por contratação não entra na soma. Confere se contrato ou ata vigente já atende pela classe do catálogo: se atende, a solicitação vira ocorrência do contrato (31) ou pedido pela ata (37), sem novo processo. Data fixa: o sistema soma os prazos mínimos da modalidade provável e mostra a data-limite; se não cabe, avisa Compras e Licitações e a Diretoria na hora. Pequena monta e pronto pagamento: via rápida (1c). Item do plano anual com saldo suficiente, aprovado em bloco pela Diretoria no passo 0: pula 6 a 9 e segue ao 10.",
+"x": "Confere a solicitação e o saldo informado, classifica a prioridade (P0 a P3) com justificativa e registra prazo e valor estimados. O sistema soma o gasto do exercício no mesmo ramo de atividade (não só o mesmo item), incluindo cartão, suprimento de fundos e lançamentos manuais, contra o limite de dispensa. A soma inclui também o pré-reservado, o reservado e os pedidos em análise do mesmo ramo. Exceção: manutenção de veículos até R$ 10.478,74 por contratação não entra na soma. Confere se contrato ou ata vigente já atende pela classe do catálogo: se atende, a solicitação vira ocorrência do contrato (31) ou pedido pela ata (37), sem novo processo. Data fixa: o sistema soma os prazos mínimos da modalidade provável e mostra a data-limite; se não cabe, avisa Compras e Licitações e a Diretoria na hora. Pequena monta e pronto pagamento: via rápida (1c). Item do plano anual com saldo suficiente, aprovado em bloco pela Diretoria no passo 0: pula 6 a 9 e segue ao 10.",
 "q": "Departamento de Compras e Licitações",
 "l": "prática interna; motivação (Lei 9.784 art. 50); art. 75 §1º II e §7º",
 "v": [
@@ -153,14 +179,16 @@
 "10",
 "item do plano anual com saldo suficiente, aprovado em bloco no 0: pula 6 a 9"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "3c": {
 "k": "step",
 "f": 2,
 "t": "Agrupa ou desmembra",
 "d": "Pedidos do mesmo ramo viram um só processo; objetos distintos são separados em lotes ou processos, com enquadramento próprio.",
-"x": "Pedidos do mesmo ramo viram um só processo; objetos distintos são separados em lotes ou processos, com enquadramento próprio. Pedidos do mesmo ramo feitos por setores diferentes no mesmo período viram um só processo. Pedido com objetos distintos (evento: buffet, som e local) é desmembrado em lotes ou processos, cada um com enquadramento próprio. Parcelamento registrado com justificativa.",
+"x": "Pedidos do mesmo ramo feitos por setores diferentes no mesmo período viram um só processo. Pedido com objetos distintos (evento: buffet, som e local) é desmembrado em lotes ou processos, cada um com enquadramento próprio. Parcelamento registrado com justificativa.",
 "q": "Departamento de Compras e Licitações",
 "l": "art. 47 II e §1º; art. 40 V",
 "v": [
@@ -168,7 +196,9 @@
 "5",
 "processo agrupado ou desmembrado"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "4": {
 "k": "step",
@@ -187,14 +217,16 @@
 "4a",
 "não: falta informação"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "4a": {
 "k": "step",
 "f": 2,
 "t": "Devolvida ao solicitante",
 "d": "Retorno ao solicitante para completar o que falta; sem resposta, o processo é arquivado.",
-"x": "Retorno ao solicitante para completar o que falta; sem resposta, o processo é arquivado. Completa o que falta e reenvia. Sem resposta em 5 dias, o sistema avisa; em 30 dias (prática interna), arquiva por inércia.",
+"x": "Completa o que falta e reenvia. Sem resposta em 5 dias, o sistema avisa; em 30 dias (prática interna), arquiva por inércia.",
 "q": "Solicitante (setor requisitante)",
 "l": "prazo de 5 dias (Lei 9.784 art. 24); arquivamento (Lei 9.784 art. 40)",
 "v": [
@@ -202,14 +234,16 @@
 "3",
 "volta ao 3"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "4b": {
 "k": "step",
 "f": 2,
 "t": "Pedido de alteração da solicitação",
 "d": "Mudança de quantidade, valor ou escopo depois da aprovação gera nova versão da solicitação; dentro da tolerância, ajusta a reserva (19); acima, volta à Diretoria (8).",
-"x": "Mudança de quantidade, valor ou escopo depois da aprovação gera nova versão da solicitação; dentro da tolerância, ajusta a reserva (19); acima, volta à Diretoria (8). Depois da aprovação da Diretoria, mudança de quantidade, valor ou escopo gera nova versão da solicitação. Vale até o 22. Abaixo da tolerância definida em portaria e sem aumento de valor: Compras e Licitações aceita, gera nova versão do DFD (15) e o Financeiro ajusta a reserva (19). Acima da tolerância, volta ao 8 pela fila da Diretoria (7). Depois do 22: só cancelamento com motivo e nova solicitação.",
+"x": "Depois da aprovação da Diretoria, mudança de quantidade, valor ou escopo gera nova versão da solicitação. Vale até o 22. Abaixo da tolerância definida em portaria e sem aumento de valor: Compras e Licitações aceita, gera nova versão do DFD (15) e o Financeiro ajusta a reserva (19). Acima da tolerância, volta ao 8 pela fila da Diretoria (7). Depois do 22: só cancelamento com motivo e nova solicitação.",
 "q": "Solicitante (setor requisitante)",
 "l": "prática interna; Lei 9.784 art. 50",
 "v": [
@@ -217,7 +251,9 @@
 "19",
 "dentro da tolerância: ajusta a reserva (19)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "5": {
 "k": "step",
@@ -232,14 +268,16 @@
 "6",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "6": {
 "k": "step",
 "f": 3,
 "t": "Envia à Diretoria",
 "d": "Encaminhamento para a decisão da Diretoria, que age por delegação do Presidente.",
-"x": "Encaminhamento para a decisão da Diretoria, que age por delegação do Presidente. Segue com prioridade, valor estimado e saldo informado.",
+"x": "Segue com prioridade, valor estimado e saldo informado.",
 "q": "Departamento de Compras e Licitações",
 "l": "prática interna; a Diretoria age por delegação do Presidente (Regimento art. 8º II)",
 "v": [
@@ -247,14 +285,16 @@
 "7",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "7": {
 "k": "step",
 "f": 3,
 "t": "Fila da Diretoria",
-"d": "Lista de pendências da Diretoria, por prioridade.",
-"x": "Lista de pendências da Diretoria, por prioridade. Lista de pendências da Diretoria, por prioridade e prazo.",
+"d": "Lista de pendências da Diretoria, por prioridade e prazo.",
+"x": "",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna (a lei não exige)",
 "v": [
@@ -262,22 +302,26 @@
 "8",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "7b": {
 "k": "step",
 "f": 3,
 "t": "Prazo da Diretoria por prioridade",
 "d": "Aviso automático de prazo à Diretoria, conforme a prioridade.",
-"x": "Aviso automático de prazo à Diretoria, conforme a prioridade. Lembra a Diretoria; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS. Como o dono é a Diretoria, o segundo aviso vai à Presidência.",
+"x": "Lembra a Diretoria; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS. Como o dono é a Diretoria, o segundo aviso vai à Presidência.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; Lei 9.784 art. 49 (30 dias para decidir)",
 "v": [
 [
 "7",
-"lembra; em 5 e 10 dias úteis,\nescala pelo painel PRAZOS E DONOS"
+"lembra; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "8": {
 "k": "step",
@@ -300,24 +344,28 @@
 "8a",
 "não"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "8a": {
 "k": "step",
 "f": 3,
-"t": "Recusada — fim",
+"t": "Recusada",
 "d": "Fim da solicitação sem contratação, com o motivo registrado.",
-"x": "Fim da solicitação sem contratação, com o motivo registrado. Arquiva com o motivo e avisa o solicitante e Compras e Licitações.",
+"x": "Arquiva com o motivo e avisa o solicitante e Compras e Licitações.",
 "q": "Sistema (Área Restrita)",
 "l": "Lei 9.784 art. 50",
-"v": []
+"v": [],
+"m": null,
+"fim": true
 },
 "8b": {
 "k": "step",
 "f": 3,
 "t": "Devolvida pela Diretoria",
 "d": "Retorno para ajuste: ao solicitante (4a) se muda quantidade ou escopo; a Compras (5) se muda só o valor.",
-"x": "Retorno para ajuste: ao solicitante (4a) se muda quantidade ou escopo; a Compras (5) se muda só o valor. A Diretoria pede ajuste antes de decidir. Volta ao 4a quando a mudança é do solicitante (quantidade ou escopo). Volta ao 5 quando é só de valor: Compras ajusta e reenvia.",
+"x": "A Diretoria pede ajuste antes de decidir. Volta ao 4a quando a mudança é do solicitante (quantidade ou escopo). Volta ao 5 quando é só de valor: Compras ajusta e reenvia.",
 "q": "Compras e Licitações e solicitante",
 "l": "—",
 "v": [
@@ -329,29 +377,33 @@
 "5",
 "só valor: Compras ajusta"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "8c": {
 "k": "step",
 "f": 3,
 "t": "Trava de fim de mandato",
 "d": "Nos últimos 4 meses do mandato o sistema bloqueia o que o Regimento proíbe; bloqueado, o pedido é adiado ou segue como exceção de pequena monta motivada.",
-"x": "Nos últimos 4 meses do mandato o sistema bloqueia o que o Regimento proíbe; bloqueado, o pedido é adiado ou segue como exceção de pequena monta motivada. Nos últimos 4 meses do mandato o sistema bloqueia: máquinas e equipamentos fora de plano já iniciado; propaganda promocional, salvo as mensagens institucionais de fim de ano e das datas comemorativas da profissão; e qualquer compromisso para pagamento depois do mandato, salvo pequena monta. A data de fim do mandato fica cadastrada. A trava é conferida de novo no 22, no 25b e no 44a. Serviço contínuo já existente que precisa renovar nos últimos 4 meses: o alcance do art. 43, IV é decisão da Assessoria Jurídica; até ela, o sistema avisa e exige motivação da Presidência com ciência do Conselho Fiscal. Pequena monta definida em portaria.",
+"x": "Nos últimos 4 meses do mandato o sistema bloqueia: máquinas e equipamentos fora de plano já iniciado; propaganda promocional, salvo as mensagens institucionais de fim de ano e das datas comemorativas da profissão; e qualquer compromisso para pagamento depois do mandato, salvo pequena monta. A data de fim do mandato fica cadastrada. A trava é conferida de novo no 22, no 25b e no 44a. Serviço contínuo já existente que precisa renovar nos últimos 4 meses: o alcance do art. 43, IV é decisão da Assessoria Jurídica; até ela, o sistema avisa e exige motivação da Presidência com ciência do Conselho Fiscal. Pequena monta definida em portaria.",
 "q": "Sistema (Área Restrita)",
 "l": "Regimento art. 43 II a IV",
 "v": [
 [
 "6",
-"últimos 4 meses do mandato:\nbloqueia antes da Diretoria (8).\nBloqueado: adia para depois do\nmandato (11a → 0) ou exceção de\npequena monta motivada"
+"últimos 4 meses do mandato: bloqueia antes da Diretoria (8). Bloqueado: adia para depois do mandato (11a → 0) ou exceção de pequena monta motivada"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "9": {
 "k": "step",
 "f": 3,
 "t": "Registra a aprovação",
 "d": "Registro da decisão da Diretoria sobre o mérito e a prioridade, conferida a alçada do decisor por delegação do Presidente.",
-"x": "Registro da decisão da Diretoria sobre o mérito e a prioridade, conferida a alçada do decisor por delegação do Presidente. Aprova o mérito e confirma ou ajusta a prioridade, com justificativa. O sistema confere a alçada do decisor contra a portaria de delegação vigente na data. A dotação é verificada a seguir. Reaprovação (4b ou 19): o processo volta ao passo em que parou, sem repetir 10 a 13.",
+"x": "Aprova o mérito e confirma ou ajusta a prioridade, com justificativa. O sistema confere a alçada do decisor contra a portaria de delegação vigente na data. A dotação é verificada a seguir. Reaprovação (4b ou 19): o processo volta ao passo em que parou, sem repetir 10 a 13.",
 "q": "Diretoria (Diretor Secretário, por delegação)",
 "l": "Lei 9.784 arts. 12 a 14, 48 e 50; Regimento art. 8º II; prática interna",
 "v": [
@@ -359,14 +411,16 @@
 "10",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "10": {
 "k": "step",
 "f": 4,
 "t": "Verifica a dotação",
 "d": "Verificação de que existe dotação orçamentária para a despesa, na rubrica da natureza indicada.",
-"x": "Verificação de que existe dotação orçamentária para a despesa, na rubrica da natureza indicada. Fila única por prioridade, com base no painel orçamentário. Confere a rubrica pela natureza da despesa indicada na solicitação (consumo, permanente ou serviço). Item do plano anual com saldo suficiente: só confirma.",
+"x": "Fila única por prioridade, com base no painel orçamentário. Confere a rubrica pela natureza da despesa indicada na solicitação (consumo, permanente ou serviço). Item do plano anual com saldo suficiente: só confirma.",
 "q": "Departamento Financeiro",
 "l": "Regimento art. 35; Lei 4.320 art. 59",
 "v": [
@@ -374,22 +428,26 @@
 "11",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "10b": {
 "k": "step",
 "f": 4,
 "t": "Alerta de prazo ao Financeiro",
 "d": "Aviso automático de prazo, conforme a prioridade.",
-"x": "Aviso automático de prazo, conforme a prioridade. Lembra o Financeiro; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS.",
+"x": "Lembra o Financeiro; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna (a lei não exige)",
 "v": [
 [
 "10",
-"lembra; em 5 e 10 dias úteis,\nescala pelo painel PRAZOS E DONOS"
+"lembra; em 5 e 10 dias úteis, escala pelo painel PRAZOS E DONOS"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "11": {
 "k": "step",
@@ -408,14 +466,16 @@
 "11a",
 "não"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "11a": {
 "k": "step",
 "f": 4,
 "t": "Reformulação orçamentária",
 "d": "Alteração do orçamento aprovado para criar ou mover dotação: remanejamento, crédito suplementar ou especial com fonte; extraordinário só em guerra, comoção intestina ou calamidade.",
-"x": "Alteração do orçamento aprovado para criar ou mover dotação: remanejamento, crédito suplementar ou especial com fonte; extraordinário só em guerra, comoção intestina ou calamidade. Três saídas: (a) remanejar dotação com folga; (b) crédito adicional suplementar (reforço) ou especial (sem dotação específica), com fonte (superávit financeiro, excesso de arrecadação ou anulação de dotação) e exposição justificativa, pelo Presidente ad referendum do Plenário, com referendo registrado, e com aprovação do COFECI; extraordinário só em guerra, comoção intestina ou calamidade pública; o crédito adicional vence em 31 de dezembro, salvo o especial e o extraordinário com disposição legal em contrário (art. 45); o sistema mostra o tempo médio das últimas homologações do COFECI; (c) a Diretoria reduz, adia para o plano do ano seguinte ou cancela. Plenário não referenda (art. 4º, XII): a dotação volta ao estado anterior e o pedido vai ao 8a ou ao plano seguinte. Receita frustrada: limitação de empenho registrada no painel.",
+"x": "Três saídas: (a) remanejar dotação com folga; (b) crédito adicional suplementar (reforço) ou especial (sem dotação específica), com fonte (superávit financeiro, excesso de arrecadação ou anulação de dotação) e exposição justificativa, pelo Presidente ad referendum do Plenário, com referendo registrado, e com aprovação do COFECI; extraordinário só em guerra, comoção intestina ou calamidade pública; o crédito adicional vence em 31 de dezembro, salvo o especial e o extraordinário com disposição legal em contrário (art. 45); o sistema mostra o tempo médio das últimas homologações do COFECI; (c) a Diretoria reduz, adia para o plano do ano seguinte ou cancela. Plenário não referenda (art. 4º, XII): a dotação volta ao estado anterior e o pedido vai ao 8a ou ao plano seguinte. Receita frustrada: limitação de empenho registrada no painel.",
 "q": "Financeiro, Presidência e Diretoria",
 "l": "Regimento arts. 4º XII, 8º VII e 32; Lei 4.320 arts. 40, 41, 43 e 45",
 "v": [
@@ -431,14 +491,16 @@
 "0",
 "adiada: plano do ano seguinte"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "12": {
 "k": "step",
 "f": 4,
 "t": "Reserva a dotação",
 "d": "Separação de parte da dotação para esta contratação, antes do empenho.",
-"x": "Separação de parte da dotação para esta contratação, antes do empenho. É controle interno; a lei só exige que o empenho não passe do crédito. Separa parte da dotação para esta contratação (controle interno: ainda não é empenho). Registra rubrica e valor e dá ciência à Diretoria; o mesmo valor não pode ser reservado duas vezes. A reserva vale 90 dias, renovável com justificativa. A reserva pertence ao exercício: vence em 31 de dezembro e precisa ser refeita no ano novo (42b). Registro de preços: só pré-reserva informativa (38b).",
+"x": "É controle interno; a lei só exige que o empenho não passe do crédito. Separa parte da dotação para esta contratação (controle interno: ainda não é empenho). Registra rubrica e valor e dá ciência à Diretoria; o mesmo valor não pode ser reservado duas vezes. A reserva vale 90 dias, renovável com justificativa. A reserva pertence ao exercício: vence em 31 de dezembro e precisa ser refeita no ano novo (42b). Registro de preços: só pré-reserva informativa (38b).",
 "q": "Departamento Financeiro",
 "l": "prática interna para cumprir a Lei 4.320 art. 59 e o art. 150; Decreto 11.462 art. 17 (ref.)",
 "v": [
@@ -446,14 +508,16 @@
 "13",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "13": {
 "k": "step",
 "f": 4,
 "t": "Abre o processo administrativo",
 "d": "Abertura formal do processo administrativo de contratação, com juntada numerada.",
-"x": "Abertura formal do processo administrativo de contratação, com juntada numerada. Termo de abertura do processo administrativo (na prática chamado de autuação): o sistema abre o processo com número próprio, gera o DFD e avisa Compras e Licitações e a Assessoria Jurídica. A prioridade acompanha o processo. Toda peça recebe número de ordem, data de juntada e hash. Nada é excluído: só substituído ou desentranhado por termo. O termo de abertura é a primeira peça; documento externo entra com protocolo de data e hora e vira peça. Desfazimento (0b): vai direto à linha LE e pula os passos 14 a 19.",
+"x": "Termo de abertura do processo administrativo (na prática chamado de autuação): o sistema abre o processo com número próprio, gera o DFD e avisa Compras e Licitações e a Assessoria Jurídica. A prioridade acompanha o processo. Toda peça recebe número de ordem, data de juntada e hash. Nada é excluído: só substituído ou desentranhado por termo. O termo de abertura é a primeira peça; documento externo entra com protocolo de data e hora e vira peça. Desfazimento (0b): vai direto à linha LE e pula os passos 14 a 19.",
 "q": "Sistema (Área Restrita)",
 "l": "Lei 9.784 arts. 5º e 22 e §§1º e 4º; art. 72 I",
 "v": [
@@ -469,24 +533,28 @@
 "14",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "13b": {
 "k": "step",
 "f": 4,
 "t": "Número do processo",
 "d": "Número único do processo, em sequência anual sem lacuna.",
-"x": "Número único do processo, em sequência anual sem lacuna. Numeração automática pelo NUP do ERP desde o primeiro incremento. Processo de 2026 aberto fora do sistema entra como acervo, com o número antigo em campo próprio. Sequência única por exercício, sem lacuna e sem número repetido. Número manual só por exceção, com motivo e termo.",
+"x": "Numeração automática pelo NUP do ERP desde o primeiro incremento. Processo de 2026 aberto fora do sistema entra como acervo, com o número antigo em campo próprio. Sequência única por exercício, sem lacuna e sem número repetido. Número manual só por exceção, com motivo e termo.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; NUP federal como referência; Lei 9.784 art. 22 §4º, por analogia",
-"v": []
+"v": [],
+"m": null,
+"fim": false
 },
 "13c": {
 "k": "step",
 "f": 4,
 "t": "Solicitante acompanha",
 "d": "Consulta do andamento pelo solicitante, sem poder editar.",
-"x": "Consulta do andamento pelo solicitante, sem poder editar. O setor que pediu vê em que passo está o processo, sem poder alterar nada.",
+"x": "O setor que pediu vê em que passo está o processo, sem poder alterar nada.",
 "q": "Solicitante (setor requisitante)",
 "l": "Lei 9.784 art. 3º II",
 "v": [
@@ -494,14 +562,16 @@
 "4b",
 "solicitante pede alteração"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "14": {
 "k": "step",
 "f": 5,
 "t": "Abre a fase preparatória",
 "d": "Ato interno que marca o início da fase preparatória, conduzida pelo agente de contratação do quadro permanente, com equipe de apoio, sem impedimento; comissão de 3 em bem ou serviço especial.",
-"x": "Ato interno que marca o início da fase preparatória, conduzida pelo agente de contratação do quadro permanente, com equipe de apoio, sem impedimento; comissão de 3 em bem ou serviço especial. O agente de contratação, designado por portaria com substituto e declaração de ausência de impedimento, registra o objeto no processo. A portaria inclui equipe de apoio e substitutos, cada um com declaração de ausência de vínculo. Agente e pregoeiro só entre empregados do quadro permanente; quem elabora o edital (21a) não julga (24). Concorrência de bem ou serviço especial: a portaria pode designar comissão de no mínimo 3 membros, com voto divergente em ata. Modalidade ou contratação direta indicada de forma provisória, confirmada no passo 20.",
+"x": "O agente de contratação, designado por portaria com substituto e declaração de ausência de impedimento, registra o objeto no processo. A portaria inclui equipe de apoio e substitutos, cada um com declaração de ausência de vínculo. Agente e pregoeiro só entre empregados do quadro permanente; quem elabora o edital (21a) não julga (24). Concorrência de bem ou serviço especial: a portaria pode designar comissão de no mínimo 3 membros, com voto divergente em ata. Modalidade ou contratação direta indicada de forma provisória, confirmada no passo 20.",
 "q": "Agente de contratação ou pregoeiro",
 "l": "prática interna; arts. 7º III e §1º, 8º e §2º e 9º §2º",
 "v": [
@@ -509,14 +579,16 @@
 "15",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "15": {
 "k": "step",
 "f": 5,
 "t": "DFD",
 "d": "Documento de formalização de demanda: o setor descreve a necessidade da contratação.",
-"x": "Documento de formalização de demanda: o setor descreve a necessidade da contratação. Gerado da solicitação e assinado pelo setor; indica a equipe de planejamento e os fiscais, que dão ciência.",
+"x": "Gerado da solicitação e assinado pelo setor; indica a equipe de planejamento e os fiscais, que dão ciência. Cada item recebe a categoria de item do plano anual e o código de catálogo adotados pelo PNCP, lidos das tabelas de domínio do portal.",
 "q": "Solicitante (setor requisitante)",
 "l": "arts. 12 VII e 72 I",
 "v": [
@@ -524,12 +596,14 @@
 "16",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "16": {
 "k": "step",
 "f": 5,
-"t": "Previsão de contratação direta que dispensa o etp?",
+"t": "Previsão de contratação direta que dispensa o ETP?",
 "d": "",
 "x": "",
 "q": "Decisão",
@@ -543,14 +617,16 @@
 "16a",
 "não"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "16a": {
 "k": "step",
 "f": 5,
 "t": "Estudo técnico preliminar",
 "d": "Primeira etapa do planejamento: mostra a necessidade, a melhor solução, o tipo de objeto, o parcelamento e o tratamento de ME e EPP.",
-"x": "Primeira etapa do planejamento: mostra a necessidade, a melhor solução, o tipo de objeto, o parcelamento e o tratamento de ME e EPP. Necessidade, soluções possíveis e viabilidade. É aqui que entra a opinião da área técnica. Obrigatório em toda licitação. Define o tipo de objeto, se há dedicação exclusiva de mão de obra, se o objeto será parcelado, se admite consórcio e o tratamento de microempresa e empresa de pequeno porte. Contém no mínimo os elementos I, IV, VI, VIII e XIII do art. 18, §1º; os demais só com justificativa.",
+"x": "Necessidade, soluções possíveis e viabilidade. É aqui que entra a opinião da área técnica. Obrigatório em toda licitação. Define o tipo de objeto, se há dedicação exclusiva de mão de obra, se o objeto será parcelado, se admite consórcio e o tratamento de microempresa e empresa de pequeno porte. Contém no mínimo os elementos I, IV, VI, VIII e XIII do art. 18, §1º; os demais só com justificativa.",
 "q": "Equipe de planejamento: setor, área técnica e Compras",
 "l": "arts. 4º, 6º XX e 18 I e §§1º e 2º",
 "v": [
@@ -558,14 +634,16 @@
 "17",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "17": {
 "k": "step",
 "f": 5,
 "t": "Riscos e Termo de Referência ou projeto básico",
 "d": "Documento que descreve o objeto e as condições da contratação, com os riscos mapeados, a garantia, o modelo de gestão e as cláusulas de TI, importação e pagamento antecipado.",
-"x": "Documento que descreve o objeto e as condições da contratação, com os riscos mapeados, a garantia, o modelo de gestão e as cláusulas de TI, importação e pagamento antecipado. Mapa de riscos (ou justificativa da ausência), que gera o checklist do fiscal; TR, ou projeto básico em obra e reforma, no modelo padronizado, com alterações destacadas e declaração de qualidade comum, sem artigos de luxo. O TR fixa: natureza da despesa (consumo ou permanente) antes do empenho; tipo de duração do contrato (contínuo, escopo, monopólio (energia, água: prazo indeterminado, art. 109) ou prazo simples); índice e data-base do reajuste ligados à data do orçamento estimado; repactuação quando houver dedicação exclusiva; garantia (modalidade e percentual); pagamento antecipado só com justificativa e previsão expressa (cláusula que ativa o 35c); subcontratação permitida ou vedada. Garantia até 5%, ou até 10% justificado; contínuo acima de 1 ano: base no valor anual. Software e TI: licença ou assinatura, dados pessoais, hospedagem, nível de serviço, código e saída de dados; desenvolvimento: cessão dos direitos patrimoniais; sistema estruturante: até 15 anos. Importação: condições de importação, data e taxa de câmbio em cláusula, gravadas no 29. A análise de riscos do processo é diferente da matriz de alocação de riscos do contrato: a matriz é opcional e vira cláusula; é obrigatória em grande vulto e em contratação integrada ou semi-integrada. O TR fixa indicadores de desempenho, com meta, forma de medição e faixa de desconto.",
+"x": "Mapa de riscos (ou justificativa da ausência), que gera o checklist do fiscal; TR, ou projeto básico em obra e reforma, no modelo padronizado, com alterações destacadas e declaração de qualidade comum, sem artigos de luxo. O TR fixa: natureza da despesa (consumo ou permanente) antes do empenho; tipo de duração do contrato (contínuo, escopo, monopólio (energia, água: prazo indeterminado, art. 109) ou prazo simples); índice e data-base do reajuste ligados à data do orçamento estimado; repactuação quando houver dedicação exclusiva; garantia (modalidade e percentual); pagamento antecipado só com justificativa e previsão expressa (cláusula que ativa o 35c); subcontratação permitida ou vedada. Garantia até 5%, ou até 10% justificado; contínuo acima de 1 ano: base no valor anual. Software e TI: licença ou assinatura, dados pessoais, hospedagem, nível de serviço, código e saída de dados; desenvolvimento: cessão dos direitos patrimoniais; sistema estruturante: até 15 anos. Importação: condições de importação, data e taxa de câmbio em cláusula, gravadas no 29. A análise de riscos do processo é diferente da matriz de alocação de riscos do contrato: a matriz é opcional e vira cláusula; é obrigatória em grande vulto e em contratação integrada ou semi-integrada. O TR fixa indicadores de desempenho, com meta, forma de medição e faixa de desconto.",
 "q": "Departamento de Compras e Licitações",
 "l": "arts. 6º XXIII, 18 II e X, 20, 22 e §3º, 25 §§7º e 8º, 92 V, XV e XVIII e §§3º e 4º, 93, 96, 98 e parágrafo único, 109, 114, 122 §2º e 145 §1º",
 "v": [
@@ -581,14 +659,16 @@
 "18",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "17b": {
 "k": "step",
 "f": 5,
 "t": "Obra ou serviço de engenharia",
 "d": "Exigências próprias de obra ou serviço de engenharia, definidas antes do edital, com licença prévia e impedimento do autor do projeto.",
-"x": "Exigências próprias de obra ou serviço de engenharia, definidas antes do edital, com licença prévia e impedimento do autor do projeto. Regime de execução definido; projeto executivo antes da obra; licença prévia antes de divulgar o edital; medição mensal; garantia de 5 anos da solidez. Autor do projeto não disputa a obra.",
+"x": "Regime de execução definido; projeto executivo antes da obra; licença prévia antes de divulgar o edital; medição mensal; garantia de 5 anos da solidez. Autor do projeto não disputa a obra.",
 "q": "Área técnica",
 "l": "arts. 14 I e II, 25 §5º, 46 e §1º, 92 §5º, 115 §4º e 140 §6º",
 "v": [
@@ -596,14 +676,16 @@
 "18",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "17c": {
 "k": "step",
 "f": 5,
 "t": "Dedicação exclusiva de mão de obra",
 "d": "Exigências próprias do serviço com dedicação exclusiva de mão de obra, definidas antes do edital.",
-"x": "Exigências próprias do serviço com dedicação exclusiva de mão de obra, definidas antes do edital. Planilha de custos e convenção coletiva; conta vinculada, pagamento condicionado à quitação ou pagamento direto das verbas trabalhistas; lista mensal de comprovação (ponto, salários, FGTS, férias, vale); repactuação com interregno de 1 ano.",
+"x": "Planilha de custos e convenção coletiva; conta vinculada, pagamento condicionado à quitação ou pagamento direto das verbas trabalhistas; lista mensal de comprovação (ponto, salários, FGTS, férias, vale); repactuação com interregno de 1 ano.",
 "q": "Departamento de Compras e Licitações",
 "l": "arts. 50, 121 §§2º e 3º e 135 e §3º",
 "v": [
@@ -611,14 +693,16 @@
 "18",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "18": {
 "k": "step",
 "f": 5,
 "t": "Pesquisa de preços",
 "d": "Levantamento de preços que define o valor estimado da contratação e a decisão sobre o sigilo do orçamento.",
-"x": "Levantamento de preços que define o valor estimado da contratação e a decisão sobre o sigilo do orçamento. Parte dos orçamentos da solicitação, válidos por 6 meses; o sistema busca preços públicos no Compras.gov.br e no PNCP e monta a cesta; obra e reforma usam o SINAPI. Captura datada de cada preço com a fonte (evidência). O sistema de pesquisa de preços já contratado alimenta a cesta. Cotação direta com no mínimo 3 fornecedores quando as bases públicas não bastam, com justificativa da escolha (art. 23, §1º, IV). Preços muito diferentes entre si: amplia a amostra para no mínimo 5 preços válidos e descarta, com justificativa, o inexequível e o excessivo antes da média ou da mediana (prática interna; a lei exige 3). A prioridade das bases públicas é prática interna, conforme a IN SEGES 65/2021 (fora de fontes-legais). Cesta sem preço de banco público exige justificativa. Obra: BDI e encargos sociais na estimativa. Termina no valor estimado e na decisão motivada sobre o sigilo do orçamento; o sigilo não vale para o controle interno e externo; maior desconto: preço máximo no edital.",
+"x": "Parte dos orçamentos da solicitação, válidos por 6 meses; o sistema busca preços públicos no Compras.gov.br e na API de consulta do PNCP, de acesso aberto, e monta a cesta; obra e reforma usam o SINAPI. Captura datada de cada preço com a fonte (evidência). O sistema de pesquisa de preços já contratado alimenta a cesta. Cotação direta com no mínimo 3 fornecedores quando as bases públicas não bastam, com justificativa da escolha (art. 23, §1º, IV). Preços muito diferentes entre si: amplia a amostra para no mínimo 5 preços válidos e descarta, com justificativa, o inexequível e o excessivo antes da média ou da mediana (prática interna; a lei exige 3). A prioridade das bases públicas é prática interna, conforme a IN SEGES 65/2021 (texto fora das fontes legais conferidas). Cesta sem preço de banco público exige justificativa. Obra: BDI e encargos sociais na estimativa. Termina no valor estimado e na decisão motivada sobre o sigilo do orçamento; o sigilo não vale para o controle interno e externo; maior desconto: preço máximo no edital.",
 "q": "Departamento de Compras e Licitações",
 "l": "arts. 18 XI, 23 e §§1º e 2º e 24 e parágrafo único",
 "v": [
@@ -626,14 +710,16 @@
 "19",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "19": {
 "k": "step",
 "f": 5,
 "t": "Ajusta a reserva ao valor estimado",
 "d": "Confirmação de que a dotação reservada cobre o valor estimado.",
-"x": "Confirmação de que a dotação reservada cobre o valor estimado. Compara o valor estimado com a reserva: complementa ou reduz. Acima do aprovado pela Diretoria (percentual a definir), volta ao passo 8.",
+"x": "Compara o valor estimado com a reserva: complementa ou reduz. Acima do aprovado pela Diretoria (percentual a definir), volta ao passo 8.",
 "q": "Departamento Financeiro",
 "l": "arts. 72 IV e 150",
 "v": [
@@ -645,14 +731,16 @@
 "8",
 "valor estimado acima do aprovado: reaprovação"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "20": {
 "k": "step",
 "f": 5,
 "t": "Define a modalidade ou a contratação direta",
 "d": "Enquadramento: modalidade de licitação, contratação direta ou procedimento auxiliar.",
-"x": "Enquadramento: modalidade de licitação, contratação direta ou procedimento auxiliar. Com o valor estimado, responde aos blocos de perguntas ao lado, de cima para baixo: o primeiro “sim” define a modalidade ou a contratação direta; as perguntas laterais (registro de preços e adesão) somam-se ao resultado. Confere a soma por ramo (3) antes de admitir a dispensa por valor. Consulta IRPs em andamento e grava as respostas nos autos. Licitação sem ETP volta ao 16a.",
+"x": "Com o valor estimado, responde aos blocos de perguntas ao lado, de cima para baixo: o primeiro “sim” define a modalidade ou a contratação direta; as perguntas laterais (registro de preços e adesão) somam-se ao resultado. Confere a soma por ramo (3) antes de admitir a dispensa por valor. Consulta IRPs em andamento e grava as respostas nos autos. Grava a modalidade, o amparo legal e o critério de julgamento com os códigos das tabelas de domínio do PNCP. Licitação sem ETP volta ao 16a.",
 "q": "Departamento de Compras e Licitações",
 "l": "arts. 18 VIII, 28, 74, 75 e 78; Decreto 11.462 art. 10 (ref.)",
 "v": [
@@ -712,14 +800,16 @@
 "L:IR",
 "rito comum"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "21": {
 "k": "step",
 "f": 5,
 "t": "Minutas e parecer",
 "d": "21a: edital, aviso de dispensa ou minuta do contrato.",
-"x": "21a: edital, aviso de dispensa ou minuta do contrato. 21b: lista de verificação e parecer jurídico; na contratação direta, também os pareceres técnicos, se for o caso.",
+"x": "21b: lista de verificação e parecer jurídico; na contratação direta, também os pareceres técnicos, se for o caso.",
 "q": "Compras e Licitações (21a) e Assessoria Jurídica (21b)",
 "l": "Lei 14.133 arts. 18 V e VI, 53 e 72 III",
 "v": [
@@ -727,14 +817,16 @@
 "22",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "22": {
 "k": "step",
 "f": 5,
 "t": "Autorização",
 "d": "Autoriza a contratação direta ou a abertura da licitação, dentro da alçada.",
-"x": "Autoriza a contratação direta ou a abertura da licitação, dentro da alçada. Não autoriza: arquiva com motivo ou devolve à instrução.",
+"x": "Não autoriza: arquiva com motivo ou devolve à instrução.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "Lei 14.133 art. 72 VIII; Regimento art. 8º VII",
 "v": [
@@ -742,29 +834,33 @@
 "23",
 "ou 24 e 25 na contratação direta sem divulgação"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "23": {
 "k": "step",
 "f": 6,
 "t": "Divulgação",
 "d": "Publica o edital ou o aviso e conta o prazo mínimo em dias úteis.",
-"x": "Publica o edital ou o aviso e conta o prazo mínimo em dias úteis.",
+"x": "",
 "q": "Agente de contratação ou pregoeiro",
-"l": "Lei 14.133 arts. 54, 55 e 75 §3º",
+"l": "Lei 14.133 arts. 54, 55, 75 §3º e 175 §1º",
 "v": [
 [
 "24",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "24": {
 "k": "step",
 "f": 6,
 "t": "Julgamento e habilitação",
 "d": "Licitação: propostas e lances, julgamento, habilitação e recurso.",
-"x": "Licitação: propostas e lances, julgamento, habilitação e recurso. Contratação direta: habilitação e razão da escolha do contratado.",
+"x": "Contratação direta: habilitação e razão da escolha do contratado.",
 "q": "Agente de contratação, pregoeiro ou comissão",
 "l": "Lei 14.133 arts. 17, 59 a 70, 72 V e VI e 165",
 "v": [
@@ -772,14 +868,16 @@
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "25": {
 "k": "step",
 "f": 6,
 "t": "Adjudicação, homologação ou divulgação",
 "d": "Licitação: adjudica e homologa.",
-"x": "Licitação: adjudica e homologa. Contratação direta: divulga o ato que a autoriza.",
+"x": "Contratação direta: divulga o ato que a autoriza.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "Lei 14.133 arts. 71 e 72 par. único",
 "v": [
@@ -795,14 +893,16 @@
 "26c",
 "registro de preços"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "25a": {
 "k": "step",
 "f": 7,
 "t": "Sem homologação",
 "d": "Desfechos da licitação sem contratação: saneamento, repetição, dispensa após deserta ou fracassada, revogação ou anulação.",
-"x": "Desfechos da licitação sem contratação: saneamento, repetição, dispensa após deserta ou fracassada, revogação ou anulação. Saneamento: volta ao julgamento (24). Deserta ou fracassada: repete a divulgação (23) ou, se a licitação tem menos de 1 ano e todas as condições do edital se mantêm, segue a dispensa (linha DO, art. 75, III). Revogação ou anulação: só após manifestação prévia dos interessados; fim (8a), e a reserva volta ao painel. Licitante que infringiu (IR7) responde na faixa SA.",
+"x": "Saneamento: volta ao julgamento (24). Deserta ou fracassada: repete a divulgação (23) ou, se a licitação tem menos de 1 ano e todas as condições do edital se mantêm, segue a dispensa (linha DO, art. 75, III). Revogação ou anulação: só após manifestação prévia dos interessados; fim (8a), e a reserva volta ao painel. Licitante que infringiu (IR7) responde na faixa SA.",
 "q": "Autoridade; Compras instrui",
 "l": "arts. 71 I a III e §3º, 75 III e 155",
 "v": [
@@ -812,9 +912,11 @@
 ],
 [
 "20",
-"sem contratação: repete a divulgação (23), sanea o julgamento (24) ou segue a dispensa (linha DO)"
+"sem contratação: repete a divulgação (23), devolve para saneamento (24) ou segue a dispensa (linha DO)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "H25": {
 "k": "step",
@@ -833,14 +935,16 @@
 "25a",
 "não"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "25b": {
 "k": "step",
 "f": 7,
 "t": "Empenha",
 "d": "Ato que compromete a dotação com o contratado, dentro do crédito disponível.",
-"x": "Ato que compromete a dotação com o contratado, dentro do crédito disponível. Sem empenho, não há despesa. Emite a nota de empenho pelas parcelas vincendas no exercício. Contrato plurianual: empenha só o ano corrente e registra o restante no cronograma (42a). Tipo: ordinário (valor certo e pagamento único), estimativo (montante que não se pode determinar: serviço medido, consumo, nuvem) ou global (parcelas: aluguel, contrato mensal). A reserva vira empenho e a diferença volta ao disponível. Recusa empenho acima do disponível contábil. Serviço de pessoa física: o empenho inclui o encargo patronal. Despesa de exercício encerrado (1d): nota de empenho na dotação de despesas de exercícios anteriores. Confere de novo a trava de fim de mandato (8c); exceção só com justificativa assinada pelo Presidente. Uma fonte só para o empenho: emitido no sistema contábil e importado, ou emitido aqui e exportado; decisão do Financeiro.",
+"x": "Sem empenho, não há despesa. Emite a nota de empenho pelas parcelas vincendas no exercício. Contrato plurianual: empenha só o ano corrente e registra o restante no cronograma (42a). Tipo: ordinário (valor certo e pagamento único), estimativo (montante que não se pode determinar: serviço medido, consumo, nuvem) ou global (parcelas: aluguel, contrato mensal). A reserva vira empenho e a diferença volta ao disponível. Recusa empenho acima do disponível contábil. Serviço de pessoa física: o empenho inclui o encargo patronal. Despesa de exercício encerrado (1d): nota de empenho na dotação de despesas de exercícios anteriores. Confere de novo a trava de fim de mandato (8c); exceção só com justificativa assinada pelo Presidente. Uma fonte só para o empenho: emitido no sistema contábil e importado, ou emitido aqui e exportado; decisão do Financeiro.",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 arts. 37, 59 e 60 §§2º e 3º; art. 150",
 "v": [
@@ -848,7 +952,9 @@
 "26",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "26": {
 "k": "step",
@@ -867,14 +973,16 @@
 "26b",
 "substitutivo"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "26a": {
 "k": "step",
 "f": 7,
 "t": "Termo de contrato",
 "d": "Instrumento obrigatório quando há obrigações futuras.",
-"x": "Instrumento obrigatório quando há obrigações futuras. Serviço contínuo, obra ou compra com obrigações futuras.",
+"x": "Serviço contínuo, obra ou compra com obrigações futuras.",
 "q": "Compras prepara; a autoridade assina",
 "l": "arts. 89 a 92",
 "v": [
@@ -882,14 +990,16 @@
 "26d",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "26b": {
 "k": "step",
 "f": 7,
 "t": "Instrumento substitutivo",
 "d": "Documento que pode substituir o termo de contrato na dispensa por valor ou na compra com entrega imediata e integral, de qualquer valor.",
-"x": "Documento que pode substituir o termo de contrato na dispensa por valor ou na compra com entrega imediata e integral, de qualquer valor. Carta-contrato, nota de empenho, autorização de compra ou ordem de execução de serviço: dispensa por valor, ou compra com entrega imediata e integral, sem obrigações futuras, de qualquer valor (art. 95, I e II). Aplica o art. 92 no que couber (art. 95, §1º). Adesão a termos de uso (assinatura de serviço digital): os termos anexados e a autorização da autoridade substituem a assinatura do fornecedor no 26d. Fornecedor estrangeiro sem CNPJ: consultas de integridade marcadas como não aplicáveis, com motivo (decisão da Assessoria Jurídica).",
+"x": "Carta-contrato, nota de empenho, autorização de compra ou ordem de execução de serviço: dispensa por valor, ou compra com entrega imediata e integral, sem obrigações futuras, de qualquer valor (art. 95, I e II). Aplica o art. 92 no que couber (art. 95, §1º). Adesão a termos de uso (assinatura de serviço digital): os termos anexados e a autorização da autoridade substituem a assinatura do fornecedor no 26d. Fornecedor estrangeiro sem CNPJ: consultas de integridade marcadas como não aplicáveis, com motivo (decisão da Assessoria Jurídica). No PNCP, o tipo é “Carta Contrato” ou “Empenho”. Se a nota de empenho que substitui o contrato também vai ao PNCP: decisão 16 da Assessoria Jurídica.",
 "q": "Compras prepara; a autoridade assina",
 "l": "art. 95 I e II e §1º",
 "v": [
@@ -897,14 +1007,16 @@
 "26d",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "26c": {
 "k": "step",
 "f": 7,
 "t": "Ata de registro de preços",
 "d": "Compromisso de fornecimento com preços registrados; não obriga a contratar.",
-"x": "Compromisso de fornecimento com preços registrados; não obriga a contratar. A vigência conta do primeiro dia útil seguinte à divulgação no PNCP. Compromisso de fornecimento com preços registrados por 1 ano, contado do primeiro dia útil seguinte à divulgação no PNCP, prorrogável por mais 1. Não obriga a contratar. Vem da linha RP.",
+"x": "Compromisso de fornecimento com preços registrados por 1 ano, contado do primeiro dia útil seguinte à divulgação no PNCP, prorrogável por mais 1. Não obriga a contratar. Vem da linha RP.",
 "q": "Compras prepara; a autoridade assina",
 "l": "arts. 6º XLVI e 82 a 86; Decreto 11.462 art. 22 (ref.)",
 "v": [
@@ -912,14 +1024,20 @@
 "26d",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "A plataforma da disputa envia a ata ao PNCP. Servidor de Compras registra no sistema o número de controle PNCP e a data de divulgação. Envio da ata pelo Licitações-e a confirmar com Compras.",
+"controle": "Localizará a ata na API de consulta do PNCP pelo CNPJ do CRECI-ES e contará a vigência a partir do primeiro dia útil seguinte à divulgação.",
+"integracao": ""
+},
+"fim": false
 },
 "26d": {
 "k": "step",
 "f": 7,
 "t": "Confere e assina",
 "d": "Conferências obrigatórias (regularidade, integridade, impedimentos, consórcio, ME e EPP) e assinatura do termo pelo vencedor; na recusa, nova nota de empenho em nome do convocado.",
-"x": "Conferências obrigatórias (regularidade, integridade, impedimentos, consórcio, ME e EPP) e assinatura do termo pelo vencedor; na recusa, nova nota de empenho em nome do convocado. Antes: regularidade fiscal, CEIS, CNEP e certidões, e garantia se exigida (em seguro, prazo mínimo de 1 mês após a homologação). O vencedor assina no prazo do edital. Recusa de assinar: anula a nota de empenho do recusante, convoca os licitantes remanescentes na ordem (24), nas condições do vencedor, e empenha em nome do convocado; se ninguém aceitar, negocia ou adjudica nas condições deles; abre responsabilização (SA1). Contrato de urgência: eficácia desde a assinatura. Instrumento substitutivo também tem fiscal e data de fim (licença, garantia). Caução em dinheiro: depósito em conta específica, fora do caixa operacional. Consórcio vencedor: constituição e registro antes de assinar, com a empresa líder. ME ou EPP: declaração de que não passou do limite de receita no ano (art. 4º, §2º). Cruza sócios e representantes do fornecedor com dirigentes, empregados e agentes do processo; coincidência trava até decisão motivada da autoridade, com ciência do Controle Interno. Fornecedor pessoa física e sócios declaram que não são cônjuge, companheiro ou parente até o terceiro grau de dirigente ou de agente do processo; sobrenome coincidente gera análise registrada nos autos. O contrato informa o e-mail oficial do contratado para intimações (prática interna).",
+"x": "Antes: regularidade fiscal, CEIS, CNEP e certidões, e garantia se exigida (em seguro, prazo mínimo de 1 mês após a homologação). O vencedor assina no prazo do edital. Recusa de assinar: anula a nota de empenho do recusante, convoca os licitantes remanescentes na ordem (24), nas condições do vencedor, e empenha em nome do convocado; se ninguém aceitar, negocia ou adjudica nas condições deles; abre responsabilização (SA1). Contrato de urgência: eficácia desde a assinatura. Instrumento substitutivo também tem fiscal e data de fim (licença, garantia). Caução em dinheiro: depósito em conta específica, fora do caixa operacional. Consórcio vencedor: constituição e registro antes de assinar, com a empresa líder. ME ou EPP: declaração de que não passou do limite de receita no ano (art. 4º, §2º). Cruza sócios e representantes do fornecedor com dirigentes, empregados e agentes do processo; coincidência trava até decisão motivada da autoridade, com ciência do Controle Interno. Fornecedor pessoa física e sócios declaram que não são cônjuge, companheiro ou parente até o terceiro grau de dirigente ou de agente do processo; sobrenome coincidente gera análise registrada nos autos. O contrato informa o e-mail oficial do contratado para intimações (prática interna).",
 "q": "Compras confere; autoridade e contratado assinam",
 "l": "arts. 4º §2º, 9º §1º, 14 IV, 15 §3º, 90 §§2º, 4º e 5º, 91 §4º, 94 §1º e 96 §3º e §4º; Lei 4.320 art. 61",
 "v": [
@@ -931,29 +1049,37 @@
 "SA1",
 "recusa injustificada de assinar: responsabilização"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "27": {
 "k": "step",
 "f": 7,
-"t": "Publica o contrato no PNCP",
-"d": "Publicação oficial que dá eficácia ao contrato.",
-"x": "Publicação oficial que dá eficácia ao contrato. Divulgação no PNCP é condição de eficácia: até 20 dias úteis (licitação) ou 10 (contratação direta). Enquanto não divulgado, o sistema bloqueia ordem de serviço, recebimento e pagamento (30). O comprovante é verificado pela consulta ao PNCP, não digitado. Urgência: eficácia desde a assinatura, publicação no prazo sob pena de nulidade. Ata: divulgação imediata (prática interna). Obra: quantitativos e preços contratados em até 25 dias úteis da assinatura, e executados em até 45 dias úteis da conclusão (art. 94, §3º). O retorno do PNCP é comparado com objeto, fornecedor, valor e vigência; divergência impede o estado Vigente (prática interna).",
-"q": "Sistema (Área Restrita)",
+"t": "Divulga o contrato no PNCP",
+"d": "Divulgação oficial que dá eficácia ao contrato.",
+"x": "Divulgação no PNCP é condição de eficácia: até 20 dias úteis (licitação) ou 10 (contratação direta). Enquanto não divulgado, nada se executa (30). Urgência: eficácia desde a assinatura, publicação no prazo sob pena de nulidade. Ata: divulgação imediata (prática interna). Obra: quantitativos e preços contratados em até 25 dias úteis da assinatura, e executados em até 45 dias úteis da conclusão (art. 94, §3º). O sistema comparará o que a API de consulta do PNCP mostra com objeto, fornecedor, valor e vigência, e a divergência impedirá o estado Vigente (prática interna).",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 94 e §§1º e 3º; Decreto 11.462 art. 22 (ref.)",
 "v": [
 [
 "28",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "Servidor de Compras divulga o contrato pelo Publicador de Contratos, ferramenta gratuita do Compras.gov.br para órgãos fora do Sisg, e registra no sistema o número de controle PNCP. O uso exige cadastro do CRECI-ES no Compras.gov.br (decisão 18).",
+"controle": "Contará os 20 ou 10 dias úteis desde a assinatura, alertará antes do vencimento, impedirá ordem de serviço, recebimento e pagamento sem número de controle PNCP registrado e verificará esse número na API de consulta do PNCP, de acesso aberto.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+},
+"fim": false
 },
 "27b": {
 "k": "step",
 "f": 7,
 "t": "Publicações obrigatórias e evidência",
 "d": "Lista de todas as publicações obrigatórias, com prazo, comprovante e verificação.",
-"x": "Lista de todas as publicações obrigatórias, com prazo, comprovante e verificação. Lista por ato, com prazo, comprovante e verificação: edital (PNCP, Diário Oficial da União e jornal), documentos preparatórios após a homologação, ato de contratação direta, contrato e aditivos, ordem cronológica mensal, extrato do cartão, plano anual, portal da transparência.",
+"x": "Lista por ato, com prazo, comprovante e verificação: edital (PNCP, Diário Oficial da União e jornal), documentos preparatórios após a homologação, ato de contratação direta, contrato e aditivos, ordem cronológica mensal, extrato do cartão, plano anual, portal da transparência. Conferência diária: o sistema comparará cada número de controle PNCP registrado com o que a API de consulta do PNCP mostra e levará a diferença ao painel de prazos (prática interna). A API de consulta é de acesso aberto.",
 "q": "Sistema (Área Restrita)",
 "l": "arts. 12 §1º, 54 §§1º e 3º, 72 parágrafo único, 75 §4º, 94 e 141 §3º; LAI art. 8º §1º IV",
 "v": [
@@ -961,14 +1087,16 @@
 "27",
 "checklist de publicações"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "28": {
 "k": "step",
 "f": 7,
 "t": "Designa gestor e fiscais",
 "d": "Portaria do Presidente com o Diretor Secretário que nomeia gestor, fiscal e substituto, sem impedimento e com segregação de funções.",
-"x": "Portaria do Presidente com o Diretor Secretário que nomeia gestor, fiscal e substituto, sem impedimento e com segregação de funções. Portaria do Presidente (Regimento art. 8º, I), assinada também pelo Diretor Secretário por decisão da Diretoria (prática interna): gestor, fiscal titular e fiscal substituto, com termo de compromisso e declaração de ausência de impedimento. Fiscais técnico e administrativo só quando o Termo de Referência exigir (art. 117: um ou mais fiscais). Designados só com vínculo permitido para a função; afastamentos cadastrados. Sem fiscal e substituto ativos, o contrato não fica Vigente nem libera execução (30). Contrato migrado sem substituto: alerta de 60 dias, não bloqueio. Instrumento substitutivo: designação simplificada no próprio instrumento, assinada pela autoridade junto com a ordem (prática interna).",
+"x": "Portaria do Presidente (Regimento art. 8º, I), assinada também pelo Diretor Secretário por decisão da Diretoria (prática interna): gestor, fiscal titular e fiscal substituto, com termo de compromisso e declaração de ausência de impedimento. Fiscais técnico e administrativo só quando o Termo de Referência exigir (art. 117: um ou mais fiscais). Designados só com vínculo permitido para a função; afastamentos cadastrados. Sem fiscal e substituto ativos, o contrato não fica Vigente nem libera execução (30). Contrato migrado sem substituto: alerta de 60 dias, não bloqueio. Instrumento substitutivo: designação simplificada no próprio instrumento, assinada pela autoridade junto com a ordem (prática interna).",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 7º I a III e §1º, 9º e 117; Regimento art. 8º I",
 "v": [
@@ -976,14 +1104,16 @@
 "30",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "29": {
 "k": "step",
 "f": 7,
 "t": "Cadastra o contrato",
 "d": "Registro do contrato no sistema, com as cláusulas essenciais, as datas de fim, os itens e saldos; alimenta o portal da transparência.",
-"x": "Registro do contrato no sistema, com as cláusulas essenciais, as datas de fim, os itens e saldos; alimenta o portal da transparência. Contratada, valores, vigência, fiscais, garantia (modalidade, valor e vencimento), reajuste, rubrica e número da nota de empenho, processo de origem. Também: tipo de duração (contínuo, escopo, monopólio (energia, água: prazo indeterminado, art. 109) ou prazo simples), data-base do reajuste, cronograma de parcelas por exercício, garantia com endosso a cada prorrogação, nível de assinatura exigido, classe de guarda, índice de atualização por atraso. Todo instrumento, inclusive o substitutivo: data de fim de cada obrigação (vigência, licença, assinatura, garantia do objeto) e responsável pelo recebimento. Prazo de garantia do objeto (legal, contratual ou do fabricante), separado da garantia contratual. Marca de dedicação exclusiva de mão de obra, que ativa o 31f e a conta vinculada. Itens com quantidade contratada, entregue e pendente; contrato por demanda: itens com preço unitário, quantidade contratada e saldo. Obra: responsável técnico e data de fim da garantia de 5 anos. Art. 74, III: grava os profissionais que justificaram a notória especialização. Importação: taxa de câmbio da cláusula. Contrato migrado sem substituto de fiscal: alerta de 60 dias (28). Alimenta o portal da transparência.",
+"x": "Contratada, valores, vigência, fiscais, garantia (modalidade, valor e vencimento), reajuste, rubrica e número da nota de empenho, processo de origem. Também: tipo de duração (contínuo, escopo, monopólio (energia, água: prazo indeterminado, art. 109) ou prazo simples), data-base do reajuste, cronograma de parcelas por exercício, garantia com endosso a cada prorrogação, nível de assinatura exigido, classe de guarda, índice de atualização por atraso. Todo instrumento, inclusive o substitutivo: data de fim de cada obrigação (vigência, licença, assinatura, garantia do objeto) e responsável pelo recebimento. Prazo de garantia do objeto (legal, contratual ou do fabricante), separado da garantia contratual. Marca de dedicação exclusiva de mão de obra, que ativa o 31f e a conta vinculada. Itens com quantidade contratada, entregue e pendente; contrato por demanda: itens com preço unitário, quantidade contratada e saldo. Obra: responsável técnico e data de fim da garantia de 5 anos. Art. 74, III: grava os profissionais que justificaram a notória especialização. Importação: taxa de câmbio da cláusula. Contrato migrado sem substituto de fiscal: alerta de 60 dias (28). Alimenta o portal da transparência.",
 "q": "Departamento de Compras e Licitações",
 "l": "art. 92 V, VI, VIII, X, XII, XIII e XV; arts. 74 §4º, 109, 121 §3º e 140 §6º; LAI art. 8º §1º IV",
 "v": [
@@ -991,14 +1121,16 @@
 "27",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "30": {
 "k": "step",
 "f": 8,
 "t": "Painel do fiscal",
 "d": "Painel com os contratos e atas em que o fiscal foi designado.",
-"x": "Painel com os contratos e atas em que o fiscal foi designado. Tela que lista, para cada fiscal, gestor e substituto, só os contratos e atas sob sua responsabilidade, com o checklist vindo do mapa de riscos (17). Sem eficácia (27), não libera ordem de serviço nem recebimento. Substituto assume em afastamento (30b).",
+"x": "Tela que lista, para cada fiscal, gestor e substituto, só os contratos e atas sob sua responsabilidade, com o checklist vindo do mapa de riscos (17). Sem eficácia (27), não libera ordem de serviço nem recebimento. Substituto assume em afastamento (30b).",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; arts. 94 e 117",
 "v": [
@@ -1018,14 +1150,16 @@
 "35c",
 "pagamento antecipado previsto no TR (17): só com o contrato eficaz"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "30b": {
 "k": "step",
 "f": 8,
 "t": "Substituição e afastamento",
 "d": "Afastamento do fiscal, do gestor ou da autoridade: o sistema redireciona ao substituto da portaria; o Presidente é substituído pelos Vice-Presidentes, pela ordem.",
-"x": "Afastamento do fiscal, do gestor ou da autoridade: o sistema redireciona ao substituto da portaria; o Presidente é substituído pelos Vice-Presidentes, pela ordem. Férias, licença, vacância ou fim de mandato do fiscal, gestor ou autoridade: o sistema redireciona ao substituto da portaria. Titular e substituto afastados ao mesmo tempo: o gestor designa substituto temporário por despacho, com período e motivo, sem portaria nova, por delegação registrada na portaria do 28 (prática interna); o alerta vai ao gestor e a Compras e Licitações no primeiro dia com entrega prevista e nenhum fiscal ativo. Autoridade afastada: substitui o Vice-Presidente, pela ordem (Regimento art. 6º); o Diretor Secretário só na ausência do Presidente e dos Vice-Presidentes (art. 9º, §1º). Vale também para Financeiro, Diretor Secretário, agente de contratação e Diretor Tesoureiro: filas e avisos vão ao substituto no período. Usuário inativado: relatório de designações órfãs a Compras e Licitações e à autoridade, com 5 dias úteis para redesignar. Portaria de delegação com data de fim e alerta 30 dias antes.",
+"x": "Férias, licença, vacância ou fim de mandato do fiscal, gestor ou autoridade: o sistema redireciona ao substituto da portaria. Titular e substituto afastados ao mesmo tempo: o gestor designa substituto temporário por despacho, com período e motivo, sem portaria nova, por delegação registrada na portaria do 28 (prática interna); o alerta vai ao gestor e a Compras e Licitações no primeiro dia com entrega prevista e nenhum fiscal ativo. Autoridade afastada: substitui o Vice-Presidente, pela ordem (Regimento art. 6º); o Diretor Secretário só na ausência do Presidente e dos Vice-Presidentes (art. 9º, §1º). Vale também para Financeiro, Diretor Secretário, agente de contratação e Diretor Tesoureiro: filas e avisos vão ao substituto no período. Usuário inativado: relatório de designações órfãs a Compras e Licitações e à autoridade, com 5 dias úteis para redesignar. Portaria de delegação com data de fim e alerta 30 dias antes.",
 "q": "Sistema (Área Restrita)",
 "l": "art. 117; Regimento arts. 6º e 9º §1º; prática interna",
 "v": [
@@ -1033,14 +1167,16 @@
 "30",
 "substituto assume"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31": {
 "k": "step",
 "f": 8,
 "t": "Acompanha e fiscaliza",
 "d": "Acompanhamento diário do contrato, com ocorrências tipificadas, ciência registrada do contratado e apoio jurídico e do controle interno ao fiscal.",
-"x": "Acompanhamento diário do contrato, com ocorrências tipificadas, ciência registrada do contratado e apoio jurídico e do controle interno ao fiscal. Registra ocorrências tipificadas: entrega, medição, atraso, paralisação, pedido do contratado (31c), fato do contratado (31e), irregularidade (31d), e junta evidências a cada entrega ou mês. Comunicação ao contratado sempre com ciência registrada. Obra paralisada por mais de 1 mês: aviso público no site e em placa na obra (art. 115, §6º). Dúvida do fiscal vai à Assessoria Jurídica e ao Controle Interno (art. 117, §3º). Fornecedor da ata que descumpre: 38c.",
+"x": "Registra ocorrências tipificadas: entrega, medição, atraso, paralisação, pedido do contratado (31c), fato do contratado (31e), irregularidade (31d), e junta evidências a cada entrega ou mês. Comunicação ao contratado sempre com ciência registrada. Obra paralisada por mais de 1 mês: aviso público no site e em placa na obra (art. 115, §6º). Dúvida do fiscal vai à Assessoria Jurídica e ao Controle Interno (art. 117, §3º). Fornecedor da ata que descumpre: 38c.",
 "q": "Fiscal do contrato",
 "l": "art. 117 §§1º e 3º; art. 115 §6º; Lei 9.784 arts. 26 e 28",
 "v": [
@@ -1072,14 +1208,16 @@
 "38c",
 "fornecedor da ata descumpre"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31a": {
 "k": "step",
 "f": 8,
 "t": "Infração do contratado",
 "d": "Fato do contratado que pode gerar sanção.",
-"x": "Fato do contratado que pode gerar sanção. Registra a infração (inexecução, atraso, fraude) e informa a autoridade. Avisa o Controle Interno.",
+"x": "Registra a infração (inexecução, atraso, fraude) e informa a autoridade. Avisa o Controle Interno.",
 "q": "Fiscal ou gestor do contrato",
 "l": "arts. 117 §1º e 155",
 "v": [
@@ -1087,14 +1225,16 @@
 "SA1",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31b": {
 "k": "step",
 "f": 8,
 "t": "Notifica e fixa prazo",
 "d": "Primeira resposta a um problema na execução: o contratado é avisado, com ciência registrada, e recebe prazo para corrigir.",
-"x": "Primeira resposta a um problema na execução: o contratado é avisado, com ciência registrada, e recebe prazo para corrigir. Registra a ocorrência e determina ao contratado o que corrigir, com prazo. Notificação com ciência registrada; o prazo de correção conta da ciência. Regularizou: volta ao 31. Não regularizou: 31a.",
+"x": "Registra a ocorrência e determina ao contratado o que corrigir, com prazo. Notificação com ciência registrada; o prazo de correção conta da ciência. Regularizou: volta ao 31. Não regularizou: 31a.",
 "q": "Fiscal ou gestor do contrato",
 "l": "art. 117 §1º; Lei 9.784 arts. 26 §3º e 66",
 "v": [
@@ -1106,14 +1246,16 @@
 "31",
 "regularizou"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA1": {
 "k": "step",
 "f": 8,
 "t": "Instaura o processo de responsabilização",
 "d": "Abertura do processo que pode levar à sanção, com aviso ao garantidor, intimação completa e registro da data de ciência da infração.",
-"x": "Abertura do processo que pode levar à sanção, com aviso ao garantidor, intimação completa e registro da data de ciência da infração. Multa: defesa em 15 dias úteis. Impedimento ou inidoneidade: comissão de 2 ou mais empregados do quadro permanente, de preferência com 3 anos de serviço (art. 158, §1º). Notifica a seguradora ou o fiador da garantia. O prazo de defesa conta da intimação (art. 158): pela internet, começa no primeiro dia útil seguinte à disponibilização; pelos correios, na juntada do aviso de recebimento (art. 183, §1º). A intimação traz os seis itens do art. 26, §1º, da Lei 9.784. Registra a data de ciência da infração: prescrição em 5 anos (art. 158, §4º). Entradas: 31a, IR7 (licitante), 26d (recusa de assinar) e 38c (fornecedor da ata).",
+"x": "Multa: defesa em 15 dias úteis. Impedimento ou inidoneidade: comissão de 2 ou mais empregados do quadro permanente, de preferência com 3 anos de serviço (art. 158, §1º). Notifica a seguradora ou o fiador da garantia. O prazo de defesa conta da intimação (art. 158): pela internet, começa no primeiro dia útil seguinte à disponibilização; pelos correios, na juntada do aviso de recebimento (art. 183, §1º). A intimação traz os seis itens do art. 26, §1º, da Lei 9.784. Registra a data de ciência da infração: prescrição em 5 anos (art. 158, §4º). Entradas: 31a, IR7 (licitante), 26d (recusa de assinar) e 38c (fornecedor da ata).",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 137 §4º, 157, 158 e §§1º e 4º e 183 §1º; Lei 9.784 arts. 26 e §1º e 28",
 "v": [
@@ -1121,14 +1263,16 @@
 "SA2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA2": {
 "k": "step",
 "f": 8,
 "t": "Defesa e provas",
 "d": "Direito de defesa do contratado.",
-"x": "Direito de defesa do contratado. Defesa em 15 dias úteis; alegações finais em 15 dias úteis se houver novas provas.",
+"x": "Defesa em 15 dias úteis; alegações finais em 15 dias úteis se houver novas provas.",
 "q": "Comissão ou banca designada",
 "l": "art. 158",
 "v": [
@@ -1136,14 +1280,16 @@
 "SA3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA3": {
 "k": "step",
 "f": 8,
 "t": "Relatório e parecer",
 "d": "Relatório da comissão e análise jurídica, inclusive para desconsiderar a personalidade jurídica.",
-"x": "Relatório da comissão e análise jurídica, inclusive para desconsiderar a personalidade jurídica. A comissão relata; análise jurídica obrigatória para inidoneidade. Desconsideração da personalidade jurídica só com análise jurídica prévia (art. 160).",
+"x": "A comissão relata; análise jurídica obrigatória para inidoneidade. Desconsideração da personalidade jurídica só com análise jurídica prévia (art. 160).",
 "q": "Comissão ou banca designada",
 "l": "arts. 156 §6º e 160",
 "v": [
@@ -1151,14 +1297,16 @@
 "SA4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA4": {
 "k": "step",
 "f": 8,
 "t": "Aplica a sanção",
 "d": "Decisão da autoridade sobre a sanção, com dosimetria e sobre a proposta de decisão da comissão.",
-"x": "Decisão da autoridade sobre a sanção, com dosimetria e sobre a proposta de decisão da comissão. Advertência, multa de 0,5% a 30%, impedimento por até 3 anos ou inidoneidade de 3 a 6 anos (autoridade máxima do CRECI-ES, a definir pela Assessoria Jurídica). Advertência só para inexecução parcial leve (art. 156, §2º). Dosimetria com os cinco critérios do art. 156, §1º, inclusive programa de integridade do contratado. Decide sobre relatório de instrução com proposta de decisão de quem instruiu; a decisão registra se acolhe ou diverge, e por quê (Lei 9.784, art. 47). Sem recurso no prazo: SA6.",
+"x": "Advertência, multa de 0,5% a 30%, impedimento por até 3 anos ou inidoneidade de 3 a 6 anos (autoridade máxima do CRECI-ES, a definir pela Assessoria Jurídica). Advertência só para inexecução parcial leve (art. 156, §2º). Dosimetria com os cinco critérios do art. 156, §1º, inclusive programa de integridade do contratado. Decide sobre relatório de instrução com proposta de decisão de quem instruiu; a decisão registra se acolhe ou diverge, e por quê (Lei 9.784, art. 47). Sem recurso no prazo: SA6.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "art. 156 e §§1º, 2º e 6º; Lei 9.784 art. 47",
 "v": [
@@ -1170,14 +1318,16 @@
 "SA6",
 "sem recurso no prazo"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA5": {
 "k": "step",
 "f": 8,
 "t": "Recurso e reconsideração",
 "d": "Revisão da sanção a pedido do contratado: primeiro por quem aplicou, depois pela autoridade superior.",
-"x": "Revisão da sanção a pedido do contratado: primeiro por quem aplicou, depois pela autoridade superior. Recurso em 15 dias úteis; quem aplicou reconsidera em 5 dias úteis (volta ao SA4) ou encaminha. Inidoneidade: só pedido de reconsideração, decidido em 20 dias úteis.",
+"x": "Recurso em 15 dias úteis; quem aplicou reconsidera em 5 dias úteis (volta ao SA4) ou encaminha. Inidoneidade: só pedido de reconsideração, decidido em 20 dias úteis.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 166 e 167",
 "v": [
@@ -1189,14 +1339,16 @@
 "SA4",
 "reconsidera"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA5b": {
 "k": "step",
 "f": 8,
 "t": "Decisão da autoridade superior",
 "d": "Quem está acima de quem aplicou a sanção decide o recurso: Diretoria colegiada ou Plenário, conforme ato normativo referendado pelo COFECI.",
-"x": "Quem está acima de quem aplicou a sanção decide o recurso: Diretoria colegiada ou Plenário, conforme ato normativo referendado pelo COFECI. Em até 20 dias úteis. Provido: reforma ou cancela a sanção (volta ao SA4). Improvido: a sanção produz efeitos. Autoridade superior: Diretoria colegiada (Regimento art. 5º) ou Plenário, definida em ato normativo referendado pelo COFECI (art. 4º, IV).",
+"x": "Em até 20 dias úteis. Provido: reforma ou cancela a sanção (volta ao SA4). Improvido: a sanção produz efeitos. Autoridade superior: Diretoria colegiada (Regimento art. 5º) ou Plenário, definida em ato normativo referendado pelo COFECI (art. 4º, IV).",
 "q": "Autoridade superior a quem aplicou (Diretoria ou Plenário, a definir em ato normativo)",
 "l": "art. 166 par. único; Regimento arts. 4º IV e 5º II",
 "v": [
@@ -1208,14 +1360,16 @@
 "SA4",
 "provido: reforma"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "SA6": {
 "k": "step",
 "f": 8,
-"t": "Informa ao CEIS e ao CNEP — fim",
+"t": "Informa ao CEIS e ao CNEP",
 "d": "Comunicação da sanção aos cadastros nacionais em 15 dias úteis da aplicação, ou da decisão final se houver recurso; multa descontada, garantia executada ou cobrança.",
-"x": "Comunicação da sanção aos cadastros nacionais em 15 dias úteis da aplicação, ou da decisão final se houver recurso; multa descontada, garantia executada ou cobrança. Em até 15 dias úteis da aplicação; com recurso, depois da decisão final (art. 168). A multa, de mora ou sanção, sai do valor líquido da ordem de pagamento (35) e entra como receita; a liquidação sai pelo valor integral. Multa maior que o pagamento executa a garantia ou abre cobrança judicial (art. 156, §8º); licitante (IR7) e recusante (26d) sem pagamento a descontar: executa a garantia ou cobra. Prescrição em 5 anos e reabilitação controladas pelo sistema, com análise jurídica prévia conclusiva (art. 163, V); reabilitação por infração dos incisos VIII e XII do art. 155 exige programa de integridade.",
+"x": "Em até 15 dias úteis da aplicação; com recurso, depois da decisão final (art. 168). A multa, de mora ou sanção, sai do valor líquido da ordem de pagamento (35) e entra como receita; a liquidação sai pelo valor integral. Multa maior que o pagamento executa a garantia ou abre cobrança judicial (art. 156, §8º); licitante (IR7) e recusante (26d) sem pagamento a descontar: executa a garantia ou cobra. Prescrição em 5 anos e reabilitação controladas pelo sistema, com análise jurídica prévia conclusiva (art. 163, V); reabilitação por infração dos incisos VIII e XII do art. 155 exige programa de integridade.",
 "q": "Sistema (Área Restrita)",
 "l": "arts. 156 §8º, 161, 163 V e parágrafo único e 168; Lei 4.320 art. 57",
 "v": [
@@ -1223,14 +1377,16 @@
 "35",
 "desconta a multa"
 ]
-]
+],
+"m": null,
+"fim": true
 },
 "31c": {
 "k": "step",
 "f": 8,
 "t": "Pedido do contratado",
 "d": "Pedido do contratado (reequilíbrio, repactuação, reajuste, subcontratação, prorrogação, suspensão), com decisão expressa em 1 mês depois de concluída a instrução.",
-"x": "Pedido do contratado (reequilíbrio, repactuação, reajuste, subcontratação, prorrogação, suspensão), com decisão expressa em 1 mês depois de concluída a instrução. Reequilíbrio, repactuação, reajuste, subcontratação (até o limite autorizado), prorrogação, suspensão por atraso de pagamento: o gestor analisa (43) e a autoridade decide por termo aditivo ou apostila (44a), ou indefere com motivo. Decisão expressa em 1 mês depois de concluída a instrução, prorrogável uma vez com motivo. Reequilíbrio, repactuação e aditivo com nova pesquisa ou comparação com o preço contratado. Repactuação: pedido com planilha de custos ou nova convenção (art. 135, §6º), só depois de 1 ano da proposta ou da última repactuação (art. 135, §3º). Subcontratação: documentos da capacidade técnica do subcontratado (art. 122, §1º) e declaração de ausência de vínculo com dirigentes e agentes (art. 122, §3º). Substituição de consorciado só com autorização (art. 15, §5º). Cessão do contrato: sem previsão na lei; só se o edital e o contrato previrem, com decisão da Assessoria Jurídica.",
+"x": "Reequilíbrio, repactuação, reajuste, subcontratação (até o limite autorizado), prorrogação, suspensão por atraso de pagamento: o gestor analisa (43) e a autoridade decide por termo aditivo ou apostila (44a), ou indefere com motivo. Decisão expressa em 1 mês depois de concluída a instrução, prorrogável uma vez com motivo. Reequilíbrio, repactuação e aditivo com nova pesquisa ou comparação com o preço contratado. Repactuação: pedido com planilha de custos ou nova convenção (art. 135, §6º), só depois de 1 ano da proposta ou da última repactuação (art. 135, §3º). Subcontratação: documentos da capacidade técnica do subcontratado (art. 122, §1º) e declaração de ausência de vínculo com dirigentes e agentes (art. 122, §3º). Substituição de consorciado só com autorização (art. 15, §5º). Cessão do contrato: sem previsão na lei; só se o edital e o contrato previrem, com decisão da Assessoria Jurídica.",
 "q": "Gestor do contrato",
 "l": "arts. 11 III, 15 §5º, 92 X e XI, 122 e §§1º e 3º, 123 e parágrafo único, 124 II d, 135 §§3º e 6º, 136 e 137 §3º II",
 "v": [
@@ -1238,14 +1394,16 @@
 "43",
 "gestor analisa o pedido"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31d": {
 "k": "step",
 "f": 8,
 "t": "Irregularidade com contrato vigente",
 "d": "Irregularidade não saneável com contrato vigente: a autoridade ouve a Assessoria Jurídica e o contratado e avalia o interesse público antes de suspender ou anular.",
-"x": "Irregularidade não saneável com contrato vigente: a autoridade ouve a Assessoria Jurídica e o contratado e avalia o interesse público antes de suspender ou anular. Não saneável: a autoridade avalia os onze aspectos de interesse público antes de suspender ou anular; se a paralisação não for de interesse público, o contrato continua e a irregularidade se resolve por indenização, com apuração de responsabilidade. Antes de decidir: parecer jurídico e manifestação do contratado com ciência. Nulidade pode ter eficácia futura por até 6 meses, prorrogável uma vez, e não exonera a Administração de indenizar o executado; com eficácia futura, abre a nova contratação no passo 1.",
+"x": "Não saneável: a autoridade avalia os onze aspectos de interesse público antes de suspender ou anular; se a paralisação não for de interesse público, o contrato continua e a irregularidade se resolve por indenização, com apuração de responsabilidade. Antes de decidir: parecer jurídico e manifestação do contratado com ciência. Nulidade pode ter eficácia futura por até 6 meses, prorrogável uma vez, e não exonera a Administração de indenizar o executado; com eficácia futura, abre a nova contratação no passo 1.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 147, 148 §2º e 149",
 "v": [
@@ -1257,14 +1415,16 @@
 "44b",
 "anula ou extingue"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31e": {
 "k": "step",
 "f": 8,
 "t": "Fato do contratado",
 "d": "Falência, dissolução, falecimento ou alteração social do contratado: extinção e contratação do remanescente pelos classificados, na ordem (24).",
-"x": "Falência, dissolução, falecimento ou alteração social do contratado: extinção e contratação do remanescente pelos classificados, na ordem (24). Falência, dissolução, falecimento ou alteração social que restrinja a capacidade: extinção do contrato (44b) e contratação do remanescente: convoca os demais licitantes na ordem de classificação (24), sem novo enquadramento, aproveitando o saldo do empenho ou dos restos a pagar.",
+"x": "Falência, dissolução, falecimento ou alteração social que restrinja a capacidade: extinção do contrato (44b) e contratação do remanescente: convoca os demais licitantes na ordem de classificação (24), sem novo enquadramento, aproveitando o saldo do empenho ou dos restos a pagar.",
 "q": "Gestor do contrato",
 "l": "arts. 90 §§7º e 8º e 137 III e IV",
 "v": [
@@ -1272,14 +1432,16 @@
 "44b",
 "extingue"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "31f": {
 "k": "step",
 "f": 8,
 "t": "Dedicação exclusiva: comprovação mensal",
 "d": "Comprovação mensal das obrigações trabalhistas antes de liquidar o serviço com dedicação exclusiva.",
-"x": "Comprovação mensal das obrigações trabalhistas antes de liquidar o serviço com dedicação exclusiva. Antes de liquidar cada mês: ponto, salários, FGTS, férias, vale-transporte e vale-alimentação; conta vinculada ou pagamento condicionado à quitação; inadimplência: pagamento direto aos empregados, deduzido do contratado. Falha na fiscalização gera responsabilidade solidária pelos encargos previdenciários e subsidiária pelos trabalhistas (art. 121, §2º).",
+"x": "Antes de liquidar cada mês: ponto, salários, FGTS, férias, vale-transporte e vale-alimentação; conta vinculada ou pagamento condicionado à quitação; inadimplência: pagamento direto aos empregados, deduzido do contratado. Falha na fiscalização gera responsabilidade solidária pelos encargos previdenciários e subsidiária pelos trabalhistas (art. 121, §2º).",
 "q": "Fiscal do contrato",
 "l": "arts. 50 e 121 §§2º e 3º",
 "v": [
@@ -1287,14 +1449,16 @@
 "34",
 "comprovação mensal libera a liquidação"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "32": {
 "k": "step",
 "f": 8,
 "t": "Recebe o objeto e registra a nota",
 "d": "Confirmação de que o objeto foi entregue como contratado: primeiro provisória, depois definitiva, por etapa ou medição; autônomo com recibo, locação com boleto ou recibo.",
-"x": "Confirmação de que o objeto foi entregue como contratado: primeiro provisória, depois definitiva, por etapa ou medição; autônomo com recibo, locação com boleto ou recibo. Recebimento provisório pelo fiscal e definitivo por servidor ou comissão designada, por etapa ou medição, conforme o cronograma; itens entregues e pendentes; prazos de recebimento definidos no contrato. Recebimento definitivo por comissão só acima do valor de corte da portaria; abaixo, o fiscal recebe em definitivo. A nota fiscal é lançada uma vez, ligada ao contrato ou ao instrumento, e segue para dois setores. Pessoa física: recibo de autônomo no lugar da nota fiscal. Locação: recebimento mensal pela ocupação do mês, com boleto ou recibo no lugar da nota fiscal (fila de locações, art. 141, II). Contrato por demanda: ordem de serviço parcial pedida pelo fiscal dentro do saldo, sem novo empenho; boletim de medição por item (quantidade, preço unitário, total) anexado à nota e conferido contra o contrato. Entrega pendente depois do prazo gera notificação automática (31b).",
+"x": "Recebimento provisório pelo fiscal e definitivo por servidor ou comissão designada, por etapa ou medição, conforme o cronograma; itens entregues e pendentes; prazos de recebimento definidos no contrato. Recebimento definitivo por comissão só acima do valor de corte da portaria; abaixo, o fiscal recebe em definitivo. A nota fiscal é lançada uma vez, ligada ao contrato ou ao instrumento, e segue para dois setores. Pessoa física: recibo de autônomo no lugar da nota fiscal. Locação: recebimento mensal pela ocupação do mês, com boleto ou recibo no lugar da nota fiscal (fila de locações, art. 141, II). Contrato por demanda: ordem de serviço parcial pedida pelo fiscal dentro do saldo, sem novo empenho; boletim de medição por item (quantidade, preço unitário, total) anexado à nota e conferido contra o contrato. Entrega pendente depois do prazo gera notificação automática (31b).",
 "q": "Fiscal e servidor ou comissão de recebimento",
 "l": "arts. 92 VI e VII, 140 e §3º e 141 II; Regimento art. 36 §2º",
 "v": [
@@ -1310,14 +1474,16 @@
 "32b",
 "vício na garantia"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "32a": {
 "k": "step",
 "f": 8,
 "t": "Rejeita ou glosa",
 "d": "Recusa do que veio errado e pagamento só do que está certo; a glosa reduz o valor a liquidar.",
-"x": "Recusa do que veio errado e pagamento só do que está certo; a glosa reduz o valor a liquidar. Objeto em desacordo com o contrato: devolve com prazo de correção, com ciência registrada; o prazo conta da ciência. Nota com erro: devolve para reemissão. A parte incontroversa segue para a liquidação (34). Glosa reduz o valor a liquidar e não é receita.",
+"x": "Objeto em desacordo com o contrato: devolve com prazo de correção, com ciência registrada; o prazo conta da ciência. Nota com erro: devolve para reemissão. A parte incontroversa segue para a liquidação (34). Glosa reduz o valor a liquidar e não é receita.",
 "q": "Fiscal do contrato",
 "l": "arts. 140 §1º e 143; Lei 9.784 arts. 26 §3º e 66",
 "v": [
@@ -1325,14 +1491,16 @@
 "31",
 "devolve com prazo de correção"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "32b": {
 "k": "step",
 "f": 8,
 "t": "Vício após o recebimento definitivo",
 "d": "Vício descoberto depois do recebimento definitivo, dentro da garantia do objeto, mesmo com o contrato extinto: reparo às expensas do contratado.",
-"x": "Vício descoberto depois do recebimento definitivo, dentro da garantia do objeto, mesmo com o contrato extinto: reparo às expensas do contratado. O recebimento não exclui a responsabilidade pela solidez e pela perfeita execução; obra responde por 5 anos. O fiscal notifica (31b) dentro da garantia do objeto, inclusive em contrato já extinto (44b). Reparo ou substituição às expensas do contratado (art. 119).",
+"x": "O recebimento não exclui a responsabilidade pela solidez e pela perfeita execução; obra responde por 5 anos. O fiscal notifica (31b) dentro da garantia do objeto, inclusive em contrato já extinto (44b). Reparo ou substituição às expensas do contratado (art. 119).",
 "q": "Fiscal, gestor ou Patrimônio",
 "l": "arts. 92 XIII, 119 e 140 §§2º e 6º",
 "v": [
@@ -1340,7 +1508,9 @@
 "31b",
 "notifica dentro da garantia"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "33": {
 "k": "step",
@@ -1363,14 +1533,16 @@
 "33c",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "33a": {
 "k": "step",
 "f": 8,
 "t": "Bem permanente: incorpora ao patrimônio",
 "d": "Registro do bem permanente no patrimônio do CRECI-ES, com conferência da classificação fixada no TR.",
-"x": "Registro do bem permanente no patrimônio do CRECI-ES, com conferência da classificação fixada no TR. Registro patrimonial com plaqueta, local e responsável (ex.: ar-condicionado). Patrimônio confirma a classificação fixada no TR (17); se divergir antes da liquidação, o Financeiro anula a nota de empenho e emite nova na rubrica certa, com motivo.",
+"x": "Registro patrimonial com plaqueta, local e responsável (ex.: ar-condicionado). Patrimônio confirma a classificação fixada no TR (17); se divergir antes da liquidação, o Financeiro anula a nota de empenho e emite nova na rubrica certa, com motivo.",
 "q": "Patrimônio e Almoxarifado",
 "l": "Lei 4.320 arts. 61, 94 e 95; Regimento art. 35",
 "v": [
@@ -1378,14 +1550,16 @@
 "34",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "33b": {
 "k": "step",
 "f": 8,
 "t": "Material de consumo: entra no almoxarifado",
 "d": "Entrada do material de consumo no almoxarifado.",
-"x": "Entrada do material de consumo no almoxarifado. Ex.: material de limpeza, mouse.",
+"x": "Ex.: material de limpeza, mouse.",
 "q": "Patrimônio e Almoxarifado",
 "l": "Lei 4.320 art. 106 III",
 "v": [
@@ -1393,14 +1567,16 @@
 "34",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "33c": {
 "k": "step",
 "f": 8,
 "t": "Serviço: nada a registrar no patrimônio",
 "d": "Serviço não gera registro no patrimônio.",
-"x": "Serviço não gera registro no patrimônio. Ex.: jardinagem, manutenção. Locação: nada a registrar no patrimônio.",
+"x": "Ex.: jardinagem, manutenção. Locação: nada a registrar no patrimônio.",
 "q": "Sistema (Área Restrita)",
 "l": "—",
 "v": [
@@ -1408,14 +1584,16 @@
 "34",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "34": {
 "k": "step",
 "f": 8,
 "t": "Liquida",
 "d": "Nota de liquidação: verificação de que a despesa é devida, com base no contrato, no empenho, na nota fiscal e no recebimento definitivo, dentro do saldo do empenho.",
-"x": "Nota de liquidação: verificação de que a despesa é devida, com base no contrato, no empenho, na nota fiscal e no recebimento definitivo, dentro do saldo do empenho. Nota de liquidação numerada: verifica origem, objeto, importância exata e quem recebe, com contrato, empenho, nota fiscal e termo de recebimento. Quatro valores: bruto, glosa, desconto por desempenho e retenções. A medição ou entrega aprovada é a unidade da liquidação. Dedicação exclusiva: paga só com a comprovação do 31f; com inadimplência trabalhista, retém o valor e paga direto aos empregados, com registro do valor e de cada destinatário, deduzido do contratado (art. 121, §3º, IV); conta vinculada: registra cada depósito e cada liberação (art. 121, §3º, III). Sem termo de recebimento definitivo, ou provisório com parcela incontroversa (32a), o sistema não emite a liquidação. Liquidação acima do saldo do empenho é recusada e abre pedido de reforço. Comprovante emitido depois da despesa é recusado. Autônomo: calcula INSS, IR e ISS. Despesa recorrente por cartão: a fatura e o registro mensal “serviço disponível no mês” pelo responsável instruem a liquidação (decisão da Assessoria Contábil). Pagamento antecipado (35c): liquida com base no contrato, na cláusula de antecipação e na nota de empenho, antes do recebimento; objeto não executado no prazo: cobra a devolução (art. 145, §3º). Nota de exercício anterior sem empenho: rito do 1d.",
+"x": "Nota de liquidação numerada: verifica origem, objeto, importância exata e quem recebe, com contrato, empenho, nota fiscal e termo de recebimento. Quatro valores: bruto, glosa, desconto por desempenho e retenções. A medição ou entrega aprovada é a unidade da liquidação. Dedicação exclusiva: paga só com a comprovação do 31f; com inadimplência trabalhista, retém o valor e paga direto aos empregados, com registro do valor e de cada destinatário, deduzido do contratado (art. 121, §3º, IV); conta vinculada: registra cada depósito e cada liberação (art. 121, §3º, III). Sem termo de recebimento definitivo, ou provisório com parcela incontroversa (32a), o sistema não emite a liquidação. Liquidação acima do saldo do empenho é recusada e abre pedido de reforço. Comprovante emitido depois da despesa é recusado. Autônomo: calcula INSS, IR e ISS. Despesa recorrente por cartão: a fatura e o registro mensal “serviço disponível no mês” pelo responsável instruem a liquidação (decisão da Assessoria Contábil). Pagamento antecipado (35c): liquida com base no contrato, na cláusula de antecipação e na nota de empenho, antes do recebimento; objeto não executado no prazo: cobra a devolução (art. 145, §3º). Nota de exercício anterior sem empenho: rito do 1d.",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 arts. 37, 59 e 63 e §§1º e 2º; arts. 121 §3º e 143; Regimento art. 36 §1º II",
 "v": [
@@ -1427,14 +1605,16 @@
 "35",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "34a": {
 "k": "step",
 "f": 8,
 "t": "Devolve a nota ao fornecedor",
 "d": "Nota fiscal diferente do empenho e do recebimento volta ao fornecedor para cancelamento e reemissão.",
-"x": "Nota fiscal diferente do empenho e do recebimento volta ao fornecedor para cancelamento e reemissão. CNPJ, valor, descrição ou tributos diferentes do empenho e do recebimento: o Financeiro devolve com ciência registrada para cancelamento e reemissão. A nota substituta herda o recebimento. O prazo de pagamento conta da nota correta. Nota cancelada depois da liquidação estorna a liquidação; depois do pagamento, abre cobrança do valor pago.",
+"x": "CNPJ, valor, descrição ou tributos diferentes do empenho e do recebimento: o Financeiro devolve com ciência registrada para cancelamento e reemissão. A nota substituta herda o recebimento. O prazo de pagamento conta da nota correta. Nota cancelada depois da liquidação estorna a liquidação; depois do pagamento, abre cobrança do valor pago.",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 art. 63 §2º III; Lei 9.784 art. 26",
 "v": [
@@ -1442,14 +1622,16 @@
 "34",
 "nota substituta"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "35": {
 "k": "step",
 "f": 8,
 "t": "Paga",
 "d": "Ordem de pagamento numerada, autorizada pelo Presidente e pelo Diretor Tesoureiro em lote semanal, na ordem cronológica por fonte e categoria, seguida da ordem bancária executada pelo Financeiro.",
-"x": "Ordem de pagamento numerada, autorizada pelo Presidente e pelo Diretor Tesoureiro em lote semanal, na ordem cronológica por fonte e categoria, seguida da ordem bancária executada pelo Financeiro. Ordem de pagamento numerada, autorizada pelo Presidente e pelo Diretor Tesoureiro, que movimentam a conta em conjunto. Confere o saldo em caixa na conta (painel). Fila cronológica por fonte e por categoria (bens, locações, serviços, obras), publicada todo mês; sair da fila só nas cinco hipóteses da lei, com justificativa prévia e comunicação ao controle interno e ao tribunal de contas. Registra bruto, retenções e líquido. Sem liquidação não paga. Dois atos: a ordem de pagamento, despacho do Presidente com o Diretor Tesoureiro, e a ordem bancária, executada pelo Financeiro com banco, conta, favorecido e comprovante; uma ordem bancária por ordem de pagamento. Ordem de pagamento em lote semanal, na ordem cronológica por categoria, autorizada pelo Presidente e pelo Diretor Tesoureiro em um só ato (prática interna); fora do lote só P0, com a justificativa do art. 141, §1º. A fila ordena pela data em que o pagamento ficou exigível: recebimento definitivo com nota fiscal aceita; fonte padrão: recursos próprios. Sem caixa na data, a ordem de pagamento aguarda na fila e o motivo fica registrado. CNPJ ou CPF do favorecido igual ao do credor da nota de empenho e da nota fiscal, salvo cessão de crédito registrada no contrato. Um cheque paga uma só despesa, salvo salários, diárias e jetons. Registra a data e o comprovante da comunicação ao tribunal de contas.",
+"x": "Ordem de pagamento numerada, autorizada pelo Presidente e pelo Diretor Tesoureiro, que movimentam a conta em conjunto. Confere o saldo em caixa na conta (painel). Fila cronológica por fonte e por categoria (bens, locações, serviços, obras), publicada todo mês; sair da fila só nas cinco hipóteses da lei, com justificativa prévia e comunicação ao controle interno e ao tribunal de contas. Registra bruto, retenções e líquido. Sem liquidação não paga. Dois atos: a ordem de pagamento, despacho do Presidente com o Diretor Tesoureiro, e a ordem bancária, executada pelo Financeiro com banco, conta, favorecido e comprovante; uma ordem bancária por ordem de pagamento. Ordem de pagamento em lote semanal, na ordem cronológica por categoria, autorizada pelo Presidente e pelo Diretor Tesoureiro em um só ato (prática interna); fora do lote só P0, com a justificativa do art. 141, §1º. A fila ordena pela data em que o pagamento ficou exigível: recebimento definitivo com nota fiscal aceita; fonte padrão: recursos próprios. Sem caixa na data, a ordem de pagamento aguarda na fila e o motivo fica registrado. CNPJ ou CPF do favorecido igual ao do credor da nota de empenho e da nota fiscal, salvo cessão de crédito registrada no contrato. Um cheque paga uma só despesa, salvo salários, diárias e jetons. Registra a data e o comprovante da comunicação ao tribunal de contas.",
 "q": "Presidente e Diretor Tesoureiro autorizam; Financeiro executa",
 "l": "art. 141 e §§1º e 3º; Lei 4.320 arts. 48 b, 63 §1º III, 64 e 65; Regimento arts. 10 e 36 §1º III e V",
 "v": [
@@ -1465,24 +1647,28 @@
 "36",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "35a": {
 "k": "step",
 "f": 8,
 "t": "Recolhe as retenções",
 "d": "Repasse ao fisco dos tributos descontados do fornecedor, cada um como lançamento extraorçamentário; o encargo patronal de pessoa física é empenhado antes da liquidação.",
-"x": "Repasse ao fisco dos tributos descontados do fornecedor, cada um como lançamento extraorçamentário; o encargo patronal de pessoa física é empenhado antes da liquidação. IR, CSLL, PIS e COFINS pela IN RFB 1.234/2012 (aplicação ao conselho: decisão da Assessoria Contábil); INSS em cessão de mão de obra (art. 121, §5º, que remete à Lei 8.212, art. 31; alíquota a conferir, fora de fontes-legais); ISS pela lei municipal de Vitória; autônomo: recibo com os descontos legais. Pessoa física: o sistema calcula o INSS patronal e exige empenho na rubrica de encargos antes da liquidação (34); optante do Simples: regra de dispensa a confirmar pela Assessoria Contábil, com declaração anexada. Cada retenção é lançamento extraorçamentário com guia, vencimento, recolhimento e baixa.",
+"x": "IR, CSLL, PIS e COFINS pela IN RFB 1.234/2012 (aplicação ao conselho: decisão da Assessoria Contábil); INSS em cessão de mão de obra (art. 121, §5º, que remete à Lei 8.212, art. 31; alíquota a conferir; texto fora das fontes legais conferidas); ISS pela lei municipal de Vitória; autônomo: recibo com os descontos legais. Pessoa física: o sistema calcula o INSS patronal e exige empenho na rubrica de encargos antes da liquidação (34); optante do Simples: regra de dispensa a confirmar pela Assessoria Contábil, com declaração anexada. Cada retenção é lançamento extraorçamentário com guia, vencimento, recolhimento e baixa.",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 arts. 60 e 63 §1º II; art. 121 §5º; Regimento art. 36 §2º",
-"v": []
+"v": [],
+"m": null,
+"fim": false
 },
 "35b": {
 "k": "step",
 "f": 8,
 "t": "Atraso de pagamento pelo CRECI-ES",
 "d": "Atraso do CRECI-ES no pagamento: atualização monetária empenhada como despesa nova e direito do contratado de suspender ou extinguir.",
-"x": "Atraso do CRECI-ES no pagamento: atualização monetária empenhada como despesa nova e direito do contratado de suspender ou extinguir. O prazo conta do adimplemento (entrega, serviço ou medição). Atraso gera atualização monetária, registrada por apostila. Mais de 2 meses da nota fiscal: o contratado pode suspender a execução ou pedir a extinção. Alerta em 30 e 50 dias. Atualização e juros são despesa nova: exigem empenho na rubrica de juros e encargos, com memória de cálculo. O motivo do atraso é registrado em lista fechada.",
+"x": "O prazo conta do adimplemento (entrega, serviço ou medição). Atraso gera atualização monetária, registrada por apostila. Mais de 2 meses da nota fiscal: o contratado pode suspender a execução ou pedir a extinção. Alerta em 30 e 50 dias. Atualização e juros são despesa nova: exigem empenho na rubrica de juros e encargos, com memória de cálculo. O motivo do atraso é registrado em lista fechada.",
 "q": "Departamento Financeiro",
 "l": "arts. 92 V e §7º, 136 II e 137 §2º IV e §3º II; Lei 4.320 art. 60",
 "v": [
@@ -1490,14 +1676,16 @@
 "31c",
 "contratado pede suspensão ou extinção"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "35c": {
 "k": "step",
 "f": 8,
 "t": "Pagamento antecipado (exceção)",
 "d": "Exceção à regra de pagar só depois de receber, usada depois da eficácia do contrato: liquida com o contrato e a nota de empenho e paga antes do recebimento; só com economia sensível ou condição indispensável, prevista no edital.",
-"x": "Exceção à regra de pagar só depois de receber, usada depois da eficácia do contrato: liquida com o contrato e a nota de empenho e paga antes do recebimento; só com economia sensível ou condição indispensável, prevista no edital. Entra depois da eficácia do contrato (27 e 30), com a cláusula fixada no TR (17). Só se trouxer economia sensível ou for condição indispensável, com justificativa prévia no processo e previsão expressa no edital ou no instrumento; garantia adicional possível; objeto não executado no prazo devolve o valor. O Regimento proíbe pagamento antecipado: até a decisão da Presidência com a Assessoria Jurídica, vale o Regimento.",
+"x": "Entra depois da eficácia do contrato (27 e 30), com a cláusula fixada no TR (17). Só se trouxer economia sensível ou for condição indispensável, com justificativa prévia no processo e previsão expressa no edital ou no instrumento; garantia adicional possível; objeto não executado no prazo devolve o valor. O Regimento proíbe pagamento antecipado: até a decisão da Presidência com a Assessoria Jurídica, vale o Regimento.",
 "q": "Autoridade: Presidente ou quem ele delegar",
 "l": "art. 145 §§1º a 3º; Lei 4.320 art. 63 §2º I e II; Regimento art. 36 §1º I",
 "v": [
@@ -1505,14 +1693,16 @@
 "34",
 "paga antecipado: liquida com o contrato e a nota de empenho (Lei 4.320, art. 63, §2º, I e II) e paga (35) antes do recebimento (32)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "36": {
 "k": "step",
 "f": 8,
 "t": "Confere pagamento × patrimônio",
 "d": "Conferência de que a nota foi paga e o bem foi registrado.",
-"x": "Conferência de que a nota foi paga e o bem foi registrado. Só avisa. Pago (35) e registrado no patrimônio (33)? Bem pago e não incorporado gera aviso, sem travar o pagamento.",
+"x": "Só avisa. Pago (35) e registrado no patrimônio (33)? Bem pago e não incorporado gera aviso, sem travar o pagamento.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; apoia a Lei 4.320 art. 94",
 "v": [
@@ -1520,14 +1710,16 @@
 "30",
 "próxima entrega, mês ou contratação pela ata"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "37": {
 "k": "step",
 "f": 8,
 "t": "Solicita contratação pela ata",
 "d": "Pedido do setor requisitante de contratação com base nos preços registrados na ata; licitação específica só com motivo.",
-"x": "Pedido do setor requisitante de contratação com base nos preços registrados na ata; licitação específica só com motivo. Quando há ata: indica itens e quantidades registrados. Licitação específica motivada em vez da ata: nova solicitação (passo 1, art. 83).",
+"x": "Quando há ata: indica itens e quantidades registrados. Licitação específica motivada em vez da ata: nova solicitação (passo 1, art. 83).",
 "q": "Setor requisitante, com aval do gestor da ata",
 "l": "arts. 82 e 83",
 "v": [
@@ -1535,7 +1727,9 @@
 "38",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "38": {
 "k": "step",
@@ -1558,14 +1752,16 @@
 "1",
 "licitação específica motivada (art. 83): nova solicitação (1)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "38a": {
 "k": "step",
 "f": 8,
 "t": "Ata sem saldo: alternativas legais",
 "d": "O que fazer quando a quantidade registrada acaba.",
-"x": "O que fazer quando a quantidade registrada acaba. A quantidade registrada não pode ser aumentada. Alternativas: termo aditivo de até 25% no contrato decorrente da ata ainda vigente (43), nova ata (41b) ou adesão, se confirmada.",
+"x": "A quantidade registrada não pode ser aumentada. Alternativas: termo aditivo de até 25% no contrato decorrente da ata ainda vigente (43), nova ata (41b) ou adesão, se confirmada.",
 "q": "Compras e Licitações e Assessoria Jurídica",
 "l": "Decreto 11.462 art. 23; arts. 124 e 125",
 "v": [
@@ -1577,14 +1773,16 @@
 "43",
 "aditivo de até 25% no contrato decorrente (art. 125)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "38b": {
 "k": "step",
 "f": 8,
 "t": "Reserva e empenha a contratação",
 "d": "Cada contratação pela ata precisa de dotação e de empenho próprios.",
-"x": "Cada contratação pela ata precisa de dotação e de empenho próprios. Cada contratação pela ata gasta dotação nova: o Financeiro reserva e empenha o valor deste pedido e atualiza o painel.",
+"x": "Cada contratação pela ata gasta dotação nova: o Financeiro reserva e empenha o valor deste pedido e atualiza o painel.",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 art. 60; art. 150; Decreto 11.462 art. 17 (ref.)",
 "v": [
@@ -1592,52 +1790,58 @@
 "39",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "38c": {
 "k": "step",
 "f": 8,
 "t": "Fornecedor da ata não entrega",
 "d": "Fornecedor da ata que não entrega ou não retira a nota de empenho: notificação, cancelamento do registro por despacho com defesa, novo empenho para o cadastro de reserva e responsabilização.",
-"x": "Fornecedor da ata que não entrega ou não retira a nota de empenho: notificação, cancelamento do registro por despacho com defesa, novo empenho para o cadastro de reserva e responsabilização. Entra do 39 (não retira a nota de empenho) e do 31 (não entrega). Notifica com prazo (31b); cancela o registro do fornecedor por despacho, com contraditório e ampla defesa (Decreto 11.462, art. 28, §2º); o Financeiro anula o empenho do pedido parado (38b) e empenha em nome do próximo do cadastro de reserva (RP5), convocado na ordem; abre responsabilização (SA1). Sanção de impedimento ou inidoneidade também cancela o registro (art. 28, IV).",
+"x": "Entra do 39 (não retira a nota de empenho) e do 31 (não entrega). Notifica com prazo (31b); cancela o registro do fornecedor por despacho, com contraditório e ampla defesa (Decreto 11.462, art. 28, §2º); o Financeiro anula o empenho do pedido parado (38b) e empenha em nome do próximo do cadastro de reserva (RP5), convocado na ordem; abre responsabilização (SA1). Sanção de impedimento ou inidoneidade também cancela o registro (art. 28, IV).",
 "q": "Departamento de Compras e Licitações",
 "l": "Decreto 11.462 art. 28 II e IV e §§2º e 3º; art. 82 §5º VI; Lei 4.320 art. 61",
 "v": [
 [
 "39",
-"próximo do\ncadastro de reserva"
+"próximo do cadastro de reserva"
 ],
 [
 "SA1",
 "responsabilização"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "39": {
 "k": "step",
 "f": 8,
 "t": "Prepara o instrumento",
 "d": "Documento que formaliza a contratação pela ata, preparado por Compras e assinado pela autoridade.",
-"x": "Documento que formaliza a contratação pela ata, preparado por Compras e assinado pela autoridade. Nota de empenho (emitida no 38b), autorização de compra ou ordem de execução de serviço; a autoridade assina. Antes, refaz regularidade fiscal, CEIS/CNEP e confere a vigência da ata.",
+"x": "Nota de empenho (emitida no 38b), autorização de compra ou ordem de execução de serviço; a autoridade assina. Antes, refaz regularidade fiscal, CEIS/CNEP e confere a vigência da ata.",
 "q": "Compras prepara; a autoridade assina",
 "l": "arts. 91 §4º e 95; Decreto 11.462 art. 34 (ref.)",
 "v": [
 [
 "38c",
-"fornecedor\ndescumpre"
+"fornecedor descumpre"
 ],
 [
 "40",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "40": {
 "k": "step",
 "f": 8,
-"t": "Confere e publica no PNCP",
-"d": "Juntada ao processo e publicação, quando houver termo de contrato.",
-"x": "Juntada ao processo e publicação, quando houver termo de contrato. Compras junta o instrumento ao processo e, se houver termo de contrato, publica no PNCP.",
+"t": "Confere e divulga no PNCP",
+"d": "Juntada ao processo e divulgação no PNCP, quando houver termo de contrato.",
+"x": "Compras junta o instrumento ao processo e, se houver termo de contrato, divulga no PNCP.",
 "q": "Departamento de Compras e Licitações",
 "l": "art. 94",
 "v": [
@@ -1645,14 +1849,20 @@
 "41",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "Servidor de Compras divulga o termo de contrato pelo Publicador de Contratos, como no passo 27, e registra no sistema o número de controle PNCP.",
+"controle": "Contará o prazo e verificará o número de controle PNCP na API de consulta.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+},
+"fim": false
 },
 "41": {
 "k": "step",
 "f": 8,
 "t": "Atualiza o saldo da ata",
 "d": "Controle da quantidade que ainda pode ser contratada pela ata.",
-"x": "Controle da quantidade que ainda pode ser contratada pela ata. Desconta a quantidade contratada e avisa o fiscal.",
+"x": "Desconta a quantidade contratada e avisa o fiscal.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna (a lei não exige)",
 "v": [
@@ -1664,14 +1874,16 @@
 "41a",
 "50% e 80%"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "41a": {
 "k": "step",
 "f": 8,
 "t": "Consumo e preço da ata",
 "d": "Aviso de que a ata está sendo consumida e lembrete de conferir o preço registrado.",
-"x": "Aviso de que a ata está sendo consumida e lembrete de conferir o preço registrado. Avisa em 50% e 80% da quantidade registrada, com previsão de quando acaba, e lembra a conferência periódica do preço de mercado: acima dele, negocia a redução ou cancela o registro.",
+"x": "Avisa em 50% e 80% da quantidade registrada, com previsão de quando acaba, e lembra a conferência periódica do preço de mercado: acima dele, negocia a redução ou cancela o registro.",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; arts. 82 §5º IV e 83; Decreto 11.462 arts. 25 a 29 (ref.)",
 "v": [
@@ -1679,14 +1891,16 @@
 "41b",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "41b": {
 "k": "step",
 "f": 8,
 "t": "Prepara a nova ata",
 "d": "Nova solicitação para a próxima ata, antes de a atual acabar.",
-"x": "Nova solicitação para a próxima ata, antes de a atual acabar. Abre nova solicitação (passo 1) antes de a quantidade registrada acabar. Renovação das quantidades na prorrogação: decisão da Assessoria Jurídica.",
+"x": "Abre nova solicitação (passo 1) antes de a quantidade registrada acabar. Renovação das quantidades na prorrogação: decisão da Assessoria Jurídica.",
 "q": "Departamento de Compras e Licitações",
 "l": "art. 84",
 "v": [
@@ -1694,14 +1908,16 @@
 "1",
 "nova ata: nova solicitação no passo 1"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "42": {
 "k": "step",
 "f": 9,
 "t": "Alertas de fim de vigência",
 "d": "Avisos de fim de vigência, garantia, reajuste, certidões e saldo; o contrato de escopo prorroga sozinho se não concluído.",
-"x": "Avisos de fim de vigência, garantia, reajuste, certidões e saldo; o contrato de escopo prorroga sozinho se não concluído. A contagem começa 120 dias antes do fim; e-mail aos 90, 60 e 30 dias, escalando fiscal → gestor → Diretoria. Também garantia, reajuste, certidões e saldo da ata. Alertas: aniversário de contrato plurianual (180, 120 e 90 dias), data-base do reajuste (60 dias), fim da garantia do objeto (30 dias), licença, assinatura ou renovação automática (toda data de fim cadastrada), prazo interno vencido em qualquer passo, com escalonamento em 5 e 10 dias úteis. Saldo do contrato por demanda em 50% e 80%, com aviso antes de esgotar o acréscimo de 25% (art. 125). Contrato de escopo: prazo vencido sem conclusão prorroga sozinho por apostila (art. 111); culpa do contratado: mora (31b).",
+"x": "A contagem começa 120 dias antes do fim; e-mail aos 90, 60 e 30 dias, escalando fiscal → gestor → Diretoria. Também garantia, reajuste, certidões e saldo da ata. Alertas: aniversário de contrato plurianual (180, 120 e 90 dias), data-base do reajuste (60 dias), fim da garantia do objeto (30 dias), licença, assinatura ou renovação automática (toda data de fim cadastrada), prazo interno vencido em qualquer passo, com escalonamento em 5 e 10 dias úteis. Saldo do contrato por demanda em 50% e 80%, com aviso antes de esgotar o acréscimo de 25% (art. 125). Contrato de escopo: prazo vencido sem conclusão prorroga sozinho por apostila (art. 111); culpa do contratado: mora (31b).",
 "q": "Sistema (Área Restrita)",
 "l": "prática interna; apoia os arts. 84, 92 V e XIII, 107, 111 e 125",
 "v": [
@@ -1717,14 +1933,16 @@
 "43",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "42a": {
 "k": "step",
 "f": 9,
 "t": "Renovação anual do contrato contínuo",
 "d": "Revisão anual obrigatória dos contratos de duração plurianual, com antecedência mínima para extinguir.",
-"x": "Revisão anual obrigatória dos contratos de duração plurianual, com antecedência mínima para extinguir. Todo início de ano orçamentário: o Financeiro trata o saldo do ano anterior, reserva e empenha o novo ano, e a autoridade atesta que manter ainda vale a pena. Sem crédito ou sem vantagem, extingue o contrato, sem multa, na data de aniversário, com decisão comunicada ao contratado pelo menos 2 meses antes. Compras e Licitações pesquisa o preço pelo rito do 18 até o alerta de 120 dias do aniversário; preço acima do mercado: negocia a redução com o contratado (art. 107); sem acordo: extinção comunicada 2 meses antes e nova solicitação aberta no 1. O empenho do novo exercício sai antes da primeira medição de janeiro (prática interna). Em lote, em janeiro: um relatório por contrato contínuo, uma assinatura por lote. Crédito e vantagem atestados: segue vigente (30). Compromissos de exercícios futuros alimentam a proposta orçamentária, até 31 de outubro.",
+"x": "Todo início de ano orçamentário: o Financeiro trata o saldo do ano anterior, reserva e empenha o novo ano, e a autoridade atesta que manter ainda vale a pena. Sem crédito ou sem vantagem, extingue o contrato, sem multa, na data de aniversário, com decisão comunicada ao contratado pelo menos 2 meses antes. Compras e Licitações pesquisa o preço pelo rito do 18 até o alerta de 120 dias do aniversário; preço acima do mercado: negocia a redução com o contratado (art. 107); sem acordo: extinção comunicada 2 meses antes e nova solicitação aberta no 1. O empenho do novo exercício sai antes da primeira medição de janeiro (prática interna). Em lote, em janeiro: um relatório por contrato contínuo, uma assinatura por lote. Crédito e vantagem atestados: segue vigente (30). Compromissos de exercícios futuros alimentam a proposta orçamentária, até 31 de outubro.",
 "q": "Financeiro, Compras e Licitações e autoridade",
 "l": "art. 106 II, III e §1º; art. 107; Regimento art. 31",
 "v": [
@@ -1736,24 +1954,28 @@
 "30",
 "crédito e vantagem atestados: segue vigente (30)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "42b": {
 "k": "step",
 "f": 9,
 "t": "Encerramento do exercício",
 "d": "Fechamento contábil do ano: o que foi empenhado e não pago vira restos a pagar; o saldo de empenho sem obrigação pendente é anulado.",
-"x": "Fechamento contábil do ano: o que foi empenhado e não pago vira restos a pagar; o saldo de empenho sem obrigação pendente é anulado. Balancete trimestral ao Conselho Fiscal e ao Plenário. Em dezembro: inscreve restos a pagar processados e não processados, por credor; no ano seguinte, liquida ou cancela os não processados (regra de cancelamento e prescrição: decisão do Financeiro com a Assessoria Jurídica); restos a pagar de contrato plurianual só caem ao fim da vigência; despesa de exercício anterior pelo 1d; vence as reservas; fecha o mês e o ano com conciliação. O que foi empenhado e não pago vira restos a pagar; o saldo de empenho sem obrigação pendente é anulado. A liquidação do resto a pagar não processado usa o empenho do ano de origem, não a dotação de despesas de exercícios anteriores; resto a pagar processado entra na fila do 35 pela data original. Gera o rol de responsáveis do período, o comparativo orçado × realizado e o termo mensal de conciliação bancária (prática interna), que alimenta a peça anual do art. 24, IV do Regimento, assinado pelo Financeiro e pelo Diretor Tesoureiro. A Assessoria Contábil emite o balancete trimestral; o sistema anexa o relatório gerencial: contratos, empenhos, ordem cronológica, achados e conciliação painel × contábil; destino: Conselho Fiscal (art. 12) e Plenário (art. 4º, X).",
+"x": "Balancete trimestral ao Conselho Fiscal e ao Plenário. Em dezembro: inscreve restos a pagar processados e não processados, por credor; no ano seguinte, liquida ou cancela os não processados (regra de cancelamento e prescrição: decisão do Financeiro com a Assessoria Jurídica); restos a pagar de contrato plurianual só caem ao fim da vigência; despesa de exercício anterior pelo 1d; vence as reservas; fecha o mês e o ano com conciliação. O que foi empenhado e não pago vira restos a pagar; o saldo de empenho sem obrigação pendente é anulado. A liquidação do resto a pagar não processado usa o empenho do ano de origem, não a dotação de despesas de exercícios anteriores; resto a pagar processado entra na fila do 35 pela data original. Gera o rol de responsáveis do período, o comparativo orçado × realizado e o termo mensal de conciliação bancária (prática interna), que alimenta a peça anual do art. 24, IV do Regimento, assinado pelo Financeiro e pelo Diretor Tesoureiro. A Assessoria Contábil emite o balancete trimestral; o sistema anexa o relatório gerencial: contratos, empenhos, ordem cronológica, achados e conciliação painel × contábil; destino: Conselho Fiscal (art. 12) e Plenário (art. 4º, X).",
 "q": "Departamento Financeiro",
 "l": "Lei 4.320 arts. 36, 37 e 92 parágrafo único; art. 105 parágrafo único; Regimento arts. 4º X, 12 e parágrafo único e 24",
-"v": []
+"v": [],
+"m": null,
+"fim": false
 },
 "43": {
 "k": "step",
 "f": 9,
 "t": "Gestor avalia e propõe",
 "d": "Avaliação do gestor e proposta de decisão à autoridade: prorrogação, alteração unilateral (até 25%, reforma até 50%), por acordo ou apostila, ou extinção.",
-"x": "Avaliação do gestor e proposta de decisão à autoridade: prorrogação, alteração unilateral (até 25%, reforma até 50%), por acordo ou apostila, ou extinção. Analisa o contrato e propõe prorrogação, termo aditivo ou extinção. Tipos de alteração: unilateral (projeto ou quantidade, até 25% do valor inicial atualizado, para acréscimo ou supressão; reforma de edifício ou de equipamento: acréscimo até 50%, art. 125), por acordo (garantia, regime, pagamento, reequilíbrio), apostila (reajuste, repactuação, razão social, empenho). O limite soma todos os aditivos. Unilateral não transfigura o objeto (art. 126) e reequilibra no mesmo termo (art. 130). Aditivo no contrato decorrente da ata sem saldo (38a). O termo aditivo é condição para executar o que foi alterado, salvo antecipação justificada, formalizada em 1 mês. Instrui com proposta de decisão; a autoridade (44) registra se acolhe ou diverge, e por quê (Lei 9.784, art. 47).",
+"x": "Analisa o contrato e propõe prorrogação, termo aditivo ou extinção. Tipos de alteração: unilateral (projeto ou quantidade, até 25% do valor inicial atualizado, para acréscimo ou supressão; reforma de edifício ou de equipamento: acréscimo até 50%, art. 125), por acordo (garantia, regime, pagamento, reequilíbrio), apostila (reajuste, repactuação, razão social, empenho). O limite soma todos os aditivos. Unilateral não transfigura o objeto (art. 126) e reequilibra no mesmo termo (art. 130). Aditivo no contrato decorrente da ata sem saldo (38a). O termo aditivo é condição para executar o que foi alterado, salvo antecipação justificada, formalizada em 1 mês. Instrui com proposta de decisão; a autoridade (44) registra se acolhe ou diverge, e por quê (Lei 9.784, art. 47).",
 "q": "Gestor do contrato",
 "l": "arts. 107, 117, 124, 125, 126, 130, 132 e 136; Lei 9.784 art. 47",
 "v": [
@@ -1761,7 +1983,9 @@
 "44",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "44": {
 "k": "step",
@@ -1784,14 +2008,16 @@
 "30",
 "indefere com motivo: segue vigente (30)"
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "44a": {
 "k": "step",
 "f": 9,
 "t": "Prorrogação ou termo aditivo",
 "d": "Ampliação do prazo ou alteração do contrato por termo aditivo, eficaz após a divulgação no PNCP, com reforço do empenho; reajuste por apostila.",
-"x": "Ampliação do prazo ou alteração do contrato por termo aditivo, eficaz após a divulgação no PNCP, com reforço do empenho; reajuste por apostila. Refaz as consultas de integridade, exige garantia renovada, junta a lista de verificação e o parecer jurídico; o Financeiro verifica a dotação e reforça o empenho (apostila para reajuste); a autoridade assina o termo, publicado no PNCP. Prorrogar sempre antes do fim; acréscimo ou supressão de até 25% do valor inicial atualizado, reforma de edifício ou de equipamento até 50% (art. 125). Contínuo: só prorroga se o edital previu (art. 107); reequilíbrio pedido antes da prorrogação (art. 131, parágrafo único). Garantia endossada ou renovada; contrato suspenso por ordem ou atraso do CRECI-ES: o contratado não precisa renovar a garantia (art. 96, §2º); data-base mantida. Reequilíbrio, repactuação e aditivo com nova pesquisa ou comparação com o preço contratado. O aditivo só produz efeito depois de divulgado no PNCP. Confere de novo a trava de fim de mandato (8c); exceção só com justificativa assinada pelo Presidente.",
+"x": "Refaz as consultas de integridade, exige garantia renovada, junta a lista de verificação e o parecer jurídico; o Financeiro verifica a dotação e reforça o empenho (apostila para reajuste); a autoridade assina o termo, divulgado no PNCP. Prorrogar sempre antes do fim; acréscimo ou supressão de até 25% do valor inicial atualizado, reforma de edifício ou de equipamento até 50% (art. 125). Contínuo: só prorroga se o edital previu (art. 107); reequilíbrio pedido antes da prorrogação (art. 131, parágrafo único). Garantia endossada ou renovada; contrato suspenso por ordem ou atraso do CRECI-ES: o contratado não precisa renovar a garantia (art. 96, §2º); data-base mantida. Reequilíbrio, repactuação e aditivo com nova pesquisa ou comparação com o preço contratado. O aditivo só produz efeito depois de divulgado no PNCP. Confere de novo a trava de fim de mandato (8c); exceção só com justificativa assinada pelo Presidente.",
 "q": "Compras, Assessoria Jurídica, Financeiro e autoridade",
 "l": "arts. 11 III, 91 §4º, 92 V, 94, 96 §2º, 107, 124, 125, 131 parágrafo único e 136",
 "v": [
@@ -1799,28 +2025,36 @@
 "30",
 "contrato segue vigente"
 ]
-]
+],
+"m": {
+"implantacao": "Servidor de Compras divulga o termo aditivo pelo mesmo canal do contrato (27) e registra no sistema o número de controle PNCP. Se o Publicador de Contratos aceita termo aditivo: a confirmar (decisão 18).",
+"controle": "Impedirá a execução do aditivo sem número de controle PNCP registrado e verificará o número na API de consulta.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+},
+"fim": false
 },
 "44b": {
 "k": "step",
 "f": 9,
-"t": "Extinção do contrato — fim",
+"t": "Extinção do contrato",
 "d": "Fim do contrato, por término da vigência ou por termo de extinção da autoridade, com acerto financeiro, garantia e avaliação do contratado; a garantia do objeto continua.",
-"x": "Fim do contrato, por término da vigência ou por termo de extinção da autoridade, com acerto financeiro, garantia e avaliação do contratado; a garantia do objeto continua. Fim da vigência, ou extinção antecipada por termo autorizado por escrito pela autoridade, com contraditório e ampla defesa; se unilateral, recurso em 3 dias úteis. O Financeiro anula o saldo de empenho, apura o que é devido e libera ou executa a garantia. Sai do painel do fiscal só ao fim da garantia do objeto; até lá fica “Concluído, em garantia”, visível ao gestor e ao Patrimônio; vício nesse prazo: 32b. Extinção unilateral, consensual, arbitral ou judicial, sempre com autorização escrita e termo; consensual: termo assinado pelas duas partes, sem a janela de recurso do art. 165, I, e. Dedicação exclusiva: a garantia só volta ao contratado depois do recibo de quitação das obrigações trabalhistas dos dispensados; na extinção unilateral, a garantia paga as verbas trabalhistas (art. 139, III, b). Garantia restituída, atualizada se em dinheiro. Anulação depois de 31 de dezembro não volta à dotação: é receita do ano em que ocorre. Emite a avaliação do contratado, com indicadores e penalidades, levada ao registro cadastral (art. 88, §3º). Remanescente: 31e.",
+"x": "Fim da vigência, ou extinção antecipada por termo autorizado por escrito pela autoridade, com contraditório e ampla defesa; se unilateral, recurso em 3 dias úteis. O Financeiro anula o saldo de empenho, apura o que é devido e libera ou executa a garantia. Sai do painel do fiscal só ao fim da garantia do objeto; até lá fica “Concluído, em garantia”, visível ao gestor e ao Patrimônio; vício nesse prazo: 32b. Extinção unilateral, consensual, arbitral ou judicial, sempre com autorização escrita e termo; consensual: termo assinado pelas duas partes, sem a janela de recurso do art. 165, I, e. Dedicação exclusiva: a garantia só volta ao contratado depois do recibo de quitação das obrigações trabalhistas dos dispensados; na extinção unilateral, a garantia paga as verbas trabalhistas (art. 139, III, b). Garantia restituída, atualizada se em dinheiro. Anulação depois de 31 de dezembro não volta à dotação: é receita do ano em que ocorre. Emite a avaliação do contratado, com indicadores e penalidades, levada ao registro cadastral (art. 88, §3º). Remanescente: 31e.",
 "q": "Autoridade assina; Financeiro anula o empenho",
-"l": "arts. 50 V, 88 §3º, 100, 137 a 139 e 165 I e; Lei 4.320 art. 38",
+"l": "arts. 50 V, 88 §3º, 100, 137 a 139 e 165 I, alínea e; Lei 4.320 art. 38",
 "v": [
 [
 "32b",
 "vício dentro da garantia do objeto"
 ]
-]
+],
+"m": null,
+"fim": true
 },
 "L:LE": {
 "k": "linha",
 "f": "LE",
 "t": "Leilão",
-"d": "MODALIDADE · art. 28 IV · definição art. 6º XL",
+"d": "Modalidade · art. 28 IV · definição art. 6º XL",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -1834,119 +2068,135 @@
 "k": "cell",
 "f": "LE",
 "t": "Justifica, avalia e classifica o bem",
-"d": "",
-"q": "Leilão",
+"d": "Entrada pelo 0b, direto do 13. Imóvel: autorização legislativa e leilão. Móvel inservível, classificado por comissão (ocioso, recuperável, antieconômico ou irrecuperável): leilão. Doação só para fins e uso de interesse social, após avaliação de oportunidade e conveniência. Permuta só entre órgãos ou entidades da Administração. Venda a outro órgão sem uso previsível. Os três dispensam a licitação (art. 76, II, a, b e f). Doação ou permuta: termo, publicação do ato e baixa patrimonial (LE6), sem leiloeiro e sem lances.",
+"q": "Patrimônio e Almoxarifado",
 "l": "art. 76 II a, b e f; Decreto 12.785 arts. 3º, 10 e 11",
 "v": [
 [
 "LE2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "LE2": {
 "k": "cell",
 "f": "LE",
 "t": "Seleciona o leiloeiro",
-"d": "",
-"q": "Leilão",
+"d": "Servidor designado, ou leiloeiro oficial por credenciamento ou pregão de menor comissão.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 31 §1º",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "21a": {
 "k": "cell",
 "f": "LE",
 "t": "Edital do leilão",
-"d": "",
-"q": "Compras e Licitações",
+"d": "Descrição, avaliação, preço mínimo e condições de pagamento.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 31 §2º",
 "v": [
 [
 "21b",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "21b": {
 "k": "cell",
 "f": "LE",
 "t": "Lista e parecer do leilão",
 "d": "",
-"q": "Compras e Licitações",
+"q": "Assessoria Jurídica",
 "l": "art. 53",
 "v": [
 [
 "22",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "LE3": {
 "k": "cell",
 "f": "LE",
 "t": "Publica o edital",
-"d": "",
-"q": "Leilão",
+"d": "Avaliação, preço mínimo e ônus; site oficial, PNCP e afixado na sede. Mínimo de 15 dias úteis.",
+"q": "Leiloeiro",
 "l": "arts. 31 e 55 III",
 "v": [
 [
 "LE4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "LE4": {
 "k": "cell",
 "f": "LE",
 "t": "Lances",
-"d": "",
-"q": "Leilão",
+"d": "Maior lance; sem habilitação.",
+"q": "Leiloeiro",
 "l": "art. 31 §4º",
 "v": [
 [
 "LE5",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "LE5": {
 "k": "cell",
 "f": "LE",
 "t": "Recurso e pagamento",
-"d": "",
-"q": "Leilão",
+"d": "Recurso em 3 dias úteis; o arrematante paga antes da homologação. Registra o pagamento do arrematante e a comissão do leiloeiro.",
+"q": "Leiloeiro",
 "l": "arts. 31 §§1º e 4º e 165",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "LE6": {
 "k": "cell",
 "f": "LE",
-"t": "Entrega e baixa — fim",
-"d": "",
-"q": "Leilão",
+"t": "Entrega e baixa",
+"d": "Patrimônio entrega o bem e dá baixa; o Financeiro registra a receita de capital no painel orçamentário. Doação ou permuta: termo e publicação do ato, sem lances.",
+"q": "Patrimônio e Almoxarifado",
 "l": "Lei 4.320 arts. 11 §2º e 94",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": true
 },
 "L:PU": {
 "k": "linha",
 "f": "PU",
 "t": "Publicidade e comunicação institucional",
-"d": "MODALIDADE · concorrência pela Lei 12.232 arts. 5º e 10; art. 74 III",
+"d": "Modalidade · concorrência pela Lei 12.232 arts. 5º e 10; art. 74 III",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -1960,63 +2210,71 @@
 "k": "cell",
 "f": "PU",
 "t": "Define o objeto",
-"d": "",
-"q": "Publicidade e comunicação institucional",
+"d": "Publicidade por agência (art. 2º) ou comunicação institucional (art. 20-A), sem misturar com eventos festivos (art. 2º, §2º). Veiculação direta em veículo determinado (jornal, rádio, stand em evento), sem agência: só por inexigibilidade de fornecedor exclusivo (art. 74, I), com prova da exclusividade, e com decisão da Assessoria Jurídica caso a caso. A vedação do art. 74, III alcança os serviços de publicidade e divulgação por notória especialização.",
+"q": "Departamento de Compras e Licitações",
 "l": "Lei 12.232 arts. 2º e 20-A; art. 74 I e III",
 "v": [
 [
 "PU2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PU2": {
 "k": "cell",
 "f": "PU",
 "t": "Dotação própria",
-"d": "",
-"q": "Publicidade e comunicação institucional",
+"d": "Rubrica específica de publicidade institucional e de utilidade pública. Teto de 5% da receita anual, com consumo mostrado no painel.",
+"q": "Departamento de Compras e Licitações",
 "l": "Lei 12.232 art. 21; Regimento art. 42",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PU3": {
 "k": "cell",
 "f": "PU",
 "t": "Publica e sorteia a subcomissão técnica",
-"d": "",
-"q": "Publicidade e comunicação institucional",
+"d": "3 membros da área, um terço sem vínculo, sorteio em sessão pública.",
+"q": "Departamento de Compras e Licitações",
 "l": "Lei 12.232 art. 10 §§1º e 2º",
 "v": [
 [
 "PU4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PU4": {
 "k": "cell",
 "f": "PU",
 "t": "Julgamento técnico pela subcomissão e de preço pela comissão",
 "d": "",
-"q": "Publicidade e comunicação institucional",
+"q": "Comissão ou banca designada",
 "l": "Lei 12.232 art. 10",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:CV": {
 "k": "linha",
 "f": "CV",
 "t": "Convênio, cooperação e auxílio",
-"d": "INSTRUMENTO CONGÊNERE · art. 184",
+"d": "Instrumento congênere · art. 184",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2030,49 +2288,55 @@
 "k": "cell",
 "f": "CV",
 "t": "Plano de trabalho e justificativa",
-"d": "",
-"q": "Convênio, cooperação e auxílio",
+"d": "Objeto, metas, cronograma e prestação de contas.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 184",
 "v": [
 [
 "CV2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CV2": {
 "k": "cell",
 "f": "CV",
 "t": "Soma anual dos auxílios",
-"d": "",
-"q": "Convênio, cooperação e auxílio",
+"d": "Contra 5% da receita e trava dos 4 duodécimos nos últimos 4 meses do mandato.",
+"q": "Sistema (Área Restrita)",
 "l": "Regimento art. 41 e §1º",
 "v": [
 [
 "CV3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CV3": {
 "k": "cell",
 "f": "CV",
 "t": "Anuência do COFECI",
-"d": "",
-"q": "Convênio, cooperação e auxílio",
+"d": "Quando for auxílio a entidade: anuência prévia do Presidente do COFECI.",
+"q": "Autoridade: Presidente ou quem ele delegar",
 "l": "Regimento art. 41 §2º",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:CS": {
 "k": "linha",
 "f": "CS",
 "t": "Concurso",
-"d": "MODALIDADE · art. 28 III · definição art. 6º XXXIX",
+"d": "Modalidade · art. 28 III · definição art. 6º XXXIX",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2086,63 +2350,71 @@
 "k": "cell",
 "f": "CS",
 "t": "Publica o edital",
-"d": "",
-"q": "Concurso",
+"d": "Qualificação exigida, diretrizes, forma de apresentação e prêmio; extrato no Diário Oficial da União e em jornal.",
+"q": "Departamento de Compras e Licitações",
 "l": "arts. 30 e 54 §1º",
 "v": [
 [
 "CS2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CS2": {
 "k": "cell",
 "f": "CS",
 "t": "Prazo mínimo para entrega",
-"d": "",
-"q": "Concurso",
+"d": "Mínimo de 35 dias úteis.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 55 IV",
 "v": [
 [
 "CS3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CS3": {
 "k": "cell",
 "f": "CS",
 "t": "Julgamento",
-"d": "",
-"q": "Concurso",
+"d": "Banca de no mínimo 3 membros atribui notas.",
+"q": "Comissão ou banca designada",
 "l": "art. 37 §1º",
 "v": [
 [
 "CS4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CS4": {
 "k": "cell",
 "f": "CS",
 "t": "Recurso",
-"d": "",
-"q": "Concurso",
+"d": "3 dias úteis; rito na linha IR.",
+"q": "Comissão ou banca designada",
 "l": "art. 165",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:DC": {
 "k": "linha",
 "f": "DC",
 "t": "Diálogo competitivo",
-"d": "MODALIDADE · art. 28 V · definição art. 6º XLII",
+"d": "Modalidade · art. 28 V · definição art. 6º XLII",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2156,77 +2428,87 @@
 "k": "cell",
 "f": "DC",
 "t": "Edital de pré-seleção",
-"d": "",
-"q": "Diálogo competitivo",
+"d": "Comissão de no mínimo 3 empregados do quadro permanente; necessidades e critérios; manifestação de interesse em no mínimo 25 dias úteis.",
+"q": "Comissão ou banca designada",
 "l": "art. 32 §1º I, II e XI",
 "v": [
 [
 "DC2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DC2": {
 "k": "cell",
 "f": "DC",
 "t": "Pré-seleção",
-"d": "",
-"q": "Diálogo competitivo",
+"d": "Admite todos que cumprem os requisitos.",
+"q": "Comissão ou banca designada",
 "l": "art. 32 §1º II",
 "v": [
 [
 "DC3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DC3": {
 "k": "cell",
 "f": "DC",
 "t": "Diálogos",
-"d": "",
-"q": "Diálogo competitivo",
+"d": "Reuniões gravadas, com ata; sigilo das soluções de cada licitante.",
+"q": "Comissão ou banca designada",
 "l": "art. 32 §1º III a VII",
 "v": [
 [
 "DC4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DC4": {
 "k": "cell",
 "f": "DC",
 "t": "Fase competitiva",
-"d": "",
-"q": "Diálogo competitivo",
+"d": "Edital com a especificação da solução; propostas em no mínimo 60 dias úteis.",
+"q": "Comissão ou banca designada",
 "l": "art. 32 §1º VIII",
 "v": [
 [
 "DC5",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DC5": {
 "k": "cell",
 "f": "DC",
 "t": "Julgamento",
-"d": "",
-"q": "Diálogo competitivo",
+"d": "Pelos critérios divulgados no início da fase competitiva.",
+"q": "Comissão ou banca designada",
 "l": "art. 32 §1º IX",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:CR": {
 "k": "linha",
 "f": "CR",
 "t": "Credenciamento",
-"d": "PROCEDIMENTO AUXILIAR · arts. 78 I e 79 · definição art. 6º XLIII",
+"d": "Procedimento auxiliar · arts. 78 I e 79 · definição art. 6º XLIII",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2240,63 +2522,71 @@
 "k": "cell",
 "f": "CR",
 "t": "Publica o chamamento",
-"d": "",
-"q": "Credenciamento",
+"d": "Permanente, com condições padronizadas e valor fixado (exceto mercado fluido).",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 79 §1º I e III",
 "v": [
 [
 "CR2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CR2": {
 "k": "cell",
 "f": "CR",
 "t": "Credencia",
-"d": "",
-"q": "Credenciamento",
+"d": "Recebe documentos a qualquer tempo e divulga a lista. Fornecedor pessoa física e sócios declaram que não são cônjuge, companheiro ou parente até o terceiro grau de dirigente ou de agente do processo; sobrenome coincidente gera análise registrada nos autos.",
+"q": "Departamento de Compras e Licitações",
 "l": "arts. 14 IV e 79 §1º I",
 "v": [
 [
 "CR3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CR3": {
 "k": "cell",
 "f": "CR",
 "t": "Distribui a demanda",
-"d": "",
-"q": "Credenciamento",
+"d": "Critério objetivo (rodízio ou sorteio), seleção pelo próprio usuário do serviço ou cotação no mercado fluido.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 79 §1º II e IV",
 "v": [
 [
 "CR4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CR4": {
 "k": "cell",
 "f": "CR",
 "t": "Contrata cada credenciado",
-"d": "",
-"q": "Credenciamento",
+"d": "Por inexigibilidade; qualquer parte pode sair nos prazos do edital.",
+"q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 74 IV e 79 §1º V e VI",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:IN": {
 "k": "linha",
 "f": "IN",
 "t": "Inexigibilidade",
-"d": "CONTRATAÇÃO DIRETA · art. 74",
+"d": "Contratação direta · art. 74",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2310,49 +2600,55 @@
 "k": "cell",
 "f": "IN",
 "t": "Enquadra o inciso",
-"d": "",
-"q": "Inexigibilidade",
+"d": "Exclusivo, inclusive serviço público em regime de monopólio (energia elétrica, água: prazo indeterminado, com crédito comprovado a cada exercício, art. 109); artista; serviço técnico intelectual com notória especialização, vedada a subcontratação e a troca dos profissionais, e vedada para publicidade; locação ou compra de imóvel: avaliação prévia, certidão de que não há imóvel público vago e singularidade (art. 74, §5º); chamamento público prévio: prática interna.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 74 I a V e §§3º a 5º; art. 109",
 "v": [
 [
 "IN2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IN2": {
 "k": "cell",
 "f": "IN",
 "t": "Prova a inviabilidade",
-"d": "",
-"q": "Inexigibilidade",
+"d": "Atestado de exclusividade, currículo e trabalhos, ou avaliação do imóvel.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 74 §§1º a 5º",
 "v": [
 [
 "IN3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IN3": {
 "k": "cell",
 "f": "IN",
 "t": "Razão da escolha, preço e habilitação",
-"d": "",
-"q": "Inexigibilidade",
+"d": "Razão da escolha, preço por notas fiscais a outros contratantes e habilitação do contratado. Fornecedor pessoa física e sócios declaram que não são cônjuge, companheiro ou parente até o terceiro grau de dirigente ou de agente do processo; sobrenome coincidente gera análise registrada nos autos.",
+"q": "Departamento de Compras e Licitações",
 "l": "arts. 14 IV, 23 §4º e 72 V a VII",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:DO": {
 "k": "linha",
 "f": "DO",
-"t": "Dispensa — outras hipóteses",
-"d": "CONTRATAÇÃO DIRETA · art. 75 III a XVIII",
+"t": "Dispensa em outras hipóteses",
+"d": "Contratação direta · art. 75 III a XVIII",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2366,35 +2662,39 @@
 "k": "cell",
 "f": "DO",
 "t": "Enquadra a hipótese",
-"d": "",
-"q": "Dispensa — outras hipóteses",
+"d": "Indica o inciso e junta a prova: edital anterior, laudo da urgência, declaração do fabricante. Emergência: só o necessário para a situação, concluído em até 1 ano contado da ocorrência da emergência, sem prorrogação nem recontratação, e apuração de quem deu causa.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 75 VIII e §6º",
 "v": [
 [
 "DO2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DO2": {
 "k": "cell",
 "f": "DO",
 "t": "Razão da escolha e preço",
-"d": "",
-"q": "Dispensa — outras hipóteses",
+"d": "Estimativa do art. 23, razão da escolha do contratado e habilitação.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 72 I a VII",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:DV": {
 "k": "linha",
 "f": "DV",
 "t": "Dispensa em razão do valor",
-"d": "CONTRATAÇÃO DIRETA · art. 75 I e II",
+"d": "Contratação direta · art. 75 I e II",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2408,63 +2708,75 @@
 "k": "cell",
 "f": "DV",
 "t": "Confere o limite",
-"d": "",
-"q": "Dispensa em razão do valor",
+"d": "Soma o gasto do exercício no mesmo ramo de atividade, com cartão e suprimento, e bloqueia o fracionamento. A soma inclui também o pré-reservado, o reservado e os pedidos em análise do mesmo ramo.",
+"q": "Sistema (Área Restrita)",
 "l": "art. 75 §1º II e §4º",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DV2": {
 "k": "cell",
 "f": "DV",
 "t": "Aviso em sítio eletrônico oficial",
-"d": "",
-"q": "Dispensa em razão do valor",
-"l": "art. 75 §3º",
+"d": "Dispensa eletrônica como regra: aviso por no mínimo 3 dias úteis.",
+"q": "Agente de contratação ou pregoeiro",
+"l": "art. 75 §3º; art. 174 §2º III",
 "v": [
 [
 "DV3",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "O canal no PNCP depende das decisões 17 e 18. Até lá, servidor de Compras divulga o aviso no site do CRECI-ES, que é sítio eletrônico oficial (art. 75, §3º).",
+"controle": "Contará os 3 dias úteis do aviso e só liberará a escolha da proposta depois deles.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+},
+"fim": false
 },
 "DV3": {
 "k": "cell",
 "f": "DV",
 "t": "Julga as propostas",
-"d": "",
-"q": "Dispensa em razão do valor",
+"d": "Seleção da proposta mais vantajosa, com a razão da escolha do contratado e a justificativa de preço.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 11 I e 72 VI e VII",
 "v": [
 [
 "DV4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "DV4": {
 "k": "cell",
 "f": "DV",
 "t": "Habilitação e qualificação mínima",
-"d": "",
-"q": "Dispensa em razão do valor",
+"d": "Pode ser dispensada abaixo de 1/4 do limite ou em entrega imediata.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 70 III e 72 V",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:PE": {
 "k": "linha",
 "f": "PE",
 "t": "Pregão",
-"d": "MODALIDADE · art. 28 I · definição art. 6º XLI",
+"d": "Modalidade · art. 28 I · definição art. 6º XLI",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2478,91 +2790,107 @@
 "k": "cell",
 "f": "PE",
 "t": "Publica o edital",
-"d": "",
-"q": "Pregão",
-"l": "art. 54 e §1º",
+"d": "Inteiro teor no PNCP; extrato no Diário Oficial da União e em jornal de grande circulação.",
+"q": "Agente de contratação ou pregoeiro",
+"l": "art. 54 e §1º; art. 175 §1º",
 "v": [
 [
 "PE2",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "A plataforma da disputa envia o edital ao PNCP (nos pregões de 2025 e 2026, o Licitações-e do Banco do Brasil). Servidor de Compras registra no sistema o número de controle PNCP.",
+"controle": "Localizará a contratação na API de consulta do PNCP, de acesso aberto, pelo CNPJ do CRECI-ES e a vinculará ao processo.",
+"integracao": ""
+},
+"fim": false
 },
 "PE2": {
 "k": "cell",
 "f": "PE",
 "t": "Prazo mínimo para propostas",
-"d": "",
-"q": "Pregão",
+"d": "Mínimo de 8 dias úteis (bens) ou 10 (serviços). Impugnação até 3 dias úteis antes (linha IR).",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 55 e 164",
 "v": [
 [
 "PE3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PE3": {
 "k": "cell",
 "f": "PE",
 "t": "Sessão pública",
-"d": "",
-"q": "Pregão",
+"d": "Propostas e lances em plataforma integrada ao PNCP.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 17 §2º e 56",
 "v": [
 [
 "PE4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PE4": {
 "k": "cell",
 "f": "PE",
 "t": "Julga e negocia",
-"d": "",
-"q": "Pregão",
+"d": "Aceitabilidade e exequibilidade; amostra, se prevista; negocia com o 1º colocado.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 59 a 61",
 "v": [
 [
 "PE5",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PE5": {
 "k": "cell",
 "f": "PE",
 "t": "Habilita o vencedor",
-"d": "",
-"q": "Pregão",
+"d": "Só o 1º colocado; diligências; prazo extra de regularização fiscal para microempresas e empresas de pequeno porte.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 62 a 70",
 "v": [
 [
 "PE6",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "PE6": {
 "k": "cell",
 "f": "PE",
 "t": "Recurso",
-"d": "",
-"q": "Pregão",
+"d": "Intenção na hora; razões em 3 dias úteis; rito na linha IR.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 165",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:CC": {
 "k": "linha",
 "f": "CC",
 "t": "Concorrência",
-"d": "MODALIDADE · art. 28 II · definição art. 6º XXXVIII",
+"d": "Modalidade · art. 28 II · definição art. 6º XXXVIII",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2576,105 +2904,123 @@
 "k": "cell",
 "f": "CC",
 "t": "Publica o edital",
-"d": "",
-"q": "Concorrência",
-"l": "arts. 17 §1º e 54",
+"d": "PNCP, extrato no Diário Oficial da União e em jornal. Pode inverter as fases (habilitação antes), com motivo.",
+"q": "Agente de contratação ou pregoeiro",
+"l": "arts. 17 §1º e 54; art. 175 §1º",
 "v": [
 [
 "CC2",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "A plataforma da disputa envia o edital ao PNCP (nos pregões de 2025 e 2026, o Licitações-e do Banco do Brasil). Servidor de Compras registra no sistema o número de controle PNCP.",
+"controle": "Localizará a contratação na API de consulta do PNCP, de acesso aberto, pelo CNPJ do CRECI-ES e a vinculará ao processo.",
+"integracao": ""
+},
+"fim": false
 },
 "CC2": {
 "k": "cell",
 "f": "CC",
 "t": "Prazo mínimo para propostas",
-"d": "",
-"q": "Concorrência",
+"d": "10, 25, 35 ou 60 dias úteis, conforme o objeto e o regime.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 55",
 "v": [
 [
 "CC3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CC3": {
 "k": "cell",
 "f": "CC",
 "t": "Propostas técnicas",
-"d": "",
-"q": "Concorrência",
+"d": "Se o critério incluir técnica: banca de 3 membros dá notas; a técnica pesa até 70%. Serviço técnico intelectual: técnica e preço ou melhor técnica; obra: regime do art. 46.",
+"q": "Comissão ou banca designada",
 "l": "arts. 36 §1º I, 37 e 46",
 "v": [
 [
 "CC4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CC4": {
 "k": "cell",
 "f": "CC",
 "t": "Propostas e lances",
-"d": "",
-"q": "Concorrência",
+"d": "Disputa aberta, fechada ou combinada.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 56",
 "v": [
 [
 "CC5",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CC5": {
 "k": "cell",
 "f": "CC",
 "t": "Julgamento",
-"d": "",
-"q": "Concorrência",
+"d": "Confere se o preço é exequível; em obra e serviço de engenharia, proposta abaixo de 75% do valor orçado é considerada inexequível.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 59",
 "v": [
 [
 "CC6",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CC6": {
 "k": "cell",
 "f": "CC",
 "t": "Habilitação",
-"d": "",
-"q": "Concorrência",
+"d": "Jurídica, técnica, fiscal e econômico-financeira.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 62 a 69",
 "v": [
 [
 "CC7",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "CC7": {
 "k": "cell",
 "f": "CC",
 "t": "Recurso",
-"d": "",
-"q": "Concorrência",
+"d": "Fase única, 3 dias úteis; rito na linha IR.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 165",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:RP": {
 "k": "linha",
 "f": "RP",
 "t": "Sistema de registro de preços",
-"d": "PROCEDIMENTO AUXILIAR · arts. 78 IV e 82 · definição art. 6º XLV",
+"d": "Procedimento auxiliar · arts. 78 IV e 82 · definição art. 6º XLV",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2688,105 +3034,123 @@
 "k": "cell",
 "f": "RP",
 "t": "Justifica o registro",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Demanda frequente, parcelada ou de quantidade incerta, registrada no ETP.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 40 II; Decreto 11.462 art. 3º (ref.)",
 "v": [
 [
 "RP2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "RP2": {
 "k": "cell",
 "f": "RP",
 "t": "Intenção de registro",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Convida outros órgãos por 8 dias úteis; dispensável se o CRECI-ES for o único contratante. Com participantes: consolida as quantidades e registra o aceite de cada um.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 e §1º",
 "v": [
 [
 "RP7",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "RP7": {
 "k": "cell",
 "f": "RP",
 "t": "Participante de ata de outro órgão federal",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Registra a intenção na IRP com estimativa e local de entrega; o CRECI-ES contrata pela ata do gerenciador (37).",
+"q": "Departamento de Compras e Licitações",
 "l": "Decreto 11.462 art. 8º I",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "RP3": {
 "k": "cell",
 "f": "RP",
 "t": "Publica o edital",
-"d": "",
-"q": "Sistema de registro de preços",
-"l": "arts. 54, 55 e 82",
+"d": "Quantidade máxima e mínima por item; prazo mínimo do pregão ou da concorrência; extrato no Diário Oficial da União e em jornal.",
+"q": "Agente de contratação ou pregoeiro",
+"l": "arts. 54, 55 e 82; art. 175 §1º",
 "v": [
 [
 "RP4",
 ""
 ]
-]
+],
+"m": {
+"implantacao": "A plataforma da disputa envia o edital ao PNCP (nos pregões de 2025 e 2026, o Licitações-e do Banco do Brasil). Servidor de Compras registra no sistema o número de controle PNCP.",
+"controle": "Localizará a contratação na API de consulta do PNCP, de acesso aberto, pelo CNPJ do CRECI-ES e a vinculará ao processo.",
+"integracao": ""
+},
+"fim": false
 },
 "RP4": {
 "k": "cell",
 "f": "RP",
 "t": "Propostas, lances e julgamento",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Mesmo rito das linhas PE (pregão) ou CC (concorrência), com recurso na linha IR.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 56 e 82",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "RP5": {
 "k": "cell",
 "f": "RP",
 "t": "Cadastro de reserva e assinatura da ata",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Inclui quem aceitou cotar preço igual ao do vencedor; convoca para assinar a ata no prazo do edital.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 82 §5º VI; Decreto 11.462 arts. 18 e 19 (ref.)",
 "v": [
 [
 "RP6",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "RP6": {
 "k": "cell",
 "f": "RP",
 "t": "Adesão de terceiros à ata do CRECI-ES",
-"d": "",
-"q": "Sistema de registro de preços",
+"d": "Aceite do gerenciador; até 50% por item para cada aderente e o dobro no total; prazo de 90 dias para o aderente contratar. A adesão é quantidade adicional e não consome o saldo da ata.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 §§2º a 5º; Decreto 11.462 art. 31 §2º",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:AD": {
 "k": "linha",
 "f": "AD",
 "t": "Adesão à ata de registro de preços",
-"d": "PROCEDIMENTO AUXILIAR · art. 86 §2º",
+"d": "Procedimento auxiliar · art. 86 §2º",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2800,63 +3164,71 @@
 "k": "cell",
 "f": "AD",
 "t": "Localiza a ata",
-"d": "",
-"q": "Adesão à ata de registro de preços",
+"d": "Ata vigente de gerenciador federal no PNCP com o mesmo objeto; vedada a adesão a ata estadual, distrital ou municipal. O sistema busca atas vigentes na API de consulta do PNCP.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 §§2º e 8º",
 "v": [
 [
 "AD2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "AD2": {
 "k": "cell",
 "f": "AD",
 "t": "Justifica a vantagem",
-"d": "",
-"q": "Adesão à ata de registro de preços",
+"d": "Vantagem da adesão e preço compatível com o mercado.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 §2º I e II",
 "v": [
 [
 "AD3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "AD3": {
 "k": "cell",
 "f": "AD",
 "t": "Consulta e aceitação",
-"d": "",
-"q": "Adesão à ata de registro de preços",
+"d": "Do órgão gerenciador e do fornecedor.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 §2º III",
 "v": [
 [
 "21a",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "AD4": {
 "k": "cell",
 "f": "AD",
 "t": "Formaliza a adesão",
-"d": "",
-"q": "Adesão à ata de registro de preços",
+"d": "Até 50% das quantidades de cada item; contratar em até 90 dias após o aceite do gerenciador, dentro da vigência da ata.",
+"q": "Departamento de Compras e Licitações",
 "l": "art. 86 §4º; Decreto 11.462 art. 31 §2º",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "L:IR": {
 "k": "linha",
 "f": "IR",
 "t": "Impugnação e recurso",
-"d": "RITO COMUM · arts. 164 a 168",
+"d": "Rito comum · arts. 164 a 168",
 "q": "Compras define no passo 20",
 "l": "",
 "v": [
@@ -2870,105 +3242,119 @@
 "k": "cell",
 "f": "IR",
 "t": "Impugnação ou esclarecimento",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Até 3 dias úteis antes da abertura; resposta em até 3 dias úteis, limitada ao último dia útil anterior à abertura. Impugnação recebida: diligência à Assessoria Jurídica e à área técnica com prazo de 1 dia útil (prática interna). A Assessoria Jurídica responde em 1 dia útil, por diligência prevista no contrato (prática interna). Sem resposta até a véspera da abertura: adia a sessão e republica se o edital mudar (IR2).",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 164 e parágrafo único",
 "v": [
 [
 "IR2",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR2": {
 "k": "cell",
 "f": "IR",
 "t": "Alterou o edital?",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Sim: republica e reabre o prazo (volta ao 23, PE1), salvo se não afetar as propostas. Não: segue a disputa (24).",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 55 §1º",
 "v": [
 [
 "IR3",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR3": {
 "k": "cell",
 "f": "IR",
 "t": "Intenção de recorrer",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Na sessão, logo após o resultado, sob pena de preclusão.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 165 §1º I",
 "v": [
 [
 "IR4",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR4": {
 "k": "cell",
 "f": "IR",
 "t": "Razões e contrarrazões",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "3 dias úteis cada, com vista dos autos.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 165 I e §§4º e 5º",
 "v": [
 [
 "IR5",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR5": {
 "k": "cell",
 "f": "IR",
 "t": "Reconsideração",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Quem decidiu reconsidera em 3 dias úteis ou encaminha.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "art. 165 §2º",
 "v": [
 [
 "IR6",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR6": {
 "k": "cell",
 "f": "IR",
 "t": "Decisão superior",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Em até 10 dias úteis, com apoio da Assessoria Jurídica. Provido: refaz o julgamento ou a habilitação (24, PE4). Improvido: segue à homologação (H25). Enquanto pende, suspende o ato.",
+"q": "Autoridade: Presidente ou quem ele delegar",
 "l": "arts. 165 §2º e 168",
 "v": [
 [
 "IR7",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 },
 "IR7": {
 "k": "cell",
 "f": "IR",
 "t": "Infração do licitante",
-"d": "",
-"q": "Impugnação e recurso",
+"d": "Fora da corrente do recurso: entra do 24 (PE6). Documentação falsa, proposta não mantida, recusa de assinar: abre processo de responsabilização (SA1), com perda da garantia de proposta.",
+"q": "Agente de contratação ou pregoeiro",
 "l": "arts. 90 §5º e 155 IV a VIII",
 "v": [
 [
 "25",
 ""
 ]
-]
+],
+"m": null,
+"fim": false
 }
 },
 "F": {
 "1": "Solicitação",
 "2": "Triagem",
-"3": "Aprovação da diretoria",
+"3": "Aprovação da Diretoria",
 "4": "Dotação e abertura do processo",
 "5": "Preparatória",
 "6": "Divulgação, julgamento e homologação",
@@ -3046,7 +3432,7 @@
 "L": {
 "LE": {
 "nome": "Leilão",
-"tipo": "MODALIDADE · art. 28 IV · definição art. 6º XL",
+"tipo": "Modalidade · art. 28 IV · definição art. 6º XL",
 "cells": [
 "LE1",
 "LE2",
@@ -3062,26 +3448,38 @@
 "var": {
 "21a": {
 "t": "Edital do leilão",
-"l": "art. 31 §2º"
+"l": "art. 31 §2º",
+"d": "Descrição, avaliação, preço mínimo e condições de pagamento.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer do leilão",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza o leilão",
-"l": "arts. 72 VIII e 76; Regimento art. 8º XVI"
+"l": "arts. 72 VIII e 76; Regimento art. 8º XVI",
+"d": "Autoriza a alienação e a abertura do leilão.",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Homologa o leilão",
-"l": "art. 71"
+"l": "art. 71",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": null
 },
 "PU": {
 "nome": "Publicidade e comunicação institucional",
-"tipo": "MODALIDADE · concorrência pela Lei 12.232 arts. 5º e 10; art. 74 III",
+"tipo": "Modalidade · concorrência pela Lei 12.232 arts. 5º e 10; art. 74 III",
 "cells": [
 "PU1",
 "PU2",
@@ -3095,26 +3493,38 @@
 "var": {
 "21a": {
 "t": "Edital com briefing e plano de comunicação sem identificação",
-"l": "Lei 12.232 art. 5º; art. 18 V e VI"
+"l": "Lei 12.232 art. 5º; art. 18 V e VI",
+"d": "Julgamento por melhor técnica ou técnica e preço.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista de verificação e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Adjudica e homologa",
-"l": "art. 71"
+"l": "art. 71",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": null
 },
 "CV": {
 "nome": "Convênio, cooperação e auxílio",
-"tipo": "INSTRUMENTO CONGÊNERE · art. 184",
+"tipo": "Instrumento congênere · art. 184",
 "cells": [
 "CV1",
 "CV2",
@@ -3127,26 +3537,38 @@
 "var": {
 "21a": {
 "t": "Minuta do termo",
-"l": "art. 184"
+"l": "art. 184",
+"d": "Termo de convênio, cooperação ou auxílio.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer do termo",
-"l": "art. 53 §4º"
+"l": "art. 53 §4º",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Presidente firma",
-"l": "Regimento art. 8º III"
+"l": "Regimento art. 8º III",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Divulga o termo",
-"l": "arts. 72 parágrafo único e 94, por analogia; prática interna"
+"l": "arts. 72 parágrafo único e 94, por analogia; prática interna",
+"d": "No site oficial e no PNCP.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 }
 },
 "fim": null
 },
 "CS": {
 "nome": "Concurso",
-"tipo": "MODALIDADE · art. 28 III · definição art. 6º XXXIX",
+"tipo": "Modalidade · art. 28 III · definição art. 6º XXXIX",
 "cells": [
 "21a",
 "21b",
@@ -3160,26 +3582,38 @@
 "var": {
 "21a": {
 "t": "Edital e minuta do contrato",
-"l": "art. 18 V e VI"
+"l": "art. 18 V e VI",
+"d": "Minuta do contrato é anexo obrigatório do edital.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista de verificação e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Homologa e concede o prêmio",
-"l": "arts. 30 e 93; Lei 4.320 art. 60"
+"l": "arts. 30 e 93; Lei 4.320 art. 60",
+"d": "O vencedor cede os direitos patrimoniais do trabalho. Paga o prêmio com empenho (25b). Vencedor pessoa física: retenção de IR (35a).",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": null
 },
 "DC": {
 "nome": "Diálogo competitivo",
-"tipo": "MODALIDADE · art. 28 V · definição art. 6º XLII",
+"tipo": "Modalidade · art. 28 V · definição art. 6º XLII",
 "cells": [
 "21a",
 "21b",
@@ -3194,26 +3628,38 @@
 "var": {
 "21a": {
 "t": "Edital e minuta do contrato",
-"l": "art. 18 V e VI"
+"l": "art. 18 V e VI",
+"d": "Minuta do contrato é anexo obrigatório do edital.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista de verificação e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Homologa",
-"l": "art. 71"
+"l": "art. 71",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": null
 },
 "CR": {
 "nome": "Credenciamento",
-"tipo": "PROCEDIMENTO AUXILIAR · arts. 78 I e 79 · definição art. 6º XLIII",
+"tipo": "Procedimento auxiliar · arts. 78 I e 79 · definição art. 6º XLIII",
 "cells": [
 "21a",
 "21b",
@@ -3226,22 +3672,31 @@
 "var": {
 "21a": {
 "t": "Edital de chamamento",
-"l": "art. 79"
+"l": "art. 79",
+"d": "Condições padronizadas, valor e critério de distribuição.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer do chamamento",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza o chamamento",
-"l": "arts. 72 VIII e 79; Regimento art. 8º VII"
+"l": "arts. 72 VIII e 79; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": "25"
 },
 "IN": {
 "nome": "Inexigibilidade",
-"tipo": "CONTRATAÇÃO DIRETA · art. 74",
+"tipo": "Contratação direta · art. 74",
 "cells": [
 "IN1",
 "IN2",
@@ -3254,26 +3709,42 @@
 "var": {
 "21a": {
 "t": "Minuta do contrato",
-"l": "arts. 92 e 95"
+"l": "arts. 92 e 95",
+"d": "Ou do instrumento que o substitui.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer",
-"l": "arts. 53 §4º e 72 III"
+"l": "arts. 53 §4º e 72 III",
+"d": "Confere os documentos do art. 72; pareceres técnicos, se for o caso.",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a contratação direta",
-"l": "art. 72 VIII"
+"l": "art. 72 VIII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Divulga o ato",
-"l": "arts. 72 par. único e 94 §2º"
+"l": "arts. 72 par. único e 94 §2º",
+"d": "Compras divulga o ato que autorizou (22), sem nova assinatura, no site oficial e no PNCP. Artista: detalhar cachê e despesas. Se basta o site do CRECI-ES: decisão 17.",
+"q": "Departamento de Compras e Licitações",
+"m": {
+"implantacao": "O canal no PNCP depende das decisões 17 e 18. Até lá, servidor de Compras divulga o ato no site do CRECI-ES, que é sítio eletrônico oficial (art. 72, parágrafo único), e registra no sistema o endereço da divulgação.",
+"controle": "Contará o prazo de divulgação e guardará o endereço e a data como comprovante.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+}
 }
 },
 "fim": null
 },
 "DO": {
-"nome": "Dispensa — outras hipóteses",
-"tipo": "CONTRATAÇÃO DIRETA · art. 75 III a XVIII",
+"nome": "Dispensa em outras hipóteses",
+"tipo": "Contratação direta · art. 75 III a XVIII",
 "cells": [
 "DO1",
 "DO2",
@@ -3285,26 +3756,42 @@
 "var": {
 "21a": {
 "t": "Minuta do contrato",
-"l": "arts. 75 VIII e 92"
+"l": "arts. 75 VIII e 92",
+"d": "Emergência: conclusão em até 1 ano da ocorrência, sem prorrogação.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer",
-"l": "arts. 53 §4º e 72 III"
+"l": "arts. 53 §4º e 72 III",
+"d": "Confere os documentos do art. 72; pareceres técnicos, se for o caso.",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a contratação direta",
-"l": "art. 72 VIII"
+"l": "art. 72 VIII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Divulga o ato",
-"l": "art. 72 par. único"
+"l": "art. 72 par. único",
+"d": "Compras divulga o ato que autorizou (22), sem nova assinatura: ato ou extrato no site oficial e no PNCP. Se basta o site do CRECI-ES: decisão 17.",
+"q": "Departamento de Compras e Licitações",
+"m": {
+"implantacao": "O canal no PNCP depende das decisões 17 e 18. Até lá, servidor de Compras divulga o ato no site do CRECI-ES, que é sítio eletrônico oficial (art. 72, parágrafo único), e registra no sistema o endereço da divulgação.",
+"controle": "Contará o prazo de divulgação e guardará o endereço e a data como comprovante.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+}
 }
 },
 "fim": null
 },
 "DV": {
 "nome": "Dispensa em razão do valor",
-"tipo": "CONTRATAÇÃO DIRETA · art. 75 I e II",
+"tipo": "Contratação direta · art. 75 I e II",
 "cells": [
 "DV1",
 "21a",
@@ -3318,26 +3805,42 @@
 "var": {
 "21a": {
 "t": "Aviso e minuta",
-"l": "arts. 75 §3º e 95"
+"l": "arts. 75 §3º e 95",
+"d": "Aviso de dispensa e minuta do instrumento (ordem ou contrato).",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Parecer (pode ser dispensado)",
-"l": "arts. 53 §5º e 72 III"
+"l": "arts. 53 §5º e 72 III",
+"d": "Dispensado se o ato da Assessoria Jurídica prever; pareceres técnicos, se for o caso.",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a dispensa",
-"l": "art. 72 VIII"
+"l": "art. 72 VIII",
+"d": "Respeita a alçada por valor.",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Divulga o ato",
-"l": "arts. 72 par. único e 94 II"
+"l": "arts. 72 par. único e 94 II",
+"d": "Compras divulga o ato que autorizou (22), sem nova assinatura, no site oficial e no PNCP em até 10 dias úteis. Pagamento preferencialmente por cartão de pagamento, com extrato no PNCP. Se basta o site do CRECI-ES: decisão 17.",
+"q": "Departamento de Compras e Licitações",
+"m": {
+"implantacao": "O canal no PNCP depende das decisões 17 e 18. Até lá, servidor de Compras divulga o ato no site do CRECI-ES, que é sítio eletrônico oficial (art. 72, parágrafo único), e registra no sistema o endereço da divulgação.",
+"controle": "Contará o prazo de divulgação e guardará o endereço e a data como comprovante.",
+"integracao": "Envio pela API de integração do PNCP, que exige plataforma credenciada no Ministério da Gestão e da Inovação em Serviços Públicos (decisão 18)."
+}
 }
 },
 "fim": null
 },
 "PE": {
 "nome": "Pregão",
-"tipo": "MODALIDADE · art. 28 I · definição art. 6º XLI",
+"tipo": "Modalidade · art. 28 I · definição art. 6º XLI",
 "cells": [
 "21a",
 "21b",
@@ -3353,26 +3856,42 @@
 "var": {
 "21a": {
 "t": "Edital e minuta do contrato",
-"l": "art. 18 V e VI"
+"l": "art. 18 V e VI",
+"d": "Minuta do contrato é anexo obrigatório do edital.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista do pregão e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Adjudica e homologa",
-"l": "arts. 54 §3º, 71 e 75 III"
+"l": "arts. 54 §3º, 71 e 75 III",
+"d": "Documentos da fase preparatória vão ao PNCP. Sem propostas (deserta) ou sem proposta válida (fracassada), revogação ou anulação: passo 25a.",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": {
+"implantacao": "A plataforma da disputa envia o resultado ao PNCP. Servidor de Compras confere o envio e encaminha pela mesma plataforma os documentos da fase preparatória que não integraram o edital (art. 54, §3º).",
+"controle": "Verificará o resultado na API de consulta do PNCP.",
+"integracao": ""
+}
 }
 },
 "fim": null
 },
 "CC": {
 "nome": "Concorrência",
-"tipo": "MODALIDADE · art. 28 II · definição art. 6º XXXVIII",
+"tipo": "Modalidade · art. 28 II · definição art. 6º XXXVIII",
 "cells": [
 "21a",
 "21b",
@@ -3389,26 +3908,42 @@
 "var": {
 "21a": {
 "t": "Edital e minuta do contrato",
-"l": "art. 18 V e VI"
+"l": "art. 18 V e VI",
+"d": "Minuta do contrato é anexo obrigatório do edital.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista de verificação e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Adjudica e homologa",
-"l": "art. 71"
+"l": "art. 71",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": {
+"implantacao": "A plataforma da disputa envia o resultado ao PNCP. Servidor de Compras confere o envio e encaminha pela mesma plataforma os documentos da fase preparatória que não integraram o edital (art. 54, §3º).",
+"controle": "Verificará o resultado na API de consulta do PNCP.",
+"integracao": ""
+}
 }
 },
 "fim": null
 },
 "RP": {
 "nome": "Sistema de registro de preços",
-"tipo": "PROCEDIMENTO AUXILIAR · arts. 78 IV e 82 · definição art. 6º XLV",
+"tipo": "Procedimento auxiliar · arts. 78 IV e 82 · definição art. 6º XLV",
 "cells": [
 "RP1",
 "RP2",
@@ -3425,26 +3960,42 @@
 "var": {
 "21a": {
 "t": "Edital com quantidades máximas",
-"l": "arts. 18 V e VI e 82"
+"l": "arts. 18 V e VI e 82",
+"d": "Minuta da ata e do contrato como anexos.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista de verificação e parecer",
-"l": "art. 53"
+"l": "art. 53",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a licitação",
-"l": "art. 72 VIII; Regimento art. 8º VII"
+"l": "art. 72 VIII; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 },
 "25": {
 "t": "Adjudica e homologa",
-"l": "art. 71"
+"l": "art. 71",
+"d": "Ou devolve para saneamento, revoga ou anula (25a).",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": {
+"implantacao": "A plataforma da disputa envia o resultado ao PNCP. Servidor de Compras confere o envio e encaminha pela mesma plataforma os documentos da fase preparatória que não integraram o edital (art. 54, §3º).",
+"controle": "Verificará o resultado na API de consulta do PNCP.",
+"integracao": ""
+}
 }
 },
 "fim": "26c"
 },
 "AD": {
 "nome": "Adesão à ata de registro de preços",
-"tipo": "PROCEDIMENTO AUXILIAR · art. 86 §2º",
+"tipo": "Procedimento auxiliar · art. 86 §2º",
 "cells": [
 "AD1",
 "AD2",
@@ -3457,22 +4008,31 @@
 "var": {
 "21a": {
 "t": "Minuta do contrato",
-"l": "arts. 86 e 92"
+"l": "arts. 86 e 92",
+"d": "Nas condições da ata aderida.",
+"q": "Departamento de Compras e Licitações",
+"m": null
 },
 "21b": {
 "t": "Lista e parecer da adesão",
-"l": "art. 53 §4º"
+"l": "art. 53 §4º",
+"d": "",
+"q": "Assessoria Jurídica",
+"m": null
 },
 "22": {
 "t": "Autoriza a adesão",
-"l": "arts. 72 VIII e 86 §2º; Regimento art. 8º VII"
+"l": "arts. 72 VIII e 86 §2º; Regimento art. 8º VII",
+"d": "",
+"q": "Autoridade: Presidente ou quem ele delegar",
+"m": null
 }
 },
 "fim": "25"
 },
 "IR": {
 "nome": "Impugnação e recurso",
-"tipo": "RITO COMUM · arts. 164 a 168",
+"tipo": "Rito comum · arts. 164 a 168",
 "cells": [
 "IR1",
 "IR2",
@@ -3536,7 +4096,7 @@
 ]
 },
 {
-"t": "jardinagem por 12 meses",
+"t": "Jardinagem por 12 meses",
 "s": "Pregão · serviço contínuo · contrato com fiscal",
 "p": [
 "1",
@@ -3592,7 +4152,7 @@
 ]
 },
 {
-"t": "material de limpeza por ata",
+"t": "Material de limpeza por ata",
 "s": "Registro de preços · compra sob demanda",
 "p": [
 "1",
@@ -3647,7 +4207,7 @@
 ]
 },
 {
-"t": "limpeza da sede com 6 postos (dedicação exclusiva)",
+"t": "Limpeza da sede com 6 postos (dedicação exclusiva)",
 "s": "Pregão · serviço contínuo com dedicação exclusiva de mão de obra",
 "p": [
 "1",
@@ -3700,7 +4260,7 @@
 ]
 },
 {
-"t": "licença anual de software que vence em 10 dias",
+"t": "Licença anual de software que vence em 10 dias",
 "s": "Prioridade P0 · inexigibilidade ou dispensa por valor",
 "p": [
 "1",
@@ -3732,7 +4292,7 @@
 ]
 },
 {
-"t": "energia elétrica da sede (R$ 69.941,76 por ano, duas contas)",
+"t": "Energia elétrica da sede (R$ 69.941,76 por ano, duas contas)",
 "s": "Inexigibilidade · serviço público em regime de monopólio",
 "p": [
 "1",

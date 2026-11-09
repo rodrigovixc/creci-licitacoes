@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { faseDe } from '../lib/fase'
-import { padrao } from '../lib/trilho'
 
 // Bifurcação: as opções ficam numa faixa com rolagem lateral (scroll-snap nativo).
 // O cartão centralizado é o caminho escolhido; o fluxo continua abaixo dele.
@@ -11,7 +10,6 @@ export default function Decisao({ D, id, i, onEscolhe }) {
   const quieto = useRef(0) // até quando ignorar o onScroll (rolagem feita por código)
   const montou = useRef(false)
   const pergunta = n.t.endsWith('?')
-  const pad = padrao(id, n)
 
   useEffect(() => {
     const tr = faixa.current
@@ -43,7 +41,7 @@ export default function Decisao({ D, id, i, onEscolhe }) {
   return (
     <section className="decisao" aria-label={'Caminhos a partir do passo ' + id}>
       <header>
-        <span className="rotulo">{pergunta ? 'Responda e role para o lado' : 'Escolha o caminho: role para o lado'}</span>
+        <span className="rotulo">{pergunta ? 'Responda e role para o lado' : 'Saídas deste passo: role para o lado'}</span>
         <span className="setas">
           <button type="button" onClick={() => passo(-1)} disabled={i === 0} aria-label="Opção anterior">←</button>
           <span>{i + 1} de {n.v.length}</span>
@@ -57,8 +55,8 @@ export default function Decisao({ D, id, i, onEscolhe }) {
           const { nome, cor } = faseDe(D, a, a.k === 'cell' ? a.f : null)
           return (
             <button type="button" key={alvo} className={'opcao' + (j === i ? ' ativa' : '')} style={{ '--c': cor }} onClick={() => onEscolhe(id, j)} aria-pressed={j === i}>
-              <span className="por">{por || (j === pad ? 'caminho principal' : 'outro caminho')}</span>
-              <span className="alvo"><b>{a.k === 'linha' ? 'Linha ' + a.f : a.k === 'cell' ? alvo : 'Passo ' + alvo}</b> · {nome}</span>
+              {por && <span className="por">{por}</span>}
+              <span className="alvo">{a.k === 'linha' ? <b>Linha {a.f}</b> : <><b>{a.k === 'cell' ? alvo : 'Passo ' + alvo}</b> · {nome}</>}</span>
               <span className="titulo">{a.t}</span>
             </button>
           )
