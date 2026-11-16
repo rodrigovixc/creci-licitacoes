@@ -1,6 +1,6 @@
 // Perguntas que a Diretoria pode fazer, com resposta curta e a referência (passo, decisão, artigo).
 // Dados em fluxo.json (P), gerados de gerador/perguntas_diretoria.json: a mesma fonte do apêndice do diagrama.
-export default function Perguntas({ D, onVoltar }) {
+export default function Perguntas({ D }) {
   const P = D.P
   return (
     <section className="perguntas">
@@ -8,7 +8,6 @@ export default function Perguntas({ D, onVoltar }) {
       <h1>{P.titulo}</h1>
       <p className="intro">{P.intro}</p>
       <p className="fonte">Fonte: {P.fonte}</p>
-      <button type="button" className="limpa" onClick={onVoltar}>← Voltar ao fluxo</button>
       <nav className="grupos" aria-label="Grupos de perguntas">
         {P.grupos.map((g, i) => (
           <a key={i} href={'#perguntas-' + (i + 1)}>{g.nome}</a>
@@ -26,7 +25,6 @@ export default function Perguntas({ D, onVoltar }) {
           ))}
         </div>
       ))}
-      <button type="button" className="limpa" onClick={onVoltar}>← Voltar ao fluxo</button>
     </section>
   )
 }

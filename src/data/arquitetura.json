@@ -1,0 +1,944 @@
+{
+"titulo": "Arquitetura do módulo de Compras",
+"intro": "Como o sistema vai funcionar dentro do ERP Área Restrita e em que ponto está a construção. Nada abaixo está implementado ainda, salvo o que estiver marcado como concluído. Fonte: docs/arquitetura, versão 2.0, e especificação 1.4.1.",
+"atualizado": "16 de novembro de 2026",
+"status": {
+"feito": "Concluído",
+"andamento": "Em andamento",
+"pendente": "Aguarda decisão",
+"planejado": "Planejado"
+},
+"sistema": {
+"titulo": "Como o sistema vai funcionar",
+"intro": "Clique numa caixa para ver o que ela faz. Use o passo a passo abaixo do diagrama para seguir um ato do começo ao fim.",
+"grupos": [
+{
+"id": "g-erp",
+"titulo": "ERP Área Restrita · Laravel 12 e Oracle 19c",
+"x": -40,
+"y": -40,
+"w": 1200,
+"h": 1090,
+"tipo": "erp"
+},
+{
+"id": "g-mod",
+"titulo": "Módulo Compras · domínio",
+"x": -20,
+"y": 0,
+"w": 1160,
+"h": 640,
+"tipo": "mod"
+},
+{
+"id": "g-ponte",
+"titulo": "Ponte · portas e adaptadores",
+"x": -20,
+"y": 650,
+"w": 1160,
+"h": 260,
+"tipo": "ponte"
+},
+{
+"id": "g-ext",
+"titulo": "Fora do CRECI-ES",
+"x": 570,
+"y": 1070,
+"w": 590,
+"h": 150,
+"tipo": "ext"
+}
+],
+"nos": [
+{
+"id": "pessoas",
+"x": 445,
+"y": -170,
+"tipo": "usuario",
+"titulo": "Pessoas do CRECI-ES",
+"sub": "Requisitante, Compras, Diretoria, Presidente, Financeiro, Jurídico, fiscal, Patrimônio",
+"texto": "Cada pessoa entra com o login que já usa no ERP. As permissões de acesso são as do ERP (módulo COMPRAS). Designações por portaria, alçadas e delegações ficarão em tabelas do módulo, porque mudam por processo e por data.",
+"adr": [
+"ADR-015"
+]
+},
+{
+"id": "telas",
+"x": 300,
+"y": 40,
+"tipo": "tela",
+"titulo": "Telas Livewire",
+"sub": "painel administrativo do ERP",
+"texto": "As telas seguirão o design system do ERP. Elas não decidirão nada: só mostrarão as opções que a fachada devolver e enviarão o ato escolhido.",
+"adr": [
+"ADR-003"
+]
+},
+{
+"id": "graphql",
+"x": 590,
+"y": 40,
+"tipo": "tela",
+"titulo": "API GraphQL",
+"sub": "só quando houver consumidor",
+"texto": "O schema graphql/compras.graphql só entrará quando um PWA ou outro sistema precisar. As regras continuarão na fachada, nunca no resolver.",
+"adr": [
+"ADR-003"
+]
+},
+{
+"id": "agendador",
+"x": 880,
+"y": 40,
+"tipo": "tela",
+"titulo": "Agendador do ERP",
+"sub": "alertas, prazos e reconciliações",
+"texto": "Comandos diários: compras:alertas-emitir (prazos e vigências) e a reconciliação, que confere o PNCP e os pagamentos do ERP. A reconciliação gera achado; nunca corrige sozinha.",
+"padroes": [
+"Observer"
+],
+"adr": [
+"ADR-011"
+]
+},
+{
+"id": "fachada",
+"x": 445,
+"y": 160,
+"tipo": "dominio",
+"titulo": "Fachada ProcessoContratacao",
+"sub": "abrir, avançar, opções, caminho",
+"texto": "Porta única do domínio. Telas, API e comandos do agendador só chamarão a fachada, nunca as peças de dentro.",
+"padroes": [
+"Facade"
+],
+"adr": [
+"ADR-004"
+]
+},
+{
+"id": "comando",
+"x": 445,
+"y": 280,
+"tipo": "dominio",
+"titulo": "Comando",
+"sub": "cada ato do usuário vira um objeto",
+"texto": "AprovarDemanda, ReservarDotacao, Empenhar, Liquidar... O comando leva o processo, o destino, quem age, a motivação e os anexos. Depois de executado, ele é o próprio registro do ato no processo administrativo.",
+"padroes": [
+"Command"
+],
+"adr": [
+"ADR-004"
+]
+},
+{
+"id": "transicao",
+"x": 445,
+"y": 400,
+"tipo": "dominio",
+"titulo": "TransicaoService",
+"sub": "transação e trava da linha",
+"texto": "Um só serviço executará todos os comandos: abrirá a transação, travará a linha do processo (lockForUpdate), passará pela corrente de guardas, gravará o evento e disparará os efeitos.",
+"padroes": [
+"State"
+],
+"adr": [
+"ADR-004"
+]
+},
+{
+"id": "guardas",
+"x": 445,
+"y": 520,
+"tipo": "dominio",
+"titulo": "Corrente de guardas",
+"sub": "qualquer elo pode barrar",
+"texto": "Em ordem: a seta existe na versão do fluxo do processo; quem age tem o cargo e a designação vigente; a alçada e o ato de delegação valem na data; há motivação (Lei 9.784, art. 50); as peças obrigatórias estão juntadas; nenhuma trava por decisão bloqueia; a regra da linha do quadro é cumprida. Usará o Pipeline do Laravel.",
+"padroes": [
+"Chain of Responsibility"
+],
+"adr": [
+"ADR-004",
+"ADR-016"
+]
+},
+{
+"id": "fluxo",
+"x": 10,
+"y": 280,
+"tipo": "dado",
+"titulo": "Fluxo importado",
+"sub": "compras_fluxo_* · versão 16.5",
+"texto": "O fluxo.json que o gerador do diagrama produz (187 nós, setas, quem faz, base legal) será importado com versão. Cada processo guardará a versão em que nasceu. Um teste falhará se o código usar uma seta que o diagrama não tem.",
+"adr": [
+"ADR-017"
+]
+},
+{
+"id": "parametros",
+"x": 10,
+"y": 400,
+"tipo": "dado",
+"titulo": "Parâmetros e travas",
+"sub": "compras_parametros · compras_decisoes",
+"texto": "Limites de dispensa, prazos, tolerância e pequena monta, com vigência e ato. As 29 decisões pendentes viram travas: quando uma decisão sair, cadastra-se o ato e a trava libera, sem deploy. Sem o Regulamento de Contratações, o sistema roda no modo restritivo.",
+"adr": [
+"ADR-008",
+"ADR-016"
+]
+},
+{
+"id": "linhas",
+"x": 10,
+"y": 520,
+"tipo": "dado",
+"titulo": "Regras por linha do quadro",
+"sub": "PE, DV, IN, DO, RP, AD, CC...",
+"texto": "Cada linha do passo 20 será uma estratégia. Todas seguirão o mesmo esqueleto (21a, 21b, 22, 23, 24 e 25), e cada uma preencherá só as células próprias.",
+"padroes": [
+"Strategy",
+"Template Method"
+],
+"adr": [
+"ADR-008"
+]
+},
+{
+"id": "evento",
+"x": 880,
+"y": 400,
+"tipo": "dominio",
+"titulo": "Evento gravado",
+"sub": "compras_eventos · hash encadeado",
+"texto": "Todo ato aceito vira um evento que só aceita inserção, ligado ao anterior por hash. O status do processo muda na mesma transação. O Controle Interno poderá conferir a cadeia por comando.",
+"adr": [
+"ADR-004"
+]
+},
+{
+"id": "efeitos",
+"x": 880,
+"y": 520,
+"tipo": "dominio",
+"titulo": "Efeitos",
+"sub": "prazos, alertas, livro-razão, peças",
+"texto": "Depois do evento, os efeitos rodam: fecham e abrem prazos, agendam alertas, lançam no livro-razão orçamentário, juntam peças e põem escritas externas na caixa de saída. Quem avança o processo não precisa saber quem está ouvindo.",
+"padroes": [
+"Observer"
+],
+"adr": [
+"ADR-005",
+"ADR-006",
+"ADR-011"
+]
+},
+{
+"id": "portas",
+"x": 445,
+"y": 690,
+"tipo": "ponte",
+"titulo": "Portas",
+"sub": "o que o módulo pede ao ERP e ao mundo",
+"texto": "Interfaces: Identidade, CadastroPessoas, Rubricas, Numerador, Pagador, Patrimonio, Assinador, Calendario, Notificador, ConsultaPncp, PublicadorPncp, PrecosPublicos, Integridade e ResultadoDisputa. O domínio depende só delas.",
+"padroes": [
+"Bridge"
+],
+"adr": [
+"ADR-015",
+"ADR-010"
+]
+},
+{
+"id": "archtest",
+"x": 10,
+"y": 690,
+"tipo": "teste",
+"titulo": "Teste de arquitetura",
+"sub": "ComprasArchTest",
+"texto": "Falhará se o módulo usar classe ou tabela do ERP fora dos adaptadores, se o ERP importar algo do módulo ou se aparecer chave estrangeira entre os dois. É ele que mantém a ponte de pé com o tempo.",
+"adr": [
+"ADR-015"
+]
+},
+{
+"id": "adErp",
+"x": 10,
+"y": 810,
+"tipo": "ponte",
+"titulo": "Adaptadores do ERP",
+"sub": "mesmo processo, sem rede",
+"texto": "Implementações das portas que chamam o que o ERP já tem: NupService, DespesaService, Pessoa, Autentique, Feriado, e-mail. Se o módulo sair do ERP, só eles serão trocados por versões HTTP.",
+"padroes": [
+"Adapter"
+],
+"adr": [
+"ADR-015"
+]
+},
+{
+"id": "falsos",
+"x": 300,
+"y": 810,
+"tipo": "teste",
+"titulo": "Falsos",
+"sub": "FontesFalsas, para os testes",
+"texto": "Uma implementação falsa de cada porta, como nas inscrições. Os testes rodarão sem ERP real, sem PNCP e sem e-mail.",
+"adr": [
+"ADR-010"
+]
+},
+{
+"id": "adHttp",
+"x": 590,
+"y": 810,
+"tipo": "ponte",
+"titulo": "Adaptadores HTTP",
+"sub": "PNCP, Compras.gov.br, CEIS e CNEP",
+"texto": "Chamadas externas com tempo limite, nova tentativa só em falha de conexão, 429 e 503, e resposta conferida. Escrita externa passa pela caixa de saída, com idempotência.",
+"padroes": [
+"Adapter"
+],
+"adr": [
+"ADR-010"
+]
+},
+{
+"id": "manual",
+"x": 880,
+"y": 810,
+"tipo": "ponte",
+"titulo": "Registro manual do PNCP",
+"sub": "até a decisão 18",
+"texto": "O servidor de Compras divulgará pelo canal disponível e informará o número de controle. O sistema conferirá o número na consulta aberta todo dia útil e bloqueará a execução sem ele (RN-190). Depois da decisão 18, troca-se este adaptador pelo envio direto.",
+"adr": [
+"ADR-018"
+]
+},
+{
+"id": "erpsvc",
+"x": 10,
+"y": 940,
+"tipo": "erp",
+"titulo": "Services do ERP",
+"sub": "pessoas, NUP, despesas, patrimônio, assinatura",
+"texto": "O que o ERP já faz hoje continua lá: cadastro de pessoas, NUP, pagamento bancário, patrimônio e Autentique. O ERP não importa nada do módulo.",
+"adr": [
+"ADR-015"
+]
+},
+{
+"id": "oracle",
+"x": 300,
+"y": 940,
+"tipo": "erp",
+"titulo": "Oracle 19c",
+"sub": "tabelas do ERP e compras_*",
+"texto": "Mesmo banco do ERP em produção, com Postgres nos testes. As tabelas do módulo começam com compras_ e não têm chave estrangeira para o ERP, para poderem ser copiadas se o módulo sair.",
+"adr": [
+"ADR-003",
+"ADR-015"
+]
+},
+{
+"id": "pncp",
+"x": 880,
+"y": 1110,
+"tipo": "ext",
+"titulo": "PNCP",
+"sub": "consulta aberta · publicação depende da decisão 18",
+"texto": "A API de consulta é aberta e servirá à conferência diária e à pesquisa de preços. A publicação exige plataforma credenciada ou o Publicador de Contratos.",
+"adr": [
+"ADR-018"
+]
+},
+{
+"id": "comprasgov",
+"x": 590,
+"y": 1110,
+"tipo": "ext",
+"titulo": "Compras.gov.br, CEIS e CNEP",
+"sub": "preços e integridade",
+"texto": "Preços públicos para a pesquisa do passo 18 e consultas de integridade antes de contratar e de prorrogar (art. 91, §4º).",
+"adr": [
+"ADR-010"
+]
+}
+],
+"setas": [
+{
+"de": "pessoas",
+"para": "telas",
+"rotulo": "usa"
+},
+{
+"de": "telas",
+"para": "fachada"
+},
+{
+"de": "graphql",
+"para": "fachada"
+},
+{
+"de": "agendador",
+"para": "fachada",
+"lado": "b-r",
+"rotulo": "todo dia útil"
+},
+{
+"de": "fachada",
+"para": "comando",
+"rotulo": "monta"
+},
+{
+"de": "comando",
+"para": "transicao",
+"rotulo": "executa"
+},
+{
+"de": "transicao",
+"para": "guardas",
+"rotulo": "confere"
+},
+{
+"de": "fluxo",
+"para": "guardas",
+"lado": "r-l",
+"rotulo": "a seta existe?"
+},
+{
+"de": "parametros",
+"para": "guardas",
+"lado": "r-l",
+"rotulo": "limites e travas"
+},
+{
+"de": "linhas",
+"para": "guardas",
+"lado": "r-l"
+},
+{
+"de": "guardas",
+"para": "evento",
+"lado": "r-b",
+"rotulo": "aceito"
+},
+{
+"de": "evento",
+"para": "efeitos",
+"rotulo": "dispara"
+},
+{
+"de": "efeitos",
+"para": "portas",
+"lado": "b-r",
+"rotulo": "precisa de fora"
+},
+{
+"de": "archtest",
+"para": "portas",
+"lado": "r-l",
+"rotulo": "vigia",
+"tracejada": true
+},
+{
+"de": "portas",
+"para": "adErp",
+"lado": "b-t"
+},
+{
+"de": "portas",
+"para": "falsos",
+"lado": "b-t",
+"rotulo": "nos testes",
+"tracejada": true
+},
+{
+"de": "portas",
+"para": "adHttp",
+"lado": "b-t"
+},
+{
+"de": "portas",
+"para": "manual",
+"lado": "b-t"
+},
+{
+"de": "adErp",
+"para": "erpsvc"
+},
+{
+"de": "erpsvc",
+"para": "oracle",
+"lado": "r-l"
+},
+{
+"de": "adHttp",
+"para": "comprasgov"
+},
+{
+"de": "adHttp",
+"para": "pncp",
+"lado": "b-l"
+},
+{
+"de": "manual",
+"para": "pncp",
+"rotulo": "confere o número",
+"tracejada": true
+}
+],
+"roteiros": [
+{
+"titulo": "Diretoria aprova a demanda (passo 9)",
+"passos": [
+{
+"nos": [
+"pessoas",
+"telas"
+],
+"texto": "O diretor delegado (até a decisão 4, o Presidente) abrirá a fila da Diretoria e clicará em Aprovar, com a motivação."
+},
+{
+"nos": [
+"telas",
+"fachada"
+],
+"texto": "A tela não decidirá nada: chamará a fachada para avançar o processo."
+},
+{
+"nos": [
+"fachada",
+"comando"
+],
+"texto": "A fachada montará o comando AprovarDemanda: processo, destino 9, quem age e a motivação."
+},
+{
+"nos": [
+"comando",
+"transicao"
+],
+"texto": "O TransicaoService abrirá a transação e travará a linha do processo, para que dois atos não aconteçam ao mesmo tempo."
+},
+{
+"nos": [
+"transicao",
+"guardas",
+"fluxo",
+"parametros",
+"linhas"
+],
+"texto": "A corrente de guardas conferirá: a seta 8 → 9 existe na versão 16.5 do fluxo; quem aprova tem ato de delegação vigente; há motivação; a trava de fim de mandato não bloqueia. Se uma guarda barrar, nada será gravado e a tela mostrará o motivo."
+},
+{
+"nos": [
+"guardas",
+"evento"
+],
+"texto": "Aceito o ato, o evento será gravado com hash, e o status mudará na mesma transação."
+},
+{
+"nos": [
+"evento",
+"efeitos"
+],
+"texto": "Os efeitos fecharão o prazo da Diretoria, abrirão o prazo do Financeiro (passo 10) e agendarão o alerta."
+},
+{
+"nos": [
+"efeitos",
+"portas",
+"adErp",
+"erpsvc"
+],
+"texto": "Para avisar o Financeiro, o efeito usará a porta Notificador; o adaptador chamará o e-mail do ERP."
+}
+]
+},
+{
+"titulo": "Financeiro liquida e o ERP paga (passos 34 e 35)",
+"passos": [
+{
+"nos": [
+"pessoas",
+"telas"
+],
+"texto": "O Financeiro registrará a liquidação com o termo de recebimento definitivo e a nota fiscal."
+},
+{
+"nos": [
+"telas",
+"fachada",
+"comando",
+"transicao"
+],
+"texto": "A fachada montará o comando Liquidar, e o TransicaoService o executará."
+},
+{
+"nos": [
+"guardas",
+"parametros"
+],
+"texto": "As guardas conferirão o recebimento definitivo, o saldo do empenho e a data do comprovante (RN-223)."
+},
+{
+"nos": [
+"evento",
+"efeitos"
+],
+"texto": "O evento será gravado, e o efeito lançará a liquidação no livro-razão orçamentário."
+},
+{
+"nos": [
+"efeitos",
+"portas",
+"adErp",
+"erpsvc",
+"oracle"
+],
+"texto": "Pela porta Pagador, o adaptador chamará o DespesaService do ERP, que criará a despesa e pagará como já faz hoje."
+},
+{
+"nos": [
+"agendador",
+"fachada",
+"portas"
+],
+"texto": "O agendador lerá o pagamento pela mesma porta e lançará PAGAMENTO no livro-razão."
+},
+{
+"nos": [
+"archtest",
+"portas",
+"adErp"
+],
+"texto": "Em nenhum momento o módulo chamará o DespesaService direto: o teste de arquitetura barraria."
+}
+]
+},
+{
+"titulo": "Contrato divulgado no PNCP (passo 27)",
+"passos": [
+{
+"nos": [
+"pessoas",
+"telas"
+],
+"texto": "O servidor de Compras divulgará o contrato pelo canal disponível (Publicador de Contratos, enquanto a decisão 18 não sair) e informará o número de controle."
+},
+{
+"nos": [
+"fachada",
+"comando",
+"transicao",
+"guardas"
+],
+"texto": "O comando RegistrarDivulgacao passará pelas guardas, que conferirão o prazo do art. 94."
+},
+{
+"nos": [
+"evento",
+"efeitos"
+],
+"texto": "O evento será gravado. Até aqui, nenhuma ordem de serviço, recebimento ou pagamento terá sido liberado (RN-190)."
+},
+{
+"nos": [
+"efeitos",
+"portas",
+"manual",
+"pncp"
+],
+"texto": "Pela porta PublicadorPncp, o adaptador de registro manual conferirá o número na consulta aberta do PNCP."
+},
+{
+"nos": [
+"agendador",
+"pncp"
+],
+"texto": "Todo dia útil, a reconciliação conferirá de novo cada número registrado. Divergência vira pendência de Compras."
+}
+]
+}
+]
+},
+"construcao": {
+"titulo": "Passo a passo da construção",
+"intro": "Cada caixa é uma etapa. A cor mostra a situação. As setas tracejadas são dependências de decisões que não são técnicas.",
+"nos": [
+{
+"id": "c1",
+"x": 300,
+"y": 0,
+"titulo": "Levantamento do fluxo",
+"sub": "fluxo v16.5 · 44 passos, 9 fases",
+"status": "feito",
+"texto": "Fluxo-alvo desenhado com Compras, revisado por especialistas e conferido contra o texto da lei (579 trechos coerentes)."
+},
+{
+"id": "c2",
+"x": 300,
+"y": 120,
+"titulo": "Especificação",
+"sub": "versão 1.4.1",
+"status": "feito",
+"texto": "Casos de uso, regras de negócio até a RN-230, máquinas de estados, papéis e segregação de funções."
+},
+{
+"id": "c3",
+"x": 300,
+"y": 240,
+"titulo": "Sabatina jurídica",
+"sub": "100 perguntas · 94 correções aplicadas",
+"status": "feito",
+"texto": "Agente crítico com réplica e tréplica; correções aplicadas na v16.5 e registro único de 29 decisões."
+},
+{
+"id": "c4",
+"x": 300,
+"y": 360,
+"titulo": "Arquitetura",
+"sub": "versão 2.0 · módulo com ponte",
+"status": "andamento",
+"texto": "ADR-015 (módulo isolado dentro do ERP, com ponte) aceito em 11/11/2026. Os demais ADRs aguardam aceite do desenvolvedor responsável e da Diretoria.",
+"itens": [
+{
+"t": "ADR-015: módulo dentro do ERP, com ponte",
+"status": "feito"
+},
+{
+"t": "Fluxograma da arquitetura no site",
+"status": "feito"
+},
+{
+"t": "Aceite dos ADRs 003 a 019",
+"status": "planejado"
+},
+{
+"t": "Assinatura de cada porta e primeiras migrations",
+"status": "planejado"
+}
+]
+},
+{
+"id": "c5",
+"x": 640,
+"y": 360,
+"titulo": "Validação com setores e Diretoria",
+"sub": "apresentação e respostas por setor",
+"status": "planejado",
+"texto": "Apresentar o site, o diagrama e as perguntas da Diretoria; colher as respostas de Financeiro, Compras, Assessoria Jurídica, Patrimônio e fiscais."
+},
+{
+"id": "c6",
+"x": 640,
+"y": 480,
+"titulo": "Decisões 18 e 26",
+"sub": "canal no PNCP e contratos legados",
+"status": "pendente",
+"texto": "Propostas para 15/12/2026, com a Presidência. Sem a decisão 18, nenhum instrumento novo se executa (RN-190). A decisão 26 trata dos contratos e atas que nunca foram ao PNCP."
+},
+{
+"id": "c7",
+"x": 640,
+"y": 600,
+"titulo": "Regulamento de Contratações",
+"sub": "Plenário e referendo do COFECI",
+"status": "pendente",
+"texto": "Alçadas, tolerância, pequena monta, tabela de ramos e adoção de regulamentos federais. Até o referendo, o sistema roda no modo restritivo (RN-217)."
+},
+{
+"id": "i0",
+"x": 300,
+"y": 520,
+"titulo": "Incremento 0 · Fundação",
+"sub": "ponte, fluxo importado, eventos, livro-razão",
+"status": "planejado",
+"texto": "Base técnica do módulo dentro do ERP. Pronto quando um usuário do ERP abrir o módulo, a tela de parâmetros mostrar os limites do Decreto 12.807, o painel mostrar as travas e o teste de arquitetura passar.",
+"itens": [
+{
+"t": "ComprasServiceProvider, config e rotas do módulo",
+"status": "planejado"
+},
+{
+"t": "Portas, adaptadores do ERP e falsos",
+"status": "planejado"
+},
+{
+"t": "Teste de arquitetura (ComprasArchTest)",
+"status": "planejado"
+},
+{
+"t": "Importação do fluxo v16.5",
+"status": "planejado"
+},
+{
+"t": "Parâmetros com carga 2026 e travas por decisão",
+"status": "planejado"
+},
+{
+"t": "Calendário de dias úteis",
+"status": "planejado"
+},
+{
+"t": "Log de eventos com hash",
+"status": "planejado"
+},
+{
+"t": "Peças com juntada e hash",
+"status": "planejado"
+},
+{
+"t": "Numeração oficial",
+"status": "planejado"
+},
+{
+"t": "Livro-razão orçamentário",
+"status": "planejado"
+}
+]
+},
+{
+"id": "i1",
+"x": 120,
+"y": 680,
+"titulo": "Incremento 1 · Solicitação até o processo",
+"sub": "passos 1 a 13",
+"status": "planejado",
+"texto": "Pronto quando uma solicitação real for da abertura ao processo aberto sem e-mail, e a planilha de Compras sair do sistema."
+},
+{
+"id": "i2",
+"x": 480,
+"y": 680,
+"titulo": "Incremento 2 · Contratos vigentes e alertas",
+"sub": "migração dos contratos do ERP",
+"status": "planejado",
+"texto": "Pronto quando nenhum contrato vigente estiver sem fiscal e gestor e um alerta de 90 dias chegar a um fiscal real."
+},
+{
+"id": "i3",
+"x": 120,
+"y": 800,
+"titulo": "Incremento 3 · Instrução e preços",
+"sub": "passos 14 a 22",
+"status": "planejado",
+"texto": "Pronto quando um processo real de dispensa por valor chegar à autorização com todas as peças geradas."
+},
+{
+"id": "i4",
+"x": 120,
+"y": 920,
+"titulo": "Incremento 4 · Seleção, empenho e formalização",
+"sub": "passos 23 a 29",
+"status": "planejado",
+"texto": "Pronto quando um pregão real tiver resultado importado e contrato vigente só depois do número de controle PNCP."
+},
+{
+"id": "i5",
+"x": 300,
+"y": 1040,
+"titulo": "Incremento 5 · Execução e pagamento",
+"sub": "passos 30 a 41b",
+"status": "planejado",
+"texto": "Pronto quando uma nota real for liquidada no módulo e paga no ERP, e pagamento sem recebimento for impossível."
+},
+{
+"id": "i6",
+"x": 300,
+"y": 1160,
+"titulo": "Incremento 6 · Alterações, sanções e exercício",
+"sub": "passos 42 a 44b e faixa SA",
+"status": "planejado",
+"texto": "Pronto quando aditivo acima do limite for recusado e o exercício seguinte abrir com os contratos contínuos empenhados."
+},
+{
+"id": "i7",
+"x": 300,
+"y": 1280,
+"titulo": "Incremento 7 · Publicação direta no PNCP",
+"sub": "opcional, depois da decisão 18",
+"status": "planejado",
+"texto": "Envio pela API de integração do PNCP, se a Diretoria decidir pelo credenciamento."
+}
+],
+"setas": [
+{
+"de": "c1",
+"para": "c2"
+},
+{
+"de": "c2",
+"para": "c3"
+},
+{
+"de": "c3",
+"para": "c4"
+},
+{
+"de": "c4",
+"para": "i0"
+},
+{
+"de": "c4",
+"para": "c5",
+"lado": "r-l",
+"rotulo": "apresentar"
+},
+{
+"de": "c5",
+"para": "i1",
+"lado": "b-r",
+"rotulo": "validação",
+"tracejada": true
+},
+{
+"de": "c6",
+"para": "i2",
+"lado": "b-r",
+"rotulo": "eficácia (RN-190)",
+"tracejada": true
+},
+{
+"de": "c7",
+"para": "i1",
+"lado": "l-r",
+"rotulo": "sem ele: modo restritivo",
+"tracejada": true
+},
+{
+"de": "i0",
+"para": "i1"
+},
+{
+"de": "i0",
+"para": "i2"
+},
+{
+"de": "i1",
+"para": "i3"
+},
+{
+"de": "i3",
+"para": "i4"
+},
+{
+"de": "i4",
+"para": "i5"
+},
+{
+"de": "i2",
+"para": "i5"
+},
+{
+"de": "i5",
+"para": "i6"
+},
+{
+"de": "i6",
+"para": "i7",
+"rotulo": "opcional",
+"tracejada": true
+}
+]
+}
+}

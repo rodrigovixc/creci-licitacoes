@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import D from './data/fluxo.json'
 import { montar, escolhasDoCaso } from './lib/trilho'
 import Cabecalho from './components/Cabecalho'
@@ -6,12 +6,17 @@ import Fases from './components/Fases'
 import Passo from './components/Passo'
 import Decisao from './components/Decisao'
 import Perguntas from './components/Perguntas'
+import Abas from './components/Abas'
+
+// o React Flow só carrega quando a aba Arquitetura abre
+const Arquitetura = lazy(() => import('./components/Arquitetura'))
 
 const INICIO = '1'
 
-// duas vistas pelo endereço: o fluxo (padrão) e as perguntas da Diretoria (#perguntas)
+// três vistas pelo endereço: o fluxo (padrão), a arquitetura (#arquitetura) e as perguntas da Diretoria (#perguntas)
 function vistaDoHash() {
-  return window.location.hash.startsWith('#perguntas') ? 'perguntas' : 'fluxo'
+  const h = window.location.hash
+  return h.startsWith('#perguntas') ? 'perguntas' : h.startsWith('#arquitetura') ? 'arquitetura' : 'fluxo'
 }
 
 export default function App() {
@@ -52,7 +57,18 @@ export default function App() {
   if (vista === 'perguntas') {
     return (
       <main>
-        <Perguntas D={D} onVoltar={() => { window.location.hash = ''; window.scrollTo({ top: 0 }) }} />
+        <Abas atual={vista} />
+        <Perguntas D={D} />
+      </main>
+    )
+  }
+  if (vista === 'arquitetura') {
+    return (
+      <main className="larga">
+        <Abas atual={vista} />
+        <Suspense fallback={<p className="arq-dica">Carregando o fluxograma…</p>}>
+          <Arquitetura />
+        </Suspense>
       </main>
     )
   }
@@ -61,7 +77,8 @@ export default function App() {
     <>
       <Fases D={D} atual={fase} />
       <main>
-        <Cabecalho D={D} caso={caso} onCaso={abreCaso} onRecomeca={() => { setCaso(null); setEscolhas({}) }} total={passos} onPerguntas={() => { window.location.hash = 'perguntas'; window.scrollTo({ top: 0 }) }} />
+        <Abas atual={vista} />
+        <Cabecalho D={D} caso={caso} onCaso={abreCaso} onRecomeca={() => { setCaso(null); setEscolhas({}) }} total={passos} />
         <div className="trilho">
           {itens.map((x, k) => {
             if (x.k === 'no') return <Passo key={x.id} D={D} id={x.id} linha={x.linha} />

@@ -193,7 +193,6 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 .pncp dl > div { grid-template-columns: 12.5em 1fr; }
 
 /* perguntas que a Diretoria pode fazer (#perguntas) */
-.atalho-perguntas { margin: 10px 0 0; }
 .perguntas .fonte { color: var(--mute); font-size: 14px; margin: 0 0 14px; }
 .perguntas .grupos { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 8px; }
 .perguntas .grupos a {
@@ -212,3 +211,80 @@ footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--line);
 .pergunta .onde { font-size: 13px; color: var(--mute); }
 button.limpa { border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--mute); padding: 6px 14px; font-size: 14px; }
 button.limpa:hover { color: var(--ink); border-color: var(--ink); }
+
+/* abas do site */
+.abas { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 28px; }
+.abas a {
+  border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 14px;
+  color: var(--mute); text-decoration: none; background: none;
+}
+.abas a[aria-current='page'] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+main.larga { max-width: 1240px; }
+
+/* aba Arquitetura (React Flow) */
+.arquitetura h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.1; }
+.arq-resumo { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--mute); margin: 0 0 18px; }
+.arq-barra { display: block; height: 6px; border-radius: 99px; background: var(--soft); overflow: hidden; margin-top: 8px; }
+.arq-barra.larga { width: min(260px, 50vw); margin: 0; }
+.arq-barra i { display: block; height: 100%; background: #2f9e44; }
+.arq-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 12px; }
+.arq-chips button { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+.arq-chips button.ativo { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.arq-dica { color: var(--mute); font-size: 14px; margin: 4px 0 10px; }
+.arq-legenda { display: flex; flex-wrap: wrap; gap: 6px 14px; list-style: none; padding: 0; margin: 0 0 10px; font-size: 12.5px; color: var(--mute); }
+.arq-legenda li { display: inline-flex; align-items: center; gap: 6px; }
+.arq-legenda li::before { content: ''; width: 10px; height: 10px; border-radius: 3px; background: var(--k, var(--mute)); }
+.arq-tela {
+  height: min(78vh, 760px); min-height: 460px; border: 1px solid var(--line); border-radius: 14px;
+  overflow: hidden; background: var(--card);
+}
+.arq-tela .react-flow { --xy-background-color: var(--card); --xy-edge-stroke: var(--mute); --xy-edge-label-background-color: var(--card); --xy-edge-label-color: var(--mute); }
+.arq-tela .react-flow__edge-text { font-size: 11px; }
+.arq-tela .react-flow__edge.tracejada path { stroke-dasharray: 6 4; }
+.arq-tela .react-flow__edge.apagada { opacity: .18; }
+.arq-tela .react-flow__edge.animated path { stroke: var(--accent); stroke-width: 2; }
+.arq-tela .react-flow__handle { opacity: 0; width: 6px; height: 6px; min-width: 0; min-height: 0; border: 0; }
+.arq-tela .react-flow__node-grupo { pointer-events: none; }
+
+.t-usuario { --k: #1971c2; } .t-tela { --k: #0c8599; } .t-dominio { --k: #6741d9; } .t-dado { --k: #e67700; }
+.t-ponte { --k: #c96442; } .t-teste { --k: #2f9e44; } .t-erp { --k: #495057; } .t-ext { --k: #868e96; }
+.s-feito { --k: #2f9e44; } .s-andamento { --k: #1971c2; } .s-pendente { --k: #e8590c; } .s-planejado { --k: #868e96; }
+@media (prefers-color-scheme: dark) { .t-erp { --k: #adb5bd; } .t-ext, .s-planejado { --k: #a8a59c; } }
+
+.arq-caixa {
+  display: flex; flex-direction: column; gap: 3px; padding: 10px 12px; border-radius: 10px;
+  background: var(--card); color: var(--ink); border: 1px solid var(--line); border-left: 4px solid var(--k, var(--mute));
+  font-size: 13px; line-height: 1.3; cursor: pointer; transition: opacity .2s, box-shadow .2s;
+}
+.arq-caixa strong { font-size: 14px; }
+.arq-caixa small { color: var(--mute); font-size: 12px; }
+.arq-caixa.apagado { opacity: .28; }
+.arq-caixa.ativo { box-shadow: 0 0 0 2px var(--accent); }
+.arq-caixa .arq-status { align-self: flex-start; font-size: 11px; font-weight: 600; color: var(--k); text-transform: uppercase; letter-spacing: .04em; }
+.arq-caixa.s-feito { background: color-mix(in srgb, #2f9e44 8%, var(--card)); }
+.arq-grupo {
+  width: 100%; height: 100%; border-radius: 16px; border: 1.5px dashed var(--line);
+  background: color-mix(in srgb, var(--soft) 55%, transparent);
+}
+.arq-grupo span { display: inline-block; margin: 8px 12px; font-size: 12px; font-weight: 600; color: var(--mute); letter-spacing: .04em; text-transform: uppercase; }
+.arq-grupo.g-mod { border-color: #6741d9; background: color-mix(in srgb, #6741d9 5%, transparent); }
+.arq-grupo.g-ponte { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
+.arq-grupo.g-ext { border-style: dotted; }
+
+.arq-roteiro { margin-top: 14px; }
+.arq-passo { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 12px; padding: 14px 16px; }
+.arq-passo p { margin: 6px 0 12px; max-width: 70ch; }
+.arq-n { font-size: 12.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); }
+.arq-nav { display: flex; gap: 8px; }
+.arq-nav button { border: 1px solid var(--line); background: var(--bg); border-radius: 999px; padding: 6px 14px; font-size: 14px; }
+.arq-nav button:disabled { opacity: .4; cursor: default; }
+.arq-detalhe { margin-top: 14px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.arq-detalhe h3 { margin: 0 0 6px; font-family: var(--serif); font-weight: 500; font-size: 20px; }
+.arq-detalhe p { margin: 6px 0 0; max-width: 72ch; }
+.arq-refs { font-size: 13px; color: var(--mute); }
+.arq-pill { display: inline-block; font-size: 11.5px; font-weight: 600; color: var(--k); border: 1px solid var(--k); border-radius: 999px; padding: 1px 8px; margin: 0; }
+.arq-itens { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 4px; font-size: 14px; }
+.arq-itens li span { display: inline-block; min-width: 110px; font-size: 12px; font-weight: 600; color: var(--k); }
+.arq-lista { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; }
+.arq-lista button { width: 100%; text-align: left; border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 8px 12px; font-size: 14px; }
+.arq-lista small { color: var(--mute); }
