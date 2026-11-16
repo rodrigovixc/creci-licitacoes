@@ -7,16 +7,17 @@ import Passo from './components/Passo'
 import Decisao from './components/Decisao'
 import Perguntas from './components/Perguntas'
 import Abas from './components/Abas'
+import Home from './components/Home'
 
 // o React Flow só carrega quando a aba Arquitetura abre
 const Arquitetura = lazy(() => import('./components/Arquitetura'))
 
 const INICIO = '1'
 
-// três vistas pelo endereço: o fluxo (padrão), a arquitetura (#arquitetura) e as perguntas da Diretoria (#perguntas)
+// vistas pelo endereço: início (padrão), fluxo (#fluxo), arquitetura (#arquitetura) e perguntas da Diretoria (#perguntas)
 function vistaDoHash() {
   const h = window.location.hash
-  return h.startsWith('#perguntas') ? 'perguntas' : h.startsWith('#arquitetura') ? 'arquitetura' : 'fluxo'
+  return h.startsWith('#perguntas') ? 'perguntas' : h.startsWith('#arquitetura') ? 'arquitetura' : h.startsWith('#fluxo') ? 'fluxo' : 'inicio'
 }
 
 export default function App() {
@@ -50,9 +51,28 @@ export default function App() {
     )
     document.querySelectorAll('.passo[data-fase]').forEach((el) => io.observe(el))
     return () => io.disconnect()
-  }, [itens])
+  }, [itens, vista])
 
   const passos = itens.filter((x) => x.k === 'no').length
+
+  // da página inicial para o fluxo: troca a vista e, depois de desenhar, rola até a fase
+  function irFase(k) {
+    window.location.hash = 'fluxo'
+    setTimeout(() => document.querySelector('.passo[data-fase="' + k + '"]')?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120)
+  }
+  function irCaso(j) {
+    window.location.hash = 'fluxo'
+    abreCaso(j)
+  }
+
+  if (vista === 'inicio') {
+    return (
+      <main>
+        <Abas atual={vista} />
+        <Home D={D} onCaso={irCaso} onFase={irFase} />
+      </main>
+    )
+  }
 
   if (vista === 'perguntas') {
     return (

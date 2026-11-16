@@ -288,3 +288,42 @@ main.larga { max-width: 1240px; }
 .arq-lista { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; }
 .arq-lista button { width: 100%; text-align: left; border: 1px solid var(--line); background: var(--card); border-radius: 10px; padding: 8px 12px; font-size: 14px; }
 .arq-lista small { color: var(--mute); }
+
+/* página inicial */
+.home h1 { font-size: clamp(32px, 5.5vw, 50px); line-height: 1.08; letter-spacing: -.01em; }
+.home-situacao {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 8px 0 28px;
+}
+.home-situacao > div {
+  display: flex; flex-direction: column; gap: 4px; min-width: 0;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+}
+.home-situacao span:first-child { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--mute); }
+.home-situacao b { font-weight: 500; font-size: 15px; line-height: 1.35; }
+.home-situacao small { color: var(--mute); font-size: 13px; }
+.home-situacao .alerta { border-left: 4px solid #e8590c; }
+.home-cards { display: grid; gap: 14px; margin: 0 0 36px; }
+@media (min-width: 700px) { .home-cards { grid-template-columns: repeat(3, 1fr); } }
+.home-card {
+  display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px;
+  color: var(--ink); text-decoration: none; transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.home-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 28px -18px var(--accent); }
+.home-card h2 { font-size: 24px; line-height: 1.15; }
+.home-card p { margin: 0; color: var(--mute); font-size: 15px; flex: 1; }
+.home-n { font-family: var(--serif); font-size: 15px; color: var(--accent); }
+.home-ir { color: var(--accent); font-weight: 500; font-size: 14px; }
+.home-card .arq-barra { margin: 0; }
+.home-sec { font-size: 22px; margin: 0 0 4px; }
+.home-dica { color: var(--mute); font-size: 14px; margin: 0 0 12px; }
+.home .casos { margin-bottom: 36px; }
+.home .casos button { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 12px; font-size: 14px; }
+.home-fases { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.home-fases button {
+  width: 100%; display: flex; align-items: center; gap: 10px; text-align: left;
+  background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--c); border-radius: 10px; padding: 10px 12px; font-size: 15px;
+}
+.home-fases i { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--c); color: #fff; font-style: normal; font-size: 13px; font-weight: 600; flex: 0 0 auto; }
+.home-fases small { margin-left: auto; color: var(--mute); font-size: 12px; white-space: nowrap; }
+@media (max-width: 380px) { .home-situacao { grid-template-columns: 1fr; } }
