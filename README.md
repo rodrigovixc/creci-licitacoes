@@ -1,6 +1,23 @@
-# Fluxo de compras do CRECI-ES
+# Compras, licitações e contratos do CRECI-ES
 
-Site que conta o fluxo de compras, licitações e contratos do CRECI-ES (diagrama v16.4) em rolagem vertical. Nas decisões, a pessoa rola para o lado, escolhe o caminho e continua descendo. Feito para apresentar à Diretoria no lugar do diagrama Excalidraw.
+Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES (diagrama v16.5), a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
+
+## Seções
+
+| Endereço | O que traz |
+|---|---|
+| `#` | Página inicial: as fases do fluxo, o índice do site e a situação da construção |
+| `#contexto` | O problema, o método, a linha do tempo e as regras do projeto |
+| `#fluxo` | O fluxo em rolagem vertical, com rolagem lateral nas decisões |
+| `#regras` | Regras de negócio e casos de uso (`#regras/RN-190`, `#regras/UC-01`) |
+| `#especificacao` | A especificação completa, uma parte por vez (`#especificacao/5`) |
+| `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e as 29 decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
+| `#perguntas` | Perguntas que a Diretoria pode fazer |
+| `#arquitetura` | Por que esta arquitetura, como funciona, os ADRs e a construção (`#arquitetura/ADR-015`) |
+| `#prompts` | O ciclo com revisor independente, as rodadas e os 15 prompts (`#prompts/i0`) |
+| `#cronograma` | As etapas em dias úteis, em dois cenários de dedicação |
+
+Os códigos citados nos textos (RN, UC, ADR, Q e decisão) são links para a seção que os explica.
 
 ## Rodar
 
@@ -15,6 +32,13 @@ A Netlify lê o `netlify.toml`: roda `npm run build` e publica a pasta `dist`.
 
 ## Dados
 
-`src/data/fluxo.json` não é editado à mão. Ele é gerado pelo script `gerador/doc_minigame.py` do projeto `compras-licitacoes-contratos`, a partir do `textos16.json` e dos exemplos do `gen16.py`. A ordem das modalidades no passo 20 fica na lista `ORDEM_USO` desse script.
+Nada em `src/data` é editado à mão. Os arquivos saem de dois scripts do projeto `compras-licitacoes-contratos`:
 
-Cada passo com divulgação no PNCP traz o canal usado na implantação, o controle previsto no sistema a desenvolver e a integração futura com a API do PNCP, sem prazo (v16.4).
+- `gerador/doc_minigame.py` gera `src/data/fluxo.json` (a partir do `textos16.json` e dos exemplos do `gen16.py`) e `src/data/arquitetura.json` (de `docs/arquitetura/arquitetura-site.json`).
+- `gerador/doc_site.py` gera `src/data/docs/`: contexto, regras, sabatina, arquitetura, prompts, especificação e cronograma, lidos dos próprios documentos. Ele falha se uma referência não existir ou se o cronograma furar um prazo.
+
+Para mudar um texto do site, mude o documento de origem e rode o script.
+
+## Movimento
+
+As animações usam só recursos do navegador: transição de seção (View Transitions), animação pela rolagem e CSS. Quem pede menos movimento no sistema não vê animação. A biblioteca Mermaid só carrega nas páginas que têm diagrama.
