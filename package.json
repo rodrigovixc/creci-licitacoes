@@ -1,7 +1,6 @@
 {
   "name": "creci-licitacoes",
   "private": true,
-  "version": "16.4.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

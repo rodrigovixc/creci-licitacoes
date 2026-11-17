@@ -1,6 +1,6 @@
 # Compras, licitações e contratos do CRECI-ES
 
-Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES (diagrama v16.5), a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
+Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES, a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
 
 ## Seções
 
