@@ -1,7 +1,7 @@
 {
 "titulo": "Arquitetura do módulo de Compras",
 "intro": "Como o sistema vai funcionar dentro do ERP Área Restrita e em que ponto está a construção. Nada abaixo está implementado ainda, salvo o que estiver marcado como concluído. Fonte: docs/arquitetura, versão 2.0, e especificação 1.4.1.",
-"atualizado": "16 de novembro de 2026",
+"atualizado": "17 de novembro de 2026",
 "status": {
 "feito": "Concluído",
 "andamento": "Em andamento",
@@ -780,7 +780,7 @@
 "status": "planejado"
 },
 {
-"t": "Log de eventos com hash",
+"t": "Log de eventos e de auditoria com hash, e trilha (UC-41)",
 "status": "planejado"
 },
 {
@@ -793,6 +793,10 @@
 },
 {
 "t": "Livro-razão orçamentário",
+"status": "planejado"
+},
+{
+"t": "Motor de transição e guardas",
 "status": "planejado"
 }
 ]
