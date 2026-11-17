@@ -11,7 +11,7 @@ Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES, a esp
 | `#fluxo` | O fluxo em rolagem vertical, com rolagem lateral nas decisões |
 | `#regras` | Regras de negócio e casos de uso (`#regras/RN-190`, `#regras/UC-01`) |
 | `#especificacao` | A especificação completa, uma parte por vez (`#especificacao/5`) |
-| `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e as 29 decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
+| `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e o registro de decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
 | `#perguntas` | Perguntas que a Diretoria pode fazer |
 | `#arquitetura` | Por que esta arquitetura, como funciona, os ADRs e a construção (`#arquitetura/ADR-015`) |
 | `#prompts` | O ciclo com revisor independente, as rodadas e os 15 prompts (`#prompts/i0`) |
