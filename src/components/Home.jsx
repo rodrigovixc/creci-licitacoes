@@ -87,9 +87,9 @@ export default function Home({ D, onCaso, onFase }) {
 
       <h2 className="home-sec">Onde a construção está</h2>
       <p className="home-dica">O projeto está na fase de desenho. Nenhuma linha do sistema está escrita.</p>
-      <div className="etapas-faixa" role="img" aria-label={`${feitas} de ${etapas.length} etapas concluídas`}>
-        {etapas.map((n) => <a key={n.id} href={'#prompts/' + n.id} className={'s-' + n.status} title={`${n.id}: ${n.titulo} (${A.status[n.status]})`}><b>{n.id}</b></a>)}
-      </div>
+      <nav className="etapas-faixa" aria-label="Etapas da construção">
+        {etapas.map((n) => <a key={n.id} href={'#prompts/' + n.id} className={'s-' + n.status} title={`${n.id}: ${n.titulo} (${A.status[n.status]})`} aria-label={`${n.id}: ${n.titulo}, ${A.status[n.status]}`}><b>{n.id}</b></a>)}
+      </nav>
       <dl className="situacao">
         <div><dt>Concluídas</dt><dd>{feitas} de {etapas.length} etapas</dd></div>
         <div><dt>Em andamento</dt><dd>{andamento.map((n) => n.titulo).join(', ') || 'nenhuma etapa'}</dd></div>
