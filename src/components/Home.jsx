@@ -47,6 +47,7 @@ export default function Home({ D, onCaso, onFase }) {
   const andamento = etapas.filter((n) => n.status === 'andamento')
   const pendentes = etapas.filter((n) => n.status === 'pendente')
   const fases = Object.keys(D.F)
+  const codando = etapas.filter((n) => n.id[0] === 'i' && n.status !== 'planejado')
 
   const INDICE = [
     ['contexto', 'Contexto', 'O problema, o método e a linha do tempo do projeto.', I.leis + ' textos legais'],
@@ -86,7 +87,11 @@ export default function Home({ D, onCaso, onFase }) {
       </ul>
 
       <h2 className="home-sec">Onde a construção está</h2>
-      <p className="home-dica">O projeto está na fase de desenho. Nenhuma linha do sistema está escrita.</p>
+      <p className="home-dica">
+        {codando.length
+          ? 'A construção do sistema começou: ' + codando.map((n) => n.titulo).join(', ') + '.'
+          : 'O projeto está na fase de desenho. Nenhuma linha do sistema está escrita.'}
+      </p>
       <nav className="etapas-faixa" aria-label="Etapas da construção">
         {etapas.map((n) => <a key={n.id} href={'#prompts/' + n.id} className={'s-' + n.status} title={`${n.id}: ${n.titulo} (${A.status[n.status]})`} aria-label={`${n.id}: ${n.titulo}, ${A.status[n.status]}`}><b>{n.id}</b></a>)}
       </nav>
