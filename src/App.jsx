@@ -17,10 +17,11 @@ const SECOES = {
   especificacao: lazy(() => import('./secoes/Especificacao')),
   sabatina: lazy(() => import('./secoes/Sabatina')),
   arquitetura: lazy(() => import('./components/Arquitetura')),
+  diagramas: lazy(() => import('./secoes/Diagramas')),
   prompts: lazy(() => import('./secoes/Prompts')),
   cronograma: lazy(() => import('./secoes/Cronograma')),
 }
-const LARGAS = ['arquitetura', 'cronograma', 'especificacao', 'prompts']
+const LARGAS = ['arquitetura', 'diagramas', 'cronograma', 'especificacao', 'prompts']
 
 const INICIO = '1'
 

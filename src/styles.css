@@ -680,6 +680,20 @@ tr.alvo td { background: var(--accent-soft); }
   .espec-indice ul { display: none; }
 }
 
+/* ---------- diagramas (Archify) ---------- */
+.diag-grade { display: grid; gap: 14px; }
+.diag-lista { display: flex; flex-wrap: wrap; gap: 6px; }
+.diag-lista button { border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 14px; font-size: 14.5px; font-weight: 550; }
+.diag-lista button:hover { border-color: var(--accent); color: var(--accent); }
+.diag-lista button.ativo { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.diag-palco { min-width: 0; }
+.diag-topo { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin: 4px 0 10px; }
+.diag-topo p { margin: 0; font-size: 15px; color: var(--mute); max-width: 80ch; }
+.diag-topo p b { color: var(--ink); font-weight: 650; }
+.diag-topo a { font-size: 14px; white-space: nowrap; }
+.diag-palco iframe { display: block; width: 100%; height: min(86vh, 960px); min-height: 520px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+@media (max-width: 860px) { .diag-palco iframe { height: 78vh; min-height: 460px; } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .linha-ficha { display: none; }

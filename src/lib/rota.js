@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 
-export const VISTAS = ['inicio', 'contexto', 'fluxo', 'regras', 'especificacao', 'sabatina', 'perguntas', 'arquitetura', 'prompts', 'cronograma']
+export const VISTAS = ['inicio', 'contexto', 'fluxo', 'regras', 'especificacao', 'sabatina', 'perguntas', 'arquitetura', 'diagramas', 'prompts', 'cronograma']
 
 export function lerRota() {
   const h = decodeURIComponent(window.location.hash.slice(1))

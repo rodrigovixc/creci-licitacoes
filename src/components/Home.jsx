@@ -2,6 +2,7 @@
 // Tudo vem dos mesmos dados das seções (fluxo.json, arquitetura.json e docs/indice.json); nada é escrito à mão aqui.
 import A from '../data/arquitetura.json'
 import I from '../data/docs/indice.json'
+import DIAG from '../data/diagramas.json'
 
 const data = (s) => new Date(s + 'T12:00:00').toLocaleDateString('pt-BR')
 
@@ -57,6 +58,7 @@ export default function Home({ D, onCaso, onFase }) {
     ['sabatina', 'Sabatina jurídica', 'Um agente crítico ataca o fluxo. Pergunta, resposta, réplica e tréplica.', I.perguntas + ' perguntas, ' + I.corrigir + ' correções'],
     ['perguntas', 'Perguntas da Diretoria', 'Resposta curta para o que a Diretoria pode perguntar, com a referência.', I.diretoria + ' perguntas'],
     ['arquitetura', 'Arquitetura', 'Por que um módulo dentro do ERP, como funciona, o que resolve e o que evita.', I.adrs + ' decisões registradas'],
+    ['diagramas', 'Diagramas', 'O sistema em diagramas interativos: arquitetura, fluxo, sequência, dados, estados e mais.', DIAG.length + ' diagramas'],
     ['prompts', 'Prompts em loop', 'Um prompt por etapa, com checagens de máquina e revisor independente.', I.prompts + ' prompts, ' + I.rodadas + ' rodadas'],
     ['cronograma', 'Cronograma', 'As etapas em dias úteis e a data que cada decisão precisa cumprir.', 'até ' + data(I.fimIntegral) + ' ou ' + data(I.fimMetade)],
   ]

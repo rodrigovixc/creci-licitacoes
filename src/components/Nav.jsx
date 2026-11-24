@@ -1,12 +1,13 @@
 // Sumário do site: trilho lateral no computador, barra com menu no celular.
 import { useEffect, useState } from 'react'
 import I from '../data/docs/indice.json'
+import DIAG from '../data/diagramas.json'
 
 export const SECOES = [
   ['O projeto', [['inicio', 'Início'], ['contexto', 'Contexto']]],
   ['O processo', [['fluxo', 'Fluxo passo a passo'], ['regras', 'Regras e casos de uso', I.rn + I.uc], ['especificacao', 'Especificação']]],
   ['A crítica', [['sabatina', 'Sabatina jurídica', I.perguntas], ['perguntas', 'Perguntas da Diretoria', I.diretoria]]],
-  ['A construção', [['arquitetura', 'Arquitetura', I.adrs], ['prompts', 'Prompts em loop', I.prompts], ['cronograma', 'Cronograma']]],
+  ['A construção', [['arquitetura', 'Arquitetura', I.adrs], ['diagramas', 'Diagramas', DIAG.length], ['prompts', 'Prompts em loop', I.prompts], ['cronograma', 'Cronograma']]],
 ]
 
 export default function Nav({ atual, versao }) {
