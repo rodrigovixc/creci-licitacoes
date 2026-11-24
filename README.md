@@ -1,6 +1,6 @@
 # Compras, licitações e contratos do CRECI-ES
 
-Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES (diagrama v16.5), a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
+Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES, a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
 
 ## Seções
 
@@ -11,9 +11,10 @@ Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES (diagr
 | `#fluxo` | O fluxo em rolagem vertical, com rolagem lateral nas decisões |
 | `#regras` | Regras de negócio e casos de uso (`#regras/RN-190`, `#regras/UC-01`) |
 | `#especificacao` | A especificação completa, uma parte por vez (`#especificacao/5`) |
-| `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e as 29 decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
+| `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e o registro de decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
 | `#perguntas` | Perguntas que a Diretoria pode fazer |
 | `#arquitetura` | Por que esta arquitetura, como funciona, os ADRs e a construção (`#arquitetura/ADR-015`) |
+| `#diagramas` | Os dez diagramas interativos do sistema (`#diagramas/architecture`, `#diagramas/erd`...) |
 | `#prompts` | O ciclo com revisor independente, as rodadas e os 15 prompts (`#prompts/i0`) |
 | `#cronograma` | As etapas em dias úteis, em dois cenários de dedicação |
 
@@ -36,6 +37,8 @@ Nada em `src/data` é editado à mão. Os arquivos saem de dois scripts do proje
 
 - `gerador/doc_minigame.py` gera `src/data/fluxo.json` (a partir do `textos16.json` e dos exemplos do `gen16.py`) e `src/data/arquitetura.json` (de `docs/arquitetura/arquitetura-site.json`).
 - `gerador/doc_site.py` gera `src/data/docs/`: contexto, regras, sabatina, arquitetura, prompts, especificação e cronograma, lidos dos próprios documentos. Ele falha se uma referência não existir ou se o cronograma furar um prazo.
+
+- `gerador/doc_diagramas.py` gera as páginas de `public/diagramas/` e o índice `src/data/diagramas.json`, a partir de `docs/diagramas/`.
 
 Para mudar um texto do site, mude o documento de origem e rode o script.
 

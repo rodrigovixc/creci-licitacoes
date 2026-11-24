@@ -31,7 +31,7 @@ export default function Contexto() {
       ))}
 
       <h2 id="regras-do-projeto">Regras do projeto</h2>
-      <p className="arq-dica">As quatro regras de redação valem para todo documento. As sete regras fixas valem para todo agente que executa um prompt.</p>
+      <p className="arq-dica">As regras de redação valem para todo documento. As regras fixas valem para todo agente que executa um prompt.</p>
       <div className="duas">
         <div className="quadro"><h3>Redação</h3><Doc html={C.projeto} /></div>
         <div className="quadro"><h3>Regras fixas dos agentes</h3><Doc html={C.fixas} /></div>

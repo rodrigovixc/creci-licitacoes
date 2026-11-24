@@ -1,0 +1,62 @@
+[
+ {
+  "tipo": "architecture",
+  "nome": "Arquitetura",
+  "titulo": "Módulo de Compras dentro do ERP, com ponte",
+  "arquivo": "diagramas/architecture.html"
+ },
+ {
+  "tipo": "workflow",
+  "nome": "Fluxo de trabalho",
+  "titulo": "Da solicitação à extinção do contrato",
+  "arquivo": "diagramas/workflow.html"
+ },
+ {
+  "tipo": "sequence",
+  "nome": "Sequência",
+  "titulo": "Formalização, divulgação no PNCP e eficácia (sistema planejado)",
+  "arquivo": "diagramas/sequence.html"
+ },
+ {
+  "tipo": "dataflow",
+  "nome": "Fluxo de dados",
+  "titulo": "O dinheiro de uma compra: da dotação ao pagamento",
+  "arquivo": "diagramas/dataflow.html"
+ },
+ {
+  "tipo": "lifecycle",
+  "nome": "Ciclo de vida",
+  "titulo": "Instrumento contratual: estados (sistema planejado)",
+  "arquivo": "diagramas/lifecycle.html"
+ },
+ {
+  "tipo": "erd",
+  "nome": "Entidades e relacionamentos",
+  "titulo": "Modelo de dados do núcleo (planejado)",
+  "arquivo": "diagramas/erd.html"
+ },
+ {
+  "tipo": "class",
+  "nome": "Classes",
+  "titulo": "Núcleo do domínio: classes planejadas",
+  "arquivo": "diagramas/class.html"
+ },
+ {
+  "tipo": "tree",
+  "nome": "Árvore",
+  "titulo": "Onde o código do módulo vai morar no ERP",
+  "arquivo": "diagramas/tree.html"
+ },
+ {
+  "tipo": "timeline",
+  "nome": "Linha do tempo",
+  "titulo": "Como o projeto chegou até aqui",
+  "arquivo": "diagramas/timeline.html"
+ },
+ {
+  "tipo": "waterfall",
+  "nome": "Cascata de tempo",
+  "titulo": "Cronograma da construção (dedicação integral)",
+  "arquivo": "diagramas/waterfall.html"
+ }
+]
