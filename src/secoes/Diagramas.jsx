@@ -1,4 +1,4 @@
-// Diagramas do projeto feitos com o Archify: cada um é uma página HTML própria, em public/diagramas/,
+// Diagramas do projeto: cada um é uma página HTML própria, em public/diagramas/,
 // gerada por gerador/doc_diagramas.py a partir de docs/diagramas/<tipo>.json. Aqui o site só os lista e os mostra.
 import { useEffect, useState } from 'react'
 import LISTA from '../data/diagramas.json'
@@ -48,7 +48,7 @@ export default function Diagramas({ sub }) {
           <iframe key={atual.tipo} src={atual.arquivo} title={atual.titulo} loading="lazy" />
         </div>
       </div>
-      <footer>Fonte: docs/diagramas, gerados com o Archify por gerador/doc_diagramas.py a partir da arquitetura 2.0, da especificação 1.4.1 e do fluxo v16.5. O sistema descrito ainda não está construído.</footer>
+      <footer>Fonte: docs/diagramas, gerados por gerador/doc_diagramas.py a partir da arquitetura 2.0, da especificação 1.4.1 e do fluxo v16.5. O sistema descrito ainda não está construído.</footer>
     </section>
   )
 }

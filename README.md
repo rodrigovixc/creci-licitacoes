@@ -38,7 +38,7 @@ Nada em `src/data` é editado à mão. Os arquivos saem de dois scripts do proje
 - `gerador/doc_minigame.py` gera `src/data/fluxo.json` (a partir do `textos16.json` e dos exemplos do `gen16.py`) e `src/data/arquitetura.json` (de `docs/arquitetura/arquitetura-site.json`).
 - `gerador/doc_site.py` gera `src/data/docs/`: contexto, regras, sabatina, arquitetura, prompts, especificação e cronograma, lidos dos próprios documentos. Ele falha se uma referência não existir ou se o cronograma furar um prazo.
 
-- `gerador/doc_diagramas.py` gera, com o Archify, as páginas de `public/diagramas/` e o índice `src/data/diagramas.json`, a partir de `docs/diagramas/`.
+- `gerador/doc_diagramas.py` gera as páginas de `public/diagramas/` e o índice `src/data/diagramas.json`, a partir de `docs/diagramas/`.
 
 Para mudar um texto do site, mude o documento de origem e rode o script.
 
