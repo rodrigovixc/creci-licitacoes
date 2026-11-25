@@ -1,5 +1,7 @@
 # Compras, licitações e contratos do CRECI-ES
 
+> **In English.** Public documentation site for the procurement, bidding and contracts system of CRECI-ES, a Brazilian professional council bound by public procurement law (Law 14.133/2021). It covers the target workflow, the full specification, a 100-question legal review with recorded decisions, architecture decision records (ADRs), ten interactive system diagrams and the build schedule. Built with React and Vite, deployed on Netlify. No content in `src/data` is edited by hand: Python scripts generate it from the source documents and stop with an error when a cross-reference (business rule, use case, ADR, question) does not exist or the schedule misses a deadline. Live site: https://creci-licitacoes.netlify.app/
+
 Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES, a especificação, a sabatina jurídica, a arquitetura do sistema, os prompts que conduzirão a construção e o cronograma. Serve para apresentar o projeto à Diretoria e aos setores, e como registro público do método.
 
 ## Seções
