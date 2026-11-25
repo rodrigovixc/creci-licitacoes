@@ -6,7 +6,9 @@ import ARQ from '../data/arquitetura.json'
 import Doc from './Doc'
 
 const GRAV = { bloqueante: ['bloqueante', 'bloqueantes'], importante: ['importante', 'importantes'], menor: ['menor', 'menores'] }
-const COR = { aprovada: 'feito', retomada: 'andamento', 'em-correcao': 'andamento', parada: 'pendente', 'nao-iniciada': 'planejado' }
+const COR = { aprovada: 'feito', 'em-correcao': 'andamento', 'sem-veredito': 'andamento', 'sem-mudanca': 'feito', parada: 'pendente', 'parada-respondida': 'pendente', 'nao-iniciada': 'planejado' }
+
+const nomeDaFatia = (n) => (n === 'fechamento' ? 'Rodada de fechamento' : n === 0 ? 'Fatia zero (o plano)' : n == null ? 'Fatia' : 'Fatia ' + n)
 
 const Html = ({ h }) => <span dangerouslySetInnerHTML={{ __html: h }} />
 
@@ -26,7 +28,7 @@ function Rodada({ e, id }) {
     <details className="dobra and-evento" id={id}>
       <summary>
         <span className={'carimbo ' + (ok ? 'ok' : e.veredito === 'REPROVADO' ? 'no' : 'meio')}>{e.veredito}</span>
-        <span>Fatia {e.fatia} · rodada {e.n}</span>
+        <span>{nomeDaFatia(e.fatia)} · rodada {e.n}</span>
         <small className="and-data">{e.data}</small>
         <Contagem c={e.contagem} />
       </summary>
@@ -66,12 +68,12 @@ function Rodada({ e, id }) {
   )
 }
 
-function Parada({ e, id }) {
+function Parada({ e, id, registro }) {
   return (
     <details className="dobra and-evento" id={id}>
       <summary>
         <span className="carimbo meio">Parada</span>
-        <span>{e.respondida ? 'Respondida pelo responsável' : 'Aguarda o responsável'}</span>
+        <span>{e.respondida ? 'Com resposta do responsável' : 'Aguarda o responsável'}</span>
         <small className="and-data">{e.data}</small>
       </summary>
       <div className="and-corpo">
@@ -79,11 +81,26 @@ function Parada({ e, id }) {
         <h4>Pergunta ao responsável</h4>
         <blockquote className="prosa"><Html h={e.pergunta} /></blockquote>
         {e.respondida && (
-          <>
-            <h4>Resposta</h4>
-            <Doc html={e.resposta} />
-          </>
+          <p className="and-meta">
+            <b>Resposta:</b> recebida em {e.datasResposta.join(' e ')}. O texto fica só no registro <code>{registro}</code>, porque a mensagem do responsável não vai para o site (protocolo, seção 6, regra 2).
+          </p>
         )}
+      </div>
+    </details>
+  )
+}
+
+function SemMudanca({ e, id }) {
+  return (
+    <details className="dobra and-evento" id={id}>
+      <summary>
+        <span className="carimbo">Sem mudança</span>
+        <span>{nomeDaFatia(e.fatia)}{e.fatiaNome ? ' · ' + e.fatiaNome : ''}</span>
+        <small className="and-data">{e.data}</small>
+      </summary>
+      <div className="and-corpo">
+        <p className="and-meta">A mudança desta etapa não toca a fatia. A rodada da fatia seguinte a confere (protocolo, seção 2, passo 4).</p>
+        {e.nota && <Doc html={e.nota} />}
       </div>
     </details>
   )
@@ -106,10 +123,10 @@ function Etapa({ et }) {
         <>
           <h3>Fatias</h3>
           <ul className="arq-itens and-fatias">
-            {et.fatias.map((f) => (
-              <li key={f.n} className={'s-' + COR[f.sit]}>
+            {et.fatias.map((f, k) => (
+              <li key={k} className={'s-' + COR[f.sit]}>
                 <span>{A.situacoes[f.sit]}</span>
-                {f.n}. {f.t}
+                {f.n != null && <>{f.n}. </>}{f.t}
                 {f.rodadas > 0 && <small> · {f.rodadas} {f.rodadas === 1 ? 'rodada' : 'rodadas'}</small>}
               </li>
             ))}
@@ -123,7 +140,9 @@ function Etapa({ et }) {
           <p className="arq-dica">Clique numa rodada para ver os achados, e num achado para ver a evidência.</p>
           {et.eventos.map((e, k) => e.tipo === 'rodada'
             ? <Rodada key={k} e={e} id={`${et.id}-f${e.fatia}-r${e.n}`} />
-            : <Parada key={k} e={e} id={`${et.id}-parada-${k}`} />)}
+            : e.tipo === 'parada'
+              ? <Parada key={k} e={e} id={`${et.id}-parada-${k}`} registro={et.registro} />
+              : <SemMudanca key={k} e={e} id={`${et.id}-sem-mudanca-${k}`} />)}
         </>
       )}
 
@@ -147,14 +166,14 @@ export default function Andamento() {
   return (
     <div className="andamento">
       <p className="arq-dica">
-        O registro de cada etapa, gerado do repositório dos documentos: as fatias e a situação de cada uma, as rodadas do revisor independente, as paradas com a pergunta ao responsável e os documentos que a etapa escreveu.
+        Aqui fica o registro de cada etapa, gerado do repositório dos documentos. Ele mostra a situação de cada fatia e as rodadas do revisor independente. Mostra também as paradas, com a pergunta ao responsável, e os documentos que a etapa escreveu.
       </p>
       {A.etapas.length === 0 && <p>Nenhuma etapa tem registro de rodada ainda.</p>}
       {A.etapas.map((et) => <Etapa key={et.id} et={et} />)}
 
       <section className="and-etapa" id="andamento-c2">
         <h2>Itens abertos para a etapa c2</h2>
-        <p className="arq-dica">O que outra etapa achou e a especificação precisa mudar. A etapa c2 marca cada item quando o trata.</p>
+        <p className="arq-dica">Outra etapa achou o que a especificação precisa mudar. A etapa c2 marca cada item quando o trata.</p>
         <ul className="and-c2">
           {A.itensC2.map((i, k) => (
             <li key={k}>
