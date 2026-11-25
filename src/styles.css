@@ -701,3 +701,40 @@ tr.alvo td { background: var(--accent-soft); }
   .linha-fase, .heroi-nota, .rodada .carimbo { opacity: 1; }
   .gantt-barra { transform: none; }
 }
+
+/* andamento das etapas (aba Arquitetura): fatias, rodadas do revisor, paradas, documentos e itens para a c2 */
+.andamento { max-width: 980px; }
+.and-etapa { margin: 28px 0 40px; }
+.and-etapa > h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; font-family: var(--display); font-size: 26px; margin: 0 0 6px; }
+.and-etapa > h3 { font-family: var(--display); font-size: 19px; margin: 26px 0 8px; }
+.and-links { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; margin: 0 0 12px; font-size: 14px; color: var(--mute); }
+.and-fatias { font-size: 15.5px; gap: 6px; }
+.and-fatias li span { min-width: 210px; font-size: 13.5px; }
+.and-fatias small { font-size: 14px; color: var(--mute); }
+.and-evento > summary { font-size: 17px; }
+.and-evento > summary .carimbo { transform: none; }
+.and-data { font-family: var(--sans); font-stretch: 100%; font-weight: 500; font-size: 13px; color: var(--mute); }
+.and-cont { display: inline-flex; flex-wrap: wrap; gap: 4px 10px; margin-left: auto; font-family: var(--sans); font-stretch: 100%; font-weight: 500; font-size: 13.5px; color: var(--mute); }
+.and-cont b { font-weight: 600; }
+.g-bloqueante { --g: var(--no); } .g-importante { --g: var(--meio); } .g-menor { --g: var(--mute); }
+.and-cont b[class^='g-'] { color: var(--g); }
+.and-corpo { padding: 0 0 20px; }
+.and-corpo h4 { font-family: var(--display); font-size: 16px; margin: 18px 0 8px; }
+.and-meta { font-size: 15px; line-height: 1.5; margin: 6px 0; overflow-wrap: anywhere; }
+.and-achados { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.and-achado { border: 1px solid var(--line); border-left: 3px solid var(--g, var(--line)); border-radius: 6px; background: var(--card); margin: 6px 0; }
+.and-achado > summary { cursor: pointer; padding: 12px 14px; font-size: 15px; line-height: 1.45; overflow-wrap: anywhere; min-height: 48px; box-sizing: border-box; }
+.and-achado > .prosa { padding: 0 14px 12px; font-size: 16px; }
+.and-grav { display: inline-block; margin-right: 6px; font-size: 12px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; color: var(--g); border: 1px solid var(--g); border-radius: 999px; padding: 0 8px; }
+.and-corpo blockquote { margin: 0 0 12px; padding: 10px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 6px 6px 0; }
+.and-arq { font-size: 13px; font-weight: 400; color: var(--mute); overflow-wrap: anywhere; }
+.andamento .prosa table code { font-size: 12.5px; }
+.and-doc-link { padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.and-c2 { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.and-c2 > li { border: 1px solid var(--line); border-radius: 8px; padding: 12px 16px; background: var(--card); font-size: 15px; line-height: 1.55; overflow-wrap: anywhere; }
+.and-c2 > li p { margin: 4px 0; }
+@media (max-width: 600px) {
+  .and-fatias li span { display: block; min-width: 0; }
+  .and-cont { margin-left: 0; width: 100%; }
+  .and-etapa > h2 { font-size: 22px; }
+}

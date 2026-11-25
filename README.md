@@ -13,7 +13,7 @@ Site que documenta o projeto inteiro: o fluxo-alvo de compras do CRECI-ES, a esp
 | `#especificacao` | A especificação completa, uma parte por vez (`#especificacao/5`) |
 | `#sabatina` | As 100 perguntas com resposta, réplica e tréplica, e o registro de decisões (`#sabatina/Q054`, `#sabatina/decisao-18`) |
 | `#perguntas` | Perguntas que a Diretoria pode fazer |
-| `#arquitetura` | Por que esta arquitetura, como funciona, os ADRs e a construção (`#arquitetura/ADR-015`) |
+| `#arquitetura` | Por que esta arquitetura, como funciona, os ADRs, a construção e o andamento de cada etapa, com fatias, rodadas de revisão, paradas e documentos (`#arquitetura/ADR-015`, `#arquitetura/andamento`) |
 | `#diagramas` | Os dez diagramas interativos do sistema (`#diagramas/architecture`, `#diagramas/erd`...) |
 | `#prompts` | O ciclo com revisor independente, as rodadas e os 15 prompts (`#prompts/i0`) |
 | `#cronograma` | As etapas em dias úteis, em dois cenários de dedicação |
@@ -36,7 +36,7 @@ A Netlify lê o `netlify.toml`: roda `npm run build` e publica a pasta `dist`.
 Nada em `src/data` é editado à mão. Os arquivos saem de dois scripts do projeto `compras-licitacoes-contratos`:
 
 - `gerador/doc_minigame.py` gera `src/data/fluxo.json` (a partir do `textos16.json` e dos exemplos do `gen16.py`) e `src/data/arquitetura.json` (de `docs/arquitetura/arquitetura-site.json`).
-- `gerador/doc_site.py` gera `src/data/docs/`: contexto, regras, sabatina, arquitetura, prompts, especificação e cronograma, lidos dos próprios documentos. Ele falha se uma referência não existir ou se o cronograma furar um prazo.
+- `gerador/doc_site.py` gera `src/data/docs/`: contexto, regras, sabatina, arquitetura, andamento das etapas, prompts, especificação e cronograma, lidos dos próprios documentos. Ele falha se uma referência não existir ou se o cronograma furar um prazo.
 
 - `gerador/doc_diagramas.py` gera as páginas de `public/diagramas/` e o índice `src/data/diagramas.json`, a partir de `docs/diagramas/`.
 

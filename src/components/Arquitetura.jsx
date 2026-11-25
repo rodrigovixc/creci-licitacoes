@@ -1,13 +1,16 @@
 // Seção "Arquitetura": por que esta arquitetura, o fluxograma de como o módulo vai funcionar, os ADRs, o documento completo e a construção.
 // Dados em src/data/arquitetura.json, gerados de docs/arquitetura/arquitetura-site.json pelo gerador/doc_minigame.py.
 // Para registrar um andamento, mude o "status" lá e rode o gerador.
-import { useEffect, useMemo, useState } from 'react'
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react'
 import { ReactFlow, ReactFlowProvider, Background, Controls, Handle, Position, MarkerType, useReactFlow } from '@xyflow/react'
 import '@xyflow/react/dist/style.css'
 import A from '../data/arquitetura.json'
 import DOC from '../data/docs/arquitetura-doc.json'
 import Doc from './Doc'
 import { ir, rolarAte } from '../lib/rota'
+
+// o andamento traz os documentos e as rodadas inteiros: só carrega quando a visão abre
+const Andamento = lazy(() => import('./Andamento'))
 
 const LADO = { t: Position.Top, r: Position.Right, b: Position.Bottom, l: Position.Left }
 
@@ -216,7 +219,7 @@ function Adrs({ alvo }) {
   )
 }
 
-const VISOES = [['porque', 'Por que esta arquitetura'], ['sistema', 'Como vai funcionar'], ['adrs', `Decisões registradas (${DOC.adrs.length})`], ['documento', 'Documento completo'], ['construcao', 'Construção']]
+const VISOES = [['porque', 'Por que esta arquitetura'], ['sistema', 'Como vai funcionar'], ['adrs', `Decisões registradas (${DOC.adrs.length})`], ['documento', 'Documento completo'], ['construcao', 'Construção'], ['andamento', 'Andamento']]
 
 export default function Arquitetura({ sub = [] }) {
   const alvo = sub[0] || ''
@@ -255,6 +258,7 @@ export default function Arquitetura({ sub = [] }) {
 
       {visao === 'porque' && <Porque />}
       {visao === 'adrs' && <Adrs alvo={alvo} />}
+      {visao === 'andamento' && <Suspense fallback={<p className="carregando">Carregando…</p>}><Andamento /></Suspense>}
       {visao === 'documento' && (
         <div className="arq-doc">
           <Doc html={DOC.intro} />
@@ -297,7 +301,7 @@ export default function Arquitetura({ sub = [] }) {
           )}
         </>
       )}
-      <footer>Fonte: docs/arquitetura (proposta 2.0, registros de decisão e arquitetura-site.json).</footer>
+      <footer>Fonte: docs/arquitetura (proposta 2.0, registros de decisão e arquitetura-site.json) e, no andamento, docs/prompts/rodadas.</footer>
     </section>
   )
 }
